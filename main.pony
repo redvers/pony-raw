@@ -101,6 +101,15 @@ actor RawSocket is AsioEventNotify
 
   be _event_notify(event: AsioEventID, flags: U32, arg: U32) =>
     let size: I64 = @recv(fid, buffer.cpointer(), 65535, 0)
+    if (size > 0) then
+      pull_buffer()
+      _event_notify(event, flags, arg)
+    end
+
+
+
+
+  fun ref pull_buffer() =>
     try
       let ptype: U16 = buffer.read_u16(12)?
       if (ptype == 8) then
@@ -116,8 +125,6 @@ actor RawSocket is AsioEventNotify
         Debug.out("Currently unsupported type - dropping: " + ptype.string())
         // Unknown
       end
-
-
     end
 
 //    for index in Range(0,15) do
