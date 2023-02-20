@@ -1,0 +1,85 @@
+<typedefs>
+  <typedef name="String"
+    ponytypein="String"
+    ponytypeinconv=".cstring()"
+    ponytypeout="String"
+    structtype="Pointer[U8]"
+    structdef="Pointer[U8]"
+    argtype="Pointer[U8] tag"
+    decl="  var "
+    rvtype="Pointer[U8]">
+    <ponytypeconvout>
+      <prefixs>
+        <prefix>var pcstring: Pointer[U8] = </prefix>
+      </prefixs>
+      <suffixes>
+        <suffix>let p: String iso = String.from_cstring(pcstring).clone()</suffix>
+        <suffix>consume p</suffix>
+      </suffixes>
+    </ponytypeconvout>
+  </typedef>
+
+  <typedef name="Array[String]"
+    ponytypein="Array[String]"
+    ponytypeinconv=""
+    ponytypeout="Pointer[Pointer[U8]]"
+    structtype="Pointer[Pointer[U8]]"
+    structdef="Pointer[Pointer[U8]]"
+    argtype="Pointer[Pointer[U8]] tag"
+    decl="  var "
+    rvtype="Pointer[Pointer[U8]]"/>
+
+<typedef name="U32" ponytypein="U32" ponytypeinconv="" ponytypeout="U32" structtype="U32" structdef="U32(0)" argtype="U32" rvtype="U32" decl="  var "/>
+<typedef name="Pointer[NullablePointer[Saddrinfo]]" ponytypein="Pointer[NullablePointer[Saddrinfo]] tag" ponytypeinconv="" ponytypeout="Pointer[NullablePointer[Saddrinfo]]" structtype="Pointer[NullablePointer[Saddrinfo]]" structdef="Pointer[NullablePointer[Saddrinfo]]" argtype="Pointer[NullablePointer[Saddrinfo]] tag" rvtype="Pointer[NullablePointer[Saddrinfo]]" decl="  var "/>
+<typedef name="I64" ponytypein="I64" ponytypeinconv="" ponytypeout="I64" structtype="I64" structdef="I64(0)" argtype="I64" rvtype="I64" decl="  var "/>
+<typedef name="F128" ponytypein="F128" ponytypeinconv="" ponytypeout="F128" structtype="F128" structdef="F128(0)" argtype="F128" rvtype="F128" decl="  var "/>
+<typedef name="..." ponytypein="... tag" ponytypeinconv="" ponytypeout="..." structtype="..." structdef="..." argtype="... tag" rvtype="..." decl="  embed "/>
+<typedef name="Pointer[U64]" ponytypein="Pointer[U64] tag" ponytypeinconv="" ponytypeout="Pointer[U64]" structtype="Pointer[U64]" structdef="Pointer[U64]" argtype="Pointer[U64] tag" rvtype="Pointer[U64]" decl="  var "/>
+<typedef name="Sinaddr" ponytypein="Sinaddr tag" ponytypeinconv="" ponytypeout="Sinaddr" structtype="Sinaddr" structdef="Sinaddr" argtype="Sinaddr tag" rvtype="Sinaddr" decl="  embed "/>
+<typedef name="NullablePointer[Sitimerspec]" ponytypein="NullablePointer[Sitimerspec] tag" ponytypeinconv="" ponytypeout="NullablePointer[Sitimerspec]" structtype="NullablePointer[Sitimerspec]" structdef="NullablePointer[Sitimerspec].none()" argtype="NullablePointer[Sitimerspec] tag" rvtype="NullablePointer[Sitimerspec]" decl="  var "/>
+<typedef name="S" ponytypein="S tag" ponytypeinconv="" ponytypeout="S" structtype="S" structdef="S" argtype="S tag" rvtype="S" decl="  embed "/>
+<typedef name="NullablePointer[Sservent]" ponytypein="NullablePointer[Sservent] tag" ponytypeinconv="" ponytypeout="NullablePointer[Sservent]" structtype="NullablePointer[Sservent]" structdef="NullablePointer[Sservent].none()" argtype="NullablePointer[Sservent] tag" rvtype="NullablePointer[Sservent]" decl="  var "/>
+<typedef name="NullablePointer[Saddrinfo]" ponytypein="NullablePointer[Saddrinfo] tag" ponytypeinconv="" ponytypeout="NullablePointer[Saddrinfo]" structtype="NullablePointer[Saddrinfo]" structdef="NullablePointer[Saddrinfo].none()" argtype="NullablePointer[Saddrinfo] tag" rvtype="NullablePointer[Saddrinfo]" decl="  var "/>
+<typedef name="NullablePointer[Srpcent]" ponytypein="NullablePointer[Srpcent] tag" ponytypeinconv="" ponytypeout="NullablePointer[Srpcent]" structtype="NullablePointer[Srpcent]" structdef="NullablePointer[Srpcent].none()" argtype="NullablePointer[Srpcent] tag" rvtype="NullablePointer[Srpcent]" decl="  var "/>
+<typedef name="Pointer[NullablePointer[Shostent]]" ponytypein="Pointer[NullablePointer[Shostent]] tag" ponytypeinconv="" ponytypeout="Pointer[NullablePointer[Shostent]]" structtype="Pointer[NullablePointer[Shostent]]" structdef="Pointer[NullablePointer[Shostent]]" argtype="Pointer[NullablePointer[Shostent]] tag" rvtype="Pointer[NullablePointer[Shostent]]" decl="  var "/>
+<typedef name="NullablePointer[Stimespec]" ponytypein="NullablePointer[Stimespec] tag" ponytypeinconv="" ponytypeout="NullablePointer[Stimespec]" structtype="NullablePointer[Stimespec]" structdef="NullablePointer[Stimespec].none()" argtype="NullablePointer[Stimespec] tag" rvtype="NullablePointer[Stimespec]" decl="  var "/>
+<typedef name="NullablePointer[Ssigstack]" ponytypein="NullablePointer[Ssigstack] tag" ponytypeinconv="" ponytypeout="NullablePointer[Ssigstack]" structtype="NullablePointer[Ssigstack]" structdef="NullablePointer[Ssigstack].none()" argtype="NullablePointer[Ssigstack] tag" rvtype="NullablePointer[Ssigstack]" decl="  var "/>
+<typedef name="NullablePointer[Slocalestruct]" ponytypein="NullablePointer[Slocalestruct] tag" ponytypeinconv="" ponytypeout="NullablePointer[Slocalestruct]" structtype="NullablePointer[Slocalestruct]" structdef="NullablePointer[Slocalestruct].none()" argtype="NullablePointer[Slocalestruct] tag" rvtype="NullablePointer[Slocalestruct]" decl="  var "/>
+<typedef name="NullablePointer[Sinaddr]" ponytypein="NullablePointer[Sinaddr] tag" ponytypeinconv="" ponytypeout="NullablePointer[Sinaddr]" structtype="NullablePointer[Sinaddr]" structdef="NullablePointer[Sinaddr].none()" argtype="NullablePointer[Sinaddr] tag" rvtype="NullablePointer[Sinaddr]" decl="  var "/>
+<typedef name="Pointer[None]" ponytypein="Pointer[None] tag" ponytypeinconv="" ponytypeout="Pointer[None]" structtype="Pointer[None]" structdef="Pointer[None]" argtype="Pointer[None] tag" rvtype="Pointer[None]" decl="  var "/>
+<typedef name="F64" ponytypein="F64" ponytypeinconv="" ponytypeout="F64" structtype="F64" structdef="F64(0)" argtype="F64" rvtype="F64" decl="  var "/>
+<typedef name="I32" ponytypein="I32" ponytypeinconv="" ponytypeout="I32" structtype="I32" structdef="I32(0)" argtype="I32" rvtype="I32" decl="  var "/>
+<typedef name="Pointer[U32]" ponytypein="Pointer[U32] tag" ponytypeinconv="" ponytypeout="Pointer[U32]" structtype="Pointer[U32]" structdef="Pointer[U32]" argtype="Pointer[U32] tag" rvtype="Pointer[U32]" decl="  var "/>
+<typedef name="NullablePointer[Stm]" ponytypein="NullablePointer[Stm] tag" ponytypeinconv="" ponytypeout="NullablePointer[Stm]" structtype="NullablePointer[Stm]" structdef="NullablePointer[Stm].none()" argtype="NullablePointer[Stm] tag" rvtype="NullablePointer[Stm]" decl="  var "/>
+<typedef name="NullablePointer[Srandomdata]" ponytypein="NullablePointer[Srandomdata] tag" ponytypeinconv="" ponytypeout="NullablePointer[Srandomdata]" structtype="NullablePointer[Srandomdata]" structdef="NullablePointer[Srandomdata].none()" argtype="NullablePointer[Srandomdata] tag" rvtype="NullablePointer[Srandomdata]" decl="  var "/>
+<typedef name="NullablePointer[Svalisttag]" ponytypein="NullablePointer[Svalisttag] tag" ponytypeinconv="" ponytypeout="NullablePointer[Svalisttag]" structtype="NullablePointer[Svalisttag]" structdef="NullablePointer[Svalisttag].none()" argtype="NullablePointer[Svalisttag] tag" rvtype="NullablePointer[Svalisttag]" decl="  var "/>
+<typedef name="Pointer[I64]" ponytypein="Pointer[I64] tag" ponytypeinconv="" ponytypeout="Pointer[I64]" structtype="Pointer[I64]" structdef="Pointer[I64]" argtype="Pointer[I64] tag" rvtype="Pointer[I64]" decl="  var "/>
+<typedef name="NullablePointer[Pointer[None]]" ponytypein="NullablePointer[Pointer[None]] tag" ponytypeinconv="" ponytypeout="NullablePointer[Pointer[None]]" structtype="NullablePointer[Pointer[None]]" structdef="NullablePointer[Pointer[None]].none()" argtype="NullablePointer[Pointer[None]] tag" rvtype="NullablePointer[Pointer[None]]" decl="  var "/>
+<typedef name="U64" ponytypein="U64" ponytypeinconv="" ponytypeout="U64" structtype="U64" structdef="U64(0)" argtype="U64" rvtype="U64" decl="  var "/>
+<typedef name="NullablePointer[Ssockaddrin6]" ponytypein="NullablePointer[Ssockaddrin6] tag" ponytypeinconv="" ponytypeout="NullablePointer[Ssockaddrin6]" structtype="NullablePointer[Ssockaddrin6]" structdef="NullablePointer[Ssockaddrin6].none()" argtype="NullablePointer[Ssockaddrin6] tag" rvtype="NullablePointer[Ssockaddrin6]" decl="  var "/>
+<typedef name="NullablePointer[Sprotoent]" ponytypein="NullablePointer[Sprotoent] tag" ponytypeinconv="" ponytypeout="NullablePointer[Sprotoent]" structtype="NullablePointer[Sprotoent]" structdef="NullablePointer[Sprotoent].none()" argtype="NullablePointer[Sprotoent] tag" rvtype="NullablePointer[Sprotoent]" decl="  var "/>
+<typedef name="NullablePointer[Ssockaddrin]" ponytypein="NullablePointer[Ssockaddrin] tag" ponytypeinconv="" ponytypeout="NullablePointer[Ssockaddrin]" structtype="NullablePointer[Ssockaddrin]" structdef="NullablePointer[Ssockaddrin].none()" argtype="NullablePointer[Ssockaddrin] tag" rvtype="NullablePointer[Ssockaddrin]" decl="  var "/>
+<typedef name="Pointer[I32]" ponytypein="Pointer[I32] tag" ponytypeinconv="" ponytypeout="Pointer[I32]" structtype="Pointer[I32]" structdef="Pointer[I32]" argtype="Pointer[I32] tag" rvtype="Pointer[I32]" decl="  var "/>
+<typedef name="NullablePointer[SIOFILE]" ponytypein="NullablePointer[SIOFILE] tag" ponytypeinconv="" ponytypeout="NullablePointer[SIOFILE]" structtype="NullablePointer[SIOFILE]" structdef="NullablePointer[SIOFILE].none()" argtype="NullablePointer[SIOFILE] tag" rvtype="NullablePointer[SIOFILE]" decl="  var "/>
+<typedef name="NullablePointer[S]" ponytypein="NullablePointer[S] tag" ponytypeinconv="" ponytypeout="NullablePointer[S]" structtype="NullablePointer[S]" structdef="NullablePointer[S].none()" argtype="NullablePointer[S] tag" rvtype="NullablePointer[S]" decl="  var "/>
+<typedef name="U16" ponytypein="U16" ponytypeinconv="" ponytypeout="U16" structtype="U16" structdef="U16(0)" argtype="U16" rvtype="U16" decl="  var "/>
+<typedef name="NullablePointer[Ssockaddr]" ponytypein="NullablePointer[Ssockaddr] tag" ponytypeinconv="" ponytypeout="NullablePointer[Ssockaddr]" structtype="NullablePointer[Ssockaddr]" structdef="NullablePointer[Ssockaddr].none()" argtype="NullablePointer[Ssockaddr] tag" rvtype="NullablePointer[Ssockaddr]" decl="  var "/>
+<typedef name="None" ponytypein="None tag" ponytypeinconv="" ponytypeout="None" structtype="None" structdef="None" argtype="None tag" rvtype="None" decl="  embed "/>
+<typedef name="NullablePointer[Shostent]" ponytypein="NullablePointer[Shostent] tag" ponytypeinconv="" ponytypeout="NullablePointer[Shostent]" structtype="NullablePointer[Shostent]" structdef="NullablePointer[Shostent].none()" argtype="NullablePointer[Shostent] tag" rvtype="NullablePointer[Shostent]" decl="  var "/>
+<typedef name="NullablePointer[Stimeval]" ponytypein="NullablePointer[Stimeval] tag" ponytypeinconv="" ponytypeout="NullablePointer[Stimeval]" structtype="NullablePointer[Stimeval]" structdef="NullablePointer[Stimeval].none()" argtype="NullablePointer[Stimeval] tag" rvtype="NullablePointer[Stimeval]" decl="  var "/>
+<typedef name="NullablePointer[Smsghdr]" ponytypein="NullablePointer[Smsghdr] tag" ponytypeinconv="" ponytypeout="NullablePointer[Smsghdr]" structtype="NullablePointer[Smsghdr]" structdef="NullablePointer[Smsghdr].none()" argtype="NullablePointer[Smsghdr] tag" rvtype="NullablePointer[Smsghdr]" decl="  var "/>
+<typedef name="NullablePointer[Ssigcontext]" ponytypein="NullablePointer[Ssigcontext] tag" ponytypeinconv="" ponytypeout="NullablePointer[Ssigcontext]" structtype="NullablePointer[Ssigcontext]" structdef="NullablePointer[Ssigcontext].none()" argtype="NullablePointer[Ssigcontext] tag" rvtype="NullablePointer[Ssigcontext]" decl="  var "/>
+<typedef name="Pointer[NullablePointer[Srpcent]]" ponytypein="Pointer[NullablePointer[Srpcent]] tag" ponytypeinconv="" ponytypeout="Pointer[NullablePointer[Srpcent]]" structtype="Pointer[NullablePointer[Srpcent]]" structdef="Pointer[NullablePointer[Srpcent]]" argtype="Pointer[NullablePointer[Srpcent]] tag" rvtype="Pointer[NullablePointer[Srpcent]]" decl="  var "/>
+<typedef name="Pointer[F64]" ponytypein="Pointer[F64] tag" ponytypeinconv="" ponytypeout="Pointer[F64]" structtype="Pointer[F64]" structdef="Pointer[F64]" argtype="Pointer[F64] tag" rvtype="Pointer[F64]" decl="  var "/>
+<typedef name="Pointer[U16]" ponytypein="Pointer[U16] tag" ponytypeinconv="" ponytypeout="Pointer[U16]" structtype="Pointer[U16]" structdef="Pointer[U16]" argtype="Pointer[U16] tag" rvtype="Pointer[U16]" decl="  var "/>
+<typedef name="F32" ponytypein="F32" ponytypeinconv="" ponytypeout="F32" structtype="F32" structdef="F32(0)" argtype="F32" rvtype="F32" decl="  var "/>
+<typedef name="Pointer[NullablePointer[Snetent]]" ponytypein="Pointer[NullablePointer[Snetent]] tag" ponytypeinconv="" ponytypeout="Pointer[NullablePointer[Snetent]]" structtype="Pointer[NullablePointer[Snetent]]" structdef="Pointer[NullablePointer[Snetent]]" argtype="Pointer[NullablePointer[Snetent]] tag" rvtype="Pointer[NullablePointer[Snetent]]" decl="  var "/>
+<typedef name="NullablePointer[Ssigaction]" ponytypein="NullablePointer[Ssigaction] tag" ponytypeinconv="" ponytypeout="NullablePointer[Ssigaction]" structtype="NullablePointer[Ssigaction]" structdef="NullablePointer[Ssigaction].none()" argtype="NullablePointer[Ssigaction] tag" rvtype="NullablePointer[Ssigaction]" decl="  var "/>
+<typedef name="NullablePointer[Scmsghdr]" ponytypein="NullablePointer[Scmsghdr] tag" ponytypeinconv="" ponytypeout="NullablePointer[Scmsghdr]" structtype="NullablePointer[Scmsghdr]" structdef="NullablePointer[Scmsghdr].none()" argtype="NullablePointer[Scmsghdr] tag" rvtype="NullablePointer[Scmsghdr]" decl="  var "/>
+<typedef name="NullablePointer[Snetent]" ponytypein="NullablePointer[Snetent] tag" ponytypeinconv="" ponytypeout="NullablePointer[Snetent]" structtype="NullablePointer[Snetent]" structdef="NullablePointer[Snetent].none()" argtype="NullablePointer[Snetent] tag" rvtype="NullablePointer[Snetent]" decl="  var "/>
+<typedef name="NullablePointer[Sdrand48data]" ponytypein="NullablePointer[Sdrand48data] tag" ponytypeinconv="" ponytypeout="NullablePointer[Sdrand48data]" structtype="NullablePointer[Sdrand48data]" structdef="NullablePointer[Sdrand48data].none()" argtype="NullablePointer[Sdrand48data] tag" rvtype="NullablePointer[Sdrand48data]" decl="  var "/>
+<typedef name="NullablePointer[Ssigevent]" ponytypein="NullablePointer[Ssigevent] tag" ponytypeinconv="" ponytypeout="NullablePointer[Ssigevent]" structtype="NullablePointer[Ssigevent]" structdef="NullablePointer[Ssigevent].none()" argtype="NullablePointer[Ssigevent] tag" rvtype="NullablePointer[Ssigevent]" decl="  var "/>
+<typedef name="NullablePointer[SGfpost]" ponytypein="NullablePointer[SGfpost] tag" ponytypeinconv="" ponytypeout="NullablePointer[SGfpost]" structtype="NullablePointer[SGfpost]" structdef="NullablePointer[SGfpost].none()" argtype="NullablePointer[SGfpost] tag" rvtype="NullablePointer[SGfpost]" decl="  var "/>
+<typedef name="Pointer[NullablePointer[Sprotoent]]" ponytypein="Pointer[NullablePointer[Sprotoent]] tag" ponytypeinconv="" ponytypeout="Pointer[NullablePointer[Sprotoent]]" structtype="Pointer[NullablePointer[Sprotoent]]" structdef="Pointer[NullablePointer[Sprotoent]]" argtype="Pointer[NullablePointer[Sprotoent]] tag" rvtype="Pointer[NullablePointer[Sprotoent]]" decl="  var "/>
+<typedef name="Pointer[NullablePointer[Sservent]]" ponytypein="Pointer[NullablePointer[Sservent]] tag" ponytypeinconv="" ponytypeout="Pointer[NullablePointer[Sservent]]" structtype="Pointer[NullablePointer[Sservent]]" structdef="Pointer[NullablePointer[Sservent]]" argtype="Pointer[NullablePointer[Sservent]] tag" rvtype="Pointer[NullablePointer[Sservent]]" decl="  var "/></typedefs>
+

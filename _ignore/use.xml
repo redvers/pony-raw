@@ -1,0 +1,5217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<castxml2pony xmlns:xi="http://www.w3.org/2001/XInclude">
+<xi:include href="./renderuse.xml"/>
+<xi:include href="./usetypes.xml"/>
+<xi:include href="./glibc-net.xml"/>
+                    <uses>
+                      <use id="_93" name="remove"
+     ponyname="remove"
+     fid="f10"
+     lineno="146"
+     rv="I32">
+     <useargs>
+       <usearg name="filename" type="String"/>
+     </useargs>
+  </use>
+  <use id="_94" name="rename"
+     ponyname="rename"
+     fid="f10"
+     lineno="148"
+     rv="I32">
+     <useargs>
+       <usearg name="old" type="String"/>
+       <usearg name="new" type="String"/>
+     </useargs>
+  </use>
+  <use id="_95" name="renameat"
+     ponyname="renameat"
+     fid="f10"
+     lineno="152"
+     rv="I32">
+     <useargs>
+       <usearg name="oldfd" type="I32"/>
+       <usearg name="old" type="String"/>
+       <usearg name="newfd" type="I32"/>
+       <usearg name="new" type="String"/>
+     </useargs>
+  </use>
+  <use id="_96" name="tmpfile"
+     ponyname="tmpfile"
+     fid="f10"
+     lineno="173"
+     rv="NullablePointer[SIOFILE]">
+     <useargs/>
+  </use>
+  <use id="_97" name="tmpnam"
+     ponyname="tmpnam"
+     fid="f10"
+     lineno="187"
+     rv="String">
+     <useargs>
+       <usearg name="s" type="String"/>
+     </useargs>
+  </use>
+  <use id="_98" name="tmpnam_r"
+     ponyname="tmpnam_r"
+     fid="f10"
+     lineno="192"
+     rv="String">
+     <useargs>
+       <usearg name="s" type="String"/>
+     </useargs>
+  </use>
+  <use id="_99" name="tempnam"
+     ponyname="tempnam"
+     fid="f10"
+     lineno="204"
+     rv="String">
+     <useargs>
+       <usearg name="dir" type="String"/>
+       <usearg name="pfx" type="String"/>
+     </useargs>
+  </use>
+  <use id="_100" name="fclose"
+     ponyname="fclose"
+     fid="f10"
+     lineno="213"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_101" name="fflush"
+     ponyname="fflush"
+     fid="f10"
+     lineno="218"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_102" name="fflush_unlocked"
+     ponyname="fflush_unlocked"
+     fid="f10"
+     lineno="227"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_103" name="fopen"
+     ponyname="fopen"
+     fid="f10"
+     lineno="246"
+     rv="NullablePointer[SIOFILE]">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+     </useargs>
+  </use>
+  <use id="_104" name="freopen"
+     ponyname="freopen"
+     fid="f10"
+     lineno="252"
+     rv="NullablePointer[SIOFILE]">
+     <useargs>
+       <usearg name="filename" type="String"/>
+       <usearg name="modes" type="String"/>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_105" name="fdopen"
+     ponyname="fdopen"
+     fid="f10"
+     lineno="279"
+     rv="NullablePointer[SIOFILE]">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="modes" type="String"/>
+     </useargs>
+  </use>
+  <use id="_106" name="fmemopen"
+     ponyname="fmemopen"
+     fid="f10"
+     lineno="292"
+     rv="NullablePointer[SIOFILE]">
+     <useargs>
+       <usearg name="s" type="Pointer[None]"/>
+       <usearg name="len" type="U64"/>
+       <usearg name="modes" type="String"/>
+     </useargs>
+  </use>
+  <use id="_107" name="open_memstream"
+     ponyname="open_memstream"
+     fid="f10"
+     lineno="298"
+     rv="NullablePointer[SIOFILE]">
+     <useargs>
+       <usearg name="bufloc" type="Array[String]"/>
+       <usearg name="sizeloc" type="Pointer[U64]"/>
+     </useargs>
+  </use>
+  <use id="_108" name="setbuf"
+     ponyname="setbuf"
+     fid="f10"
+     lineno="304"
+     rv="None">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+       <usearg name="buf" type="String"/>
+     </useargs>
+  </use>
+  <use id="_109" name="setvbuf"
+     ponyname="setvbuf"
+     fid="f10"
+     lineno="308"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="modes" type="I32"/>
+       <usearg name="n" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_110" name="setbuffer"
+     ponyname="setbuffer"
+     fid="f10"
+     lineno="314"
+     rv="None">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="size" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_111" name="setlinebuf"
+     ponyname="setlinebuf"
+     fid="f10"
+     lineno="318"
+     rv="None">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_112" name="fprintf"
+     ponyname="fprintf"
+     fid="f10"
+     lineno="326"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="NullablePointer[SIOFILE]"/>
+       <usearg name="parg1" type="String"/>
+       <usearg name="parg2" type="..."/>
+     </useargs>
+  </use>
+  <use id="_113" name="printf"
+     ponyname="printf"
+     fid="f10"
+     lineno="332"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="..."/>
+     </useargs>
+  </use>
+  <use id="_114" name="sprintf"
+     ponyname="sprintf"
+     fid="f10"
+     lineno="334"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+       <usearg name="parg2" type="..."/>
+     </useargs>
+  </use>
+  <use id="_115" name="vfprintf"
+     ponyname="vfprintf"
+     fid="f10"
+     lineno="341"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="NullablePointer[SIOFILE]"/>
+       <usearg name="parg1" type="String"/>
+       <usearg name="parg2" type="NullablePointer[Svalisttag]"/>
+     </useargs>
+  </use>
+  <use id="_116" name="vprintf"
+     ponyname="vprintf"
+     fid="f10"
+     lineno="347"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="NullablePointer[Svalisttag]"/>
+     </useargs>
+  </use>
+  <use id="_117" name="vsprintf"
+     ponyname="vsprintf"
+     fid="f10"
+     lineno="349"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+       <usearg name="parg2" type="NullablePointer[Svalisttag]"/>
+     </useargs>
+  </use>
+  <use id="_118" name="snprintf"
+     ponyname="snprintf"
+     fid="f10"
+     lineno="354"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="U64"/>
+       <usearg name="parg2" type="String"/>
+       <usearg name="parg3" type="..."/>
+     </useargs>
+  </use>
+  <use id="_119" name="vsnprintf"
+     ponyname="vsnprintf"
+     fid="f10"
+     lineno="358"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="U64"/>
+       <usearg name="parg2" type="String"/>
+       <usearg name="parg3" type="NullablePointer[Svalisttag]"/>
+     </useargs>
+  </use>
+  <use id="_120" name="vdprintf"
+     ponyname="vdprintf"
+     fid="f10"
+     lineno="379"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="fmt" type="String"/>
+       <usearg name="arg" type="NullablePointer[Svalisttag]"/>
+     </useargs>
+  </use>
+  <use id="_121" name="dprintf"
+     ponyname="dprintf"
+     fid="f10"
+     lineno="382"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="fmt" type="String"/>
+       <usearg name="parg2" type="..."/>
+     </useargs>
+  </use>
+  <use id="_122" name="fscanf"
+     ponyname="fscanf"
+     fid="f10"
+     lineno="391"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="NullablePointer[SIOFILE]"/>
+       <usearg name="parg1" type="String"/>
+       <usearg name="parg2" type="..."/>
+     </useargs>
+  </use>
+  <use id="_123" name="scanf"
+     ponyname="scanf"
+     fid="f10"
+     lineno="397"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="..."/>
+     </useargs>
+  </use>
+  <use id="_124" name="sscanf"
+     ponyname="sscanf"
+     fid="f10"
+     lineno="399"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+       <usearg name="parg2" type="..."/>
+     </useargs>
+  </use>
+  <use id="_129" name="vfscanf"
+     ponyname="vfscanf"
+     fid="f10"
+     lineno="435"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="NullablePointer[SIOFILE]"/>
+       <usearg name="parg1" type="String"/>
+       <usearg name="parg2" type="NullablePointer[Svalisttag]"/>
+     </useargs>
+  </use>
+  <use id="_130" name="vscanf"
+     ponyname="vscanf"
+     fid="f10"
+     lineno="443"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="NullablePointer[Svalisttag]"/>
+     </useargs>
+  </use>
+  <use id="_131" name="vsscanf"
+     ponyname="vsscanf"
+     fid="f10"
+     lineno="447"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+       <usearg name="parg2" type="NullablePointer[Svalisttag]"/>
+     </useargs>
+  </use>
+  <use id="_132" name="fgetc"
+     ponyname="fgetc"
+     fid="f10"
+     lineno="489"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_133" name="getc"
+     ponyname="getc"
+     fid="f10"
+     lineno="490"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_134" name="getchar"
+     ponyname="getchar"
+     fid="f10"
+     lineno="496"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_135" name="getc_unlocked"
+     ponyname="getc_unlocked"
+     fid="f10"
+     lineno="503"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_136" name="getchar_unlocked"
+     ponyname="getchar_unlocked"
+     fid="f10"
+     lineno="504"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_137" name="fgetc_unlocked"
+     ponyname="fgetc_unlocked"
+     fid="f10"
+     lineno="514"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_138" name="fputc"
+     ponyname="fputc"
+     fid="f10"
+     lineno="525"
+     rv="I32">
+     <useargs>
+       <usearg name="c" type="I32"/>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_139" name="putc"
+     ponyname="putc"
+     fid="f10"
+     lineno="526"
+     rv="I32">
+     <useargs>
+       <usearg name="c" type="I32"/>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_140" name="putchar"
+     ponyname="putchar"
+     fid="f10"
+     lineno="532"
+     rv="I32">
+     <useargs>
+       <usearg name="c" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_141" name="fputc_unlocked"
+     ponyname="fputc_unlocked"
+     fid="f10"
+     lineno="541"
+     rv="I32">
+     <useargs>
+       <usearg name="c" type="I32"/>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_142" name="putc_unlocked"
+     ponyname="putc_unlocked"
+     fid="f10"
+     lineno="549"
+     rv="I32">
+     <useargs>
+       <usearg name="c" type="I32"/>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_143" name="putchar_unlocked"
+     ponyname="putchar_unlocked"
+     fid="f10"
+     lineno="550"
+     rv="I32">
+     <useargs>
+       <usearg name="c" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_144" name="getw"
+     ponyname="getw"
+     fid="f10"
+     lineno="557"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_145" name="putw"
+     ponyname="putw"
+     fid="f10"
+     lineno="560"
+     rv="I32">
+     <useargs>
+       <usearg name="w" type="I32"/>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_146" name="fgets"
+     ponyname="fgets"
+     fid="f10"
+     lineno="568"
+     rv="String">
+     <useargs>
+       <usearg name="s" type="String"/>
+       <usearg name="n" type="I32"/>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_147" name="__getdelim"
+     ponyname="__getdelim"
+     fid="f10"
+     lineno="608"
+     rv="I64">
+     <useargs>
+       <usearg name="lineptr" type="Array[String]"/>
+       <usearg name="n" type="Pointer[U64]"/>
+       <usearg name="delimiter" type="I32"/>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_148" name="getdelim"
+     ponyname="getdelim"
+     fid="f10"
+     lineno="611"
+     rv="I64">
+     <useargs>
+       <usearg name="lineptr" type="Array[String]"/>
+       <usearg name="n" type="Pointer[U64]"/>
+       <usearg name="delimiter" type="I32"/>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_149" name="getline"
+     ponyname="getline"
+     fid="f10"
+     lineno="621"
+     rv="I64">
+     <useargs>
+       <usearg name="lineptr" type="Array[String]"/>
+       <usearg name="n" type="Pointer[U64]"/>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_150" name="fputs"
+     ponyname="fputs"
+     fid="f10"
+     lineno="631"
+     rv="I32">
+     <useargs>
+       <usearg name="s" type="String"/>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_151" name="puts"
+     ponyname="puts"
+     fid="f10"
+     lineno="637"
+     rv="I32">
+     <useargs>
+       <usearg name="s" type="String"/>
+     </useargs>
+  </use>
+  <use id="_152" name="ungetc"
+     ponyname="ungetc"
+     fid="f10"
+     lineno="644"
+     rv="I32">
+     <useargs>
+       <usearg name="c" type="I32"/>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_153" name="fread"
+     ponyname="fread"
+     fid="f10"
+     lineno="651"
+     rv="U64">
+     <useargs>
+       <usearg name="parg0" type="Pointer[None]"/>
+       <usearg name="parg1" type="U64"/>
+       <usearg name="parg2" type="U64"/>
+       <usearg name="parg3" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_154" name="fwrite"
+     ponyname="fwrite"
+     fid="f10"
+     lineno="657"
+     rv="U64">
+     <useargs>
+       <usearg name="parg0" type="Pointer[None]"/>
+       <usearg name="parg1" type="U64"/>
+       <usearg name="parg2" type="U64"/>
+       <usearg name="parg3" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_155" name="fread_unlocked"
+     ponyname="fread_unlocked"
+     fid="f10"
+     lineno="678"
+     rv="U64">
+     <useargs>
+       <usearg name="ptr" type="Pointer[None]"/>
+       <usearg name="size" type="U64"/>
+       <usearg name="n" type="U64"/>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_156" name="fwrite_unlocked"
+     ponyname="fwrite_unlocked"
+     fid="f10"
+     lineno="680"
+     rv="U64">
+     <useargs>
+       <usearg name="ptr" type="Pointer[None]"/>
+       <usearg name="size" type="U64"/>
+       <usearg name="n" type="U64"/>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_157" name="fseek"
+     ponyname="fseek"
+     fid="f10"
+     lineno="689"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+       <usearg name="off" type="I64"/>
+       <usearg name="whence" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_158" name="ftell"
+     ponyname="ftell"
+     fid="f10"
+     lineno="694"
+     rv="I64">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_159" name="rewind"
+     ponyname="rewind"
+     fid="f10"
+     lineno="699"
+     rv="None">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_160" name="fseeko"
+     ponyname="fseeko"
+     fid="f10"
+     lineno="712"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+       <usearg name="off" type="I64"/>
+       <usearg name="whence" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_161" name="ftello"
+     ponyname="ftello"
+     fid="f10"
+     lineno="717"
+     rv="I64">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_162" name="fgetpos"
+     ponyname="fgetpos"
+     fid="f10"
+     lineno="736"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+       <usearg name="pos" type="NullablePointer[SGfpost]"/>
+     </useargs>
+  </use>
+  <use id="_163" name="fsetpos"
+     ponyname="fsetpos"
+     fid="f10"
+     lineno="741"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+       <usearg name="pos" type="NullablePointer[SGfpost]"/>
+     </useargs>
+  </use>
+  <use id="_164" name="clearerr"
+     ponyname="clearerr"
+     fid="f10"
+     lineno="762"
+     rv="None">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_165" name="feof"
+     ponyname="feof"
+     fid="f10"
+     lineno="764"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_166" name="ferror"
+     ponyname="ferror"
+     fid="f10"
+     lineno="766"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_167" name="clearerr_unlocked"
+     ponyname="clearerr_unlocked"
+     fid="f10"
+     lineno="770"
+     rv="None">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_168" name="feof_unlocked"
+     ponyname="feof_unlocked"
+     fid="f10"
+     lineno="771"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_169" name="ferror_unlocked"
+     ponyname="ferror_unlocked"
+     fid="f10"
+     lineno="772"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_170" name="perror"
+     ponyname="perror"
+     fid="f10"
+     lineno="780"
+     rv="None">
+     <useargs>
+       <usearg name="s" type="String"/>
+     </useargs>
+  </use>
+  <use id="_171" name="fileno"
+     ponyname="fileno"
+     fid="f10"
+     lineno="785"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_172" name="fileno_unlocked"
+     ponyname="fileno_unlocked"
+     fid="f10"
+     lineno="790"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_173" name="popen"
+     ponyname="popen"
+     fid="f10"
+     lineno="799"
+     rv="NullablePointer[SIOFILE]">
+     <useargs>
+       <usearg name="command" type="String"/>
+       <usearg name="modes" type="String"/>
+     </useargs>
+  </use>
+  <use id="_174" name="pclose"
+     ponyname="pclose"
+     fid="f10"
+     lineno="805"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_175" name="ctermid"
+     ponyname="ctermid"
+     fid="f10"
+     lineno="811"
+     rv="String">
+     <useargs>
+       <usearg name="s" type="String"/>
+     </useargs>
+  </use>
+  <use id="_176" name="flockfile"
+     ponyname="flockfile"
+     fid="f10"
+     lineno="839"
+     rv="None">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_177" name="ftrylockfile"
+     ponyname="ftrylockfile"
+     fid="f10"
+     lineno="843"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_178" name="funlockfile"
+     ponyname="funlockfile"
+     fid="f10"
+     lineno="846"
+     rv="None">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_179" name="__uflow"
+     ponyname="__uflow"
+     fid="f10"
+     lineno="857"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="NullablePointer[SIOFILE]"/>
+     </useargs>
+  </use>
+  <use id="_180" name="__overflow"
+     ponyname="__overflow"
+     fid="f10"
+     lineno="858"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="NullablePointer[SIOFILE]"/>
+       <usearg name="parg1" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_216" name="__bswap_16"
+     ponyname="__bswap_16"
+     fid="f18"
+     lineno="34"
+     rv="U16">
+     <useargs>
+       <usearg name="bsx" type="U16"/>
+     </useargs>
+  </use>
+  <use id="_217" name="__bswap_32"
+     ponyname="__bswap_32"
+     fid="f18"
+     lineno="49"
+     rv="U32">
+     <useargs>
+       <usearg name="bsx" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_218" name="__bswap_64"
+     ponyname="__bswap_64"
+     fid="f18"
+     lineno="70"
+     rv="U64">
+     <useargs>
+       <usearg name="bsx" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_219" name="__uint16_identity"
+     ponyname="__uint16_identity"
+     fid="f19"
+     lineno="33"
+     rv="U16">
+     <useargs>
+       <usearg name="x" type="U16"/>
+     </useargs>
+  </use>
+  <use id="_220" name="__uint32_identity"
+     ponyname="__uint32_identity"
+     fid="f19"
+     lineno="39"
+     rv="U32">
+     <useargs>
+       <usearg name="x" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_221" name="__uint64_identity"
+     ponyname="__uint64_identity"
+     fid="f19"
+     lineno="45"
+     rv="U64">
+     <useargs>
+       <usearg name="x" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_232" name="select"
+     ponyname="select"
+     fid="f24"
+     lineno="101"
+     rv="I32">
+     <useargs>
+       <usearg name="nfds" type="I32"/>
+       <usearg name="readfds" type="NullablePointer[S]"/>
+       <usearg name="writefds" type="NullablePointer[S]"/>
+       <usearg name="exceptfds" type="NullablePointer[S]"/>
+       <usearg name="timeout" type="NullablePointer[Stimeval]"/>
+     </useargs>
+  </use>
+  <use id="_233" name="pselect"
+     ponyname="pselect"
+     fid="f24"
+     lineno="113"
+     rv="I32">
+     <useargs>
+       <usearg name="nfds" type="I32"/>
+       <usearg name="readfds" type="NullablePointer[S]"/>
+       <usearg name="writefds" type="NullablePointer[S]"/>
+       <usearg name="exceptfds" type="NullablePointer[S]"/>
+       <usearg name="timeout" type="NullablePointer[Stimespec]"/>
+       <usearg name="sigmask" type="NullablePointer[S]"/>
+     </useargs>
+  </use>
+  <use id="_280" name="__cmsg_nxthdr"
+     ponyname="__cmsg_nxthdr"
+     fid="f30"
+     lineno="305"
+     rv="NullablePointer[Scmsghdr]">
+     <useargs>
+       <usearg name="mhdr" type="NullablePointer[Smsghdr]"/>
+       <usearg name="cmsg" type="NullablePointer[Scmsghdr]"/>
+     </useargs>
+  </use>
+  <use id="_321" name="socket"
+     ponyname="socket"
+     fid="f37"
+     lineno="102"
+     rv="I32">
+     <useargs>
+       <usearg name="domain" type="I32"/>
+       <usearg name="type" type="I32"/>
+       <usearg name="protocol" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_322" name="socketpair"
+     ponyname="socketpair"
+     fid="f37"
+     lineno="108"
+     rv="I32">
+     <useargs>
+       <usearg name="domain" type="I32"/>
+       <usearg name="type" type="I32"/>
+       <usearg name="protocol" type="I32"/>
+       <usearg name="fds" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_323" name="bind"
+     ponyname="bind"
+     fid="f37"
+     lineno="112"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="addr" type="NullablePointer[Ssockaddr]"/>
+       <usearg name="len" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_324" name="getsockname"
+     ponyname="getsockname"
+     fid="f37"
+     lineno="116"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="addr" type="NullablePointer[Ssockaddr]"/>
+       <usearg name="len" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_325" name="connect"
+     ponyname="connect"
+     fid="f37"
+     lineno="126"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="addr" type="NullablePointer[Ssockaddr]"/>
+       <usearg name="len" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_326" name="getpeername"
+     ponyname="getpeername"
+     fid="f37"
+     lineno="130"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="addr" type="NullablePointer[Ssockaddr]"/>
+       <usearg name="len" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_327" name="send"
+     ponyname="send"
+     fid="f37"
+     lineno="138"
+     rv="I64">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="buf" type="Pointer[None]"/>
+       <usearg name="n" type="U64"/>
+       <usearg name="flags" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_328" name="recv"
+     ponyname="recv"
+     fid="f37"
+     lineno="145"
+     rv="I64">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="buf" type="Pointer[None]"/>
+       <usearg name="n" type="U64"/>
+       <usearg name="flags" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_329" name="sendto"
+     ponyname="sendto"
+     fid="f37"
+     lineno="152"
+     rv="I64">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="buf" type="Pointer[None]"/>
+       <usearg name="n" type="U64"/>
+       <usearg name="flags" type="I32"/>
+       <usearg name="addr" type="NullablePointer[Ssockaddr]"/>
+       <usearg name="addrlen" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_330" name="recvfrom"
+     ponyname="recvfrom"
+     fid="f37"
+     lineno="163"
+     rv="I64">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="buf" type="Pointer[None]"/>
+       <usearg name="n" type="U64"/>
+       <usearg name="flags" type="I32"/>
+       <usearg name="addr" type="NullablePointer[Ssockaddr]"/>
+       <usearg name="addrlen" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_331" name="sendmsg"
+     ponyname="sendmsg"
+     fid="f37"
+     lineno="173"
+     rv="I64">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="message" type="NullablePointer[Smsghdr]"/>
+       <usearg name="flags" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_332" name="recvmsg"
+     ponyname="recvmsg"
+     fid="f37"
+     lineno="191"
+     rv="I64">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="message" type="NullablePointer[Smsghdr]"/>
+       <usearg name="flags" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_333" name="getsockopt"
+     ponyname="getsockopt"
+     fid="f37"
+     lineno="208"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="level" type="I32"/>
+       <usearg name="optname" type="I32"/>
+       <usearg name="optval" type="Pointer[None]"/>
+       <usearg name="optlen" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_334" name="setsockopt"
+     ponyname="setsockopt"
+     fid="f37"
+     lineno="215"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="level" type="I32"/>
+       <usearg name="optname" type="I32"/>
+       <usearg name="optval" type="Pointer[None]"/>
+       <usearg name="optlen" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_335" name="listen"
+     ponyname="listen"
+     fid="f37"
+     lineno="222"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="n" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_336" name="accept"
+     ponyname="accept"
+     fid="f37"
+     lineno="232"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="addr" type="NullablePointer[Ssockaddr]"/>
+       <usearg name="addrlen" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_337" name="shutdown"
+     ponyname="shutdown"
+     fid="f37"
+     lineno="250"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="how" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_338" name="sockatmark"
+     ponyname="sockatmark"
+     fid="f37"
+     lineno="255"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_339" name="isfdtype"
+     ponyname="isfdtype"
+     fid="f37"
+     lineno="263"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="fdtype" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_365" name="ntohl"
+     ponyname="ntohl"
+     fid="f39"
+     lineno="379"
+     rv="U32">
+     <useargs>
+       <usearg name="netlong" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_366" name="ntohs"
+     ponyname="ntohs"
+     fid="f39"
+     lineno="380"
+     rv="U16">
+     <useargs>
+       <usearg name="netshort" type="U16"/>
+     </useargs>
+  </use>
+  <use id="_367" name="htonl"
+     ponyname="htonl"
+     fid="f39"
+     lineno="382"
+     rv="U32">
+     <useargs>
+       <usearg name="hostlong" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_368" name="htons"
+     ponyname="htons"
+     fid="f39"
+     lineno="384"
+     rv="U16">
+     <useargs>
+       <usearg name="hostshort" type="U16"/>
+     </useargs>
+  </use>
+  <use id="_369" name="bindresvport"
+     ponyname="bindresvport"
+     fid="f39"
+     lineno="507"
+     rv="I32">
+     <useargs>
+       <usearg name="sockfd" type="I32"/>
+       <usearg name="sockin" type="NullablePointer[Ssockaddrin]"/>
+     </useargs>
+  </use>
+  <use id="_370" name="bindresvport6"
+     ponyname="bindresvport6"
+     fid="f39"
+     lineno="510"
+     rv="I32">
+     <useargs>
+       <usearg name="sockfd" type="I32"/>
+       <usearg name="sockin" type="NullablePointer[Ssockaddrin6]"/>
+     </useargs>
+  </use>
+  <use id="_371" name="inet_addr"
+     ponyname="inet_addr"
+     fid="f41"
+     lineno="34"
+     rv="U32">
+     <useargs>
+       <usearg name="cp" type="String"/>
+     </useargs>
+  </use>
+  <use id="_372" name="inet_lnaof"
+     ponyname="inet_lnaof"
+     fid="f41"
+     lineno="37"
+     rv="U32">
+     <useargs>
+       <usearg name="in" type="Sinaddr"/>
+     </useargs>
+  </use>
+  <use id="_373" name="inet_makeaddr"
+     ponyname="inet_makeaddr"
+     fid="f41"
+     lineno="41"
+     rv="Sinaddr">
+     <useargs>
+       <usearg name="net" type="U32"/>
+       <usearg name="host" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_374" name="inet_netof"
+     ponyname="inet_netof"
+     fid="f41"
+     lineno="45"
+     rv="U32">
+     <useargs>
+       <usearg name="in" type="Sinaddr"/>
+     </useargs>
+  </use>
+  <use id="_375" name="inet_network"
+     ponyname="inet_network"
+     fid="f41"
+     lineno="49"
+     rv="U32">
+     <useargs>
+       <usearg name="cp" type="String"/>
+     </useargs>
+  </use>
+  <use id="_376" name="inet_ntoa"
+     ponyname="inet_ntoa"
+     fid="f41"
+     lineno="53"
+     rv="String">
+     <useargs>
+       <usearg name="in" type="Sinaddr"/>
+     </useargs>
+  </use>
+  <use id="_377" name="inet_pton"
+     ponyname="inet_pton"
+     fid="f41"
+     lineno="58"
+     rv="I32">
+     <useargs>
+       <usearg name="af" type="I32"/>
+       <usearg name="cp" type="String"/>
+       <usearg name="buf" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_378" name="inet_ntop"
+     ponyname="inet_ntop"
+     fid="f41"
+     lineno="64"
+     rv="String">
+     <useargs>
+       <usearg name="af" type="I32"/>
+       <usearg name="cp" type="Pointer[None]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="len" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_379" name="inet_aton"
+     ponyname="inet_aton"
+     fid="f41"
+     lineno="73"
+     rv="I32">
+     <useargs>
+       <usearg name="cp" type="String"/>
+       <usearg name="inp" type="NullablePointer[Sinaddr]"/>
+     </useargs>
+  </use>
+  <use id="_380" name="inet_neta"
+     ponyname="inet_neta"
+     fid="f41"
+     lineno="77"
+     rv="String">
+     <useargs>
+       <usearg name="net" type="U32"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="len" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_381" name="inet_net_ntop"
+     ponyname="inet_net_ntop"
+     fid="f41"
+     lineno="82"
+     rv="String">
+     <useargs>
+       <usearg name="af" type="I32"/>
+       <usearg name="cp" type="Pointer[None]"/>
+       <usearg name="bits" type="I32"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="len" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_382" name="inet_net_pton"
+     ponyname="inet_net_pton"
+     fid="f41"
+     lineno="88"
+     rv="I32">
+     <useargs>
+       <usearg name="af" type="I32"/>
+       <usearg name="cp" type="String"/>
+       <usearg name="buf" type="Pointer[None]"/>
+       <usearg name="len" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_383" name="inet_nsap_addr"
+     ponyname="inet_nsap_addr"
+     fid="f41"
+     lineno="94"
+     rv="U32">
+     <useargs>
+       <usearg name="cp" type="String"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="len" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_384" name="inet_nsap_ntoa"
+     ponyname="inet_nsap_ntoa"
+     fid="f41"
+     lineno="99"
+     rv="String">
+     <useargs>
+       <usearg name="len" type="I32"/>
+       <usearg name="cp" type="String"/>
+       <usearg name="buf" type="String"/>
+     </useargs>
+  </use>
+  <use id="_386" name="setrpcent"
+     ponyname="setrpcent"
+     fid="f42"
+     lineno="53"
+     rv="None">
+     <useargs>
+       <usearg name="stayopen" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_387" name="endrpcent"
+     ponyname="endrpcent"
+     fid="f42"
+     lineno="54"
+     rv="None">
+     <useargs/>
+  </use>
+  <use id="_388" name="getrpcbyname"
+     ponyname="getrpcbyname"
+     fid="f42"
+     lineno="55"
+     rv="NullablePointer[Srpcent]">
+     <useargs>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_389" name="getrpcbynumber"
+     ponyname="getrpcbynumber"
+     fid="f42"
+     lineno="56"
+     rv="NullablePointer[Srpcent]">
+     <useargs>
+       <usearg name="number" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_390" name="getrpcent"
+     ponyname="getrpcent"
+     fid="f42"
+     lineno="57"
+     rv="NullablePointer[Srpcent]">
+     <useargs/>
+  </use>
+  <use id="_391" name="getrpcbyname_r"
+     ponyname="getrpcbyname_r"
+     fid="f42"
+     lineno="60"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="resultbuf" type="NullablePointer[Srpcent]"/>
+       <usearg name="buffer" type="String"/>
+       <usearg name="buflen" type="U64"/>
+       <usearg name="result" type="Pointer[NullablePointer[Srpcent]]"/>
+     </useargs>
+  </use>
+  <use id="_392" name="getrpcbynumber_r"
+     ponyname="getrpcbynumber_r"
+     fid="f42"
+     lineno="64"
+     rv="I32">
+     <useargs>
+       <usearg name="number" type="I32"/>
+       <usearg name="resultbuf" type="NullablePointer[Srpcent]"/>
+       <usearg name="buffer" type="String"/>
+       <usearg name="buflen" type="U64"/>
+       <usearg name="result" type="Pointer[NullablePointer[Srpcent]]"/>
+     </useargs>
+  </use>
+  <use id="_393" name="getrpcent_r"
+     ponyname="getrpcent_r"
+     fid="f42"
+     lineno="68"
+     rv="I32">
+     <useargs>
+       <usearg name="resultbuf" type="NullablePointer[Srpcent]"/>
+       <usearg name="buffer" type="String"/>
+       <usearg name="buflen" type="U64"/>
+       <usearg name="result" type="Pointer[NullablePointer[Srpcent]]"/>
+     </useargs>
+  </use>
+  <use id="_395" name="__h_errno_location"
+     ponyname="__h_errno_location"
+     fid="f44"
+     lineno="59"
+     rv="Pointer[I32]">
+     <useargs/>
+  </use>
+  <use id="_396" name="herror"
+     ponyname="herror"
+     fid="f44"
+     lineno="90"
+     rv="None">
+     <useargs>
+       <usearg name="str" type="String"/>
+     </useargs>
+  </use>
+  <use id="_397" name="hstrerror"
+     ponyname="hstrerror"
+     fid="f44"
+     lineno="93"
+     rv="String">
+     <useargs>
+       <usearg name="errnum" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_399" name="sethostent"
+     ponyname="sethostent"
+     fid="f44"
+     lineno="115"
+     rv="None">
+     <useargs>
+       <usearg name="stayopen" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_400" name="endhostent"
+     ponyname="endhostent"
+     fid="f44"
+     lineno="121"
+     rv="None">
+     <useargs/>
+  </use>
+  <use id="_401" name="gethostent"
+     ponyname="gethostent"
+     fid="f44"
+     lineno="128"
+     rv="NullablePointer[Shostent]">
+     <useargs/>
+  </use>
+  <use id="_402" name="gethostbyaddr"
+     ponyname="gethostbyaddr"
+     fid="f44"
+     lineno="135"
+     rv="NullablePointer[Shostent]">
+     <useargs>
+       <usearg name="addr" type="Pointer[None]"/>
+       <usearg name="len" type="U32"/>
+       <usearg name="type" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_403" name="gethostbyname"
+     ponyname="gethostbyname"
+     fid="f44"
+     lineno="142"
+     rv="NullablePointer[Shostent]">
+     <useargs>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_404" name="gethostbyname2"
+     ponyname="gethostbyname2"
+     fid="f44"
+     lineno="153"
+     rv="NullablePointer[Shostent]">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="af" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_405" name="gethostent_r"
+     ponyname="gethostent_r"
+     fid="f44"
+     lineno="165"
+     rv="I32">
+     <useargs>
+       <usearg name="resultbuf" type="NullablePointer[Shostent]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="buflen" type="U64"/>
+       <usearg name="result" type="Pointer[NullablePointer[Shostent]]"/>
+       <usearg name="herrnop" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_406" name="gethostbyaddr_r"
+     ponyname="gethostbyaddr_r"
+     fid="f44"
+     lineno="170"
+     rv="I32">
+     <useargs>
+       <usearg name="addr" type="Pointer[None]"/>
+       <usearg name="len" type="U32"/>
+       <usearg name="type" type="I32"/>
+       <usearg name="resultbuf" type="NullablePointer[Shostent]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="buflen" type="U64"/>
+       <usearg name="result" type="Pointer[NullablePointer[Shostent]]"/>
+       <usearg name="herrnop" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_407" name="gethostbyname_r"
+     ponyname="gethostbyname_r"
+     fid="f44"
+     lineno="177"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="resultbuf" type="NullablePointer[Shostent]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="buflen" type="U64"/>
+       <usearg name="result" type="Pointer[NullablePointer[Shostent]]"/>
+       <usearg name="herrnop" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_408" name="gethostbyname2_r"
+     ponyname="gethostbyname2_r"
+     fid="f44"
+     lineno="183"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="af" type="I32"/>
+       <usearg name="resultbuf" type="NullablePointer[Shostent]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="buflen" type="U64"/>
+       <usearg name="result" type="Pointer[NullablePointer[Shostent]]"/>
+       <usearg name="herrnop" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_409" name="setnetent"
+     ponyname="setnetent"
+     fid="f44"
+     lineno="196"
+     rv="None">
+     <useargs>
+       <usearg name="stayopen" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_410" name="endnetent"
+     ponyname="endnetent"
+     fid="f44"
+     lineno="202"
+     rv="None">
+     <useargs/>
+  </use>
+  <use id="_411" name="getnetent"
+     ponyname="getnetent"
+     fid="f44"
+     lineno="209"
+     rv="NullablePointer[Snetent]">
+     <useargs/>
+  </use>
+  <use id="_412" name="getnetbyaddr"
+     ponyname="getnetbyaddr"
+     fid="f44"
+     lineno="216"
+     rv="NullablePointer[Snetent]">
+     <useargs>
+       <usearg name="net" type="U32"/>
+       <usearg name="type" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_413" name="getnetbyname"
+     ponyname="getnetbyname"
+     fid="f44"
+     lineno="222"
+     rv="NullablePointer[Snetent]">
+     <useargs>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_414" name="getnetent_r"
+     ponyname="getnetent_r"
+     fid="f44"
+     lineno="235"
+     rv="I32">
+     <useargs>
+       <usearg name="resultbuf" type="NullablePointer[Snetent]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="buflen" type="U64"/>
+       <usearg name="result" type="Pointer[NullablePointer[Snetent]]"/>
+       <usearg name="herrnop" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_415" name="getnetbyaddr_r"
+     ponyname="getnetbyaddr_r"
+     fid="f44"
+     lineno="240"
+     rv="I32">
+     <useargs>
+       <usearg name="net" type="U32"/>
+       <usearg name="type" type="I32"/>
+       <usearg name="resultbuf" type="NullablePointer[Snetent]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="buflen" type="U64"/>
+       <usearg name="result" type="Pointer[NullablePointer[Snetent]]"/>
+       <usearg name="herrnop" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_416" name="getnetbyname_r"
+     ponyname="getnetbyname_r"
+     fid="f44"
+     lineno="246"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="resultbuf" type="NullablePointer[Snetent]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="buflen" type="U64"/>
+       <usearg name="result" type="Pointer[NullablePointer[Snetent]]"/>
+       <usearg name="herrnop" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_418" name="setservent"
+     ponyname="setservent"
+     fid="f44"
+     lineno="268"
+     rv="None">
+     <useargs>
+       <usearg name="stayopen" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_419" name="endservent"
+     ponyname="endservent"
+     fid="f44"
+     lineno="274"
+     rv="None">
+     <useargs/>
+  </use>
+  <use id="_420" name="getservent"
+     ponyname="getservent"
+     fid="f44"
+     lineno="281"
+     rv="NullablePointer[Sservent]">
+     <useargs/>
+  </use>
+  <use id="_421" name="getservbyname"
+     ponyname="getservbyname"
+     fid="f44"
+     lineno="288"
+     rv="NullablePointer[Sservent]">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="proto" type="String"/>
+     </useargs>
+  </use>
+  <use id="_422" name="getservbyport"
+     ponyname="getservbyport"
+     fid="f44"
+     lineno="295"
+     rv="NullablePointer[Sservent]">
+     <useargs>
+       <usearg name="port" type="I32"/>
+       <usearg name="proto" type="String"/>
+     </useargs>
+  </use>
+  <use id="_423" name="getservent_r"
+     ponyname="getservent_r"
+     fid="f44"
+     lineno="306"
+     rv="I32">
+     <useargs>
+       <usearg name="resultbuf" type="NullablePointer[Sservent]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="buflen" type="U64"/>
+       <usearg name="result" type="Pointer[NullablePointer[Sservent]]"/>
+     </useargs>
+  </use>
+  <use id="_424" name="getservbyname_r"
+     ponyname="getservbyname_r"
+     fid="f44"
+     lineno="310"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="proto" type="String"/>
+       <usearg name="resultbuf" type="NullablePointer[Sservent]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="buflen" type="U64"/>
+       <usearg name="result" type="Pointer[NullablePointer[Sservent]]"/>
+     </useargs>
+  </use>
+  <use id="_425" name="getservbyport_r"
+     ponyname="getservbyport_r"
+     fid="f44"
+     lineno="316"
+     rv="I32">
+     <useargs>
+       <usearg name="port" type="I32"/>
+       <usearg name="proto" type="String"/>
+       <usearg name="resultbuf" type="NullablePointer[Sservent]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="buflen" type="U64"/>
+       <usearg name="result" type="Pointer[NullablePointer[Sservent]]"/>
+     </useargs>
+  </use>
+  <use id="_427" name="setprotoent"
+     ponyname="setprotoent"
+     fid="f44"
+     lineno="336"
+     rv="None">
+     <useargs>
+       <usearg name="stayopen" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_428" name="endprotoent"
+     ponyname="endprotoent"
+     fid="f44"
+     lineno="342"
+     rv="None">
+     <useargs/>
+  </use>
+  <use id="_429" name="getprotoent"
+     ponyname="getprotoent"
+     fid="f44"
+     lineno="349"
+     rv="NullablePointer[Sprotoent]">
+     <useargs/>
+  </use>
+  <use id="_430" name="getprotobyname"
+     ponyname="getprotobyname"
+     fid="f44"
+     lineno="355"
+     rv="NullablePointer[Sprotoent]">
+     <useargs>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_431" name="getprotobynumber"
+     ponyname="getprotobynumber"
+     fid="f44"
+     lineno="361"
+     rv="NullablePointer[Sprotoent]">
+     <useargs>
+       <usearg name="proto" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_432" name="getprotoent_r"
+     ponyname="getprotoent_r"
+     fid="f44"
+     lineno="372"
+     rv="I32">
+     <useargs>
+       <usearg name="resultbuf" type="NullablePointer[Sprotoent]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="buflen" type="U64"/>
+       <usearg name="result" type="Pointer[NullablePointer[Sprotoent]]"/>
+     </useargs>
+  </use>
+  <use id="_433" name="getprotobyname_r"
+     ponyname="getprotobyname_r"
+     fid="f44"
+     lineno="376"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="resultbuf" type="NullablePointer[Sprotoent]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="buflen" type="U64"/>
+       <usearg name="result" type="Pointer[NullablePointer[Sprotoent]]"/>
+     </useargs>
+  </use>
+  <use id="_434" name="getprotobynumber_r"
+     ponyname="getprotobynumber_r"
+     fid="f44"
+     lineno="381"
+     rv="I32">
+     <useargs>
+       <usearg name="proto" type="I32"/>
+       <usearg name="resultbuf" type="NullablePointer[Sprotoent]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="buflen" type="U64"/>
+       <usearg name="result" type="Pointer[NullablePointer[Sprotoent]]"/>
+     </useargs>
+  </use>
+  <use id="_435" name="setnetgrent"
+     ponyname="setnetgrent"
+     fid="f44"
+     lineno="393"
+     rv="I32">
+     <useargs>
+       <usearg name="netgroup" type="String"/>
+     </useargs>
+  </use>
+  <use id="_436" name="endnetgrent"
+     ponyname="endnetgrent"
+     fid="f44"
+     lineno="401"
+     rv="None">
+     <useargs/>
+  </use>
+  <use id="_437" name="getnetgrent"
+     ponyname="getnetgrent"
+     fid="f44"
+     lineno="410"
+     rv="I32">
+     <useargs>
+       <usearg name="hostp" type="Array[String]"/>
+       <usearg name="userp" type="Array[String]"/>
+       <usearg name="domainp" type="Array[String]"/>
+     </useargs>
+  </use>
+  <use id="_438" name="innetgr"
+     ponyname="innetgr"
+     fid="f44"
+     lineno="421"
+     rv="I32">
+     <useargs>
+       <usearg name="netgroup" type="String"/>
+       <usearg name="host" type="String"/>
+       <usearg name="user" type="String"/>
+       <usearg name="domain" type="String"/>
+     </useargs>
+  </use>
+  <use id="_439" name="getnetgrent_r"
+     ponyname="getnetgrent_r"
+     fid="f44"
+     lineno="430"
+     rv="I32">
+     <useargs>
+       <usearg name="hostp" type="Array[String]"/>
+       <usearg name="userp" type="Array[String]"/>
+       <usearg name="domainp" type="Array[String]"/>
+       <usearg name="buffer" type="String"/>
+       <usearg name="buflen" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_440" name="rcmd"
+     ponyname="rcmd"
+     fid="f44"
+     lineno="449"
+     rv="I32">
+     <useargs>
+       <usearg name="ahost" type="Array[String]"/>
+       <usearg name="rport" type="U16"/>
+       <usearg name="locuser" type="String"/>
+       <usearg name="remuser" type="String"/>
+       <usearg name="cmd" type="String"/>
+       <usearg name="fd2p" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_441" name="rcmd_af"
+     ponyname="rcmd_af"
+     fid="f44"
+     lineno="461"
+     rv="I32">
+     <useargs>
+       <usearg name="ahost" type="Array[String]"/>
+       <usearg name="rport" type="U16"/>
+       <usearg name="locuser" type="String"/>
+       <usearg name="remuser" type="String"/>
+       <usearg name="cmd" type="String"/>
+       <usearg name="fd2p" type="Pointer[I32]"/>
+       <usearg name="af" type="U16"/>
+     </useargs>
+  </use>
+  <use id="_442" name="rexec"
+     ponyname="rexec"
+     fid="f44"
+     lineno="477"
+     rv="I32">
+     <useargs>
+       <usearg name="ahost" type="Array[String]"/>
+       <usearg name="rport" type="I32"/>
+       <usearg name="name" type="String"/>
+       <usearg name="pass" type="String"/>
+       <usearg name="cmd" type="String"/>
+       <usearg name="fd2p" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_443" name="rexec_af"
+     ponyname="rexec_af"
+     fid="f44"
+     lineno="489"
+     rv="I32">
+     <useargs>
+       <usearg name="ahost" type="Array[String]"/>
+       <usearg name="rport" type="I32"/>
+       <usearg name="name" type="String"/>
+       <usearg name="pass" type="String"/>
+       <usearg name="cmd" type="String"/>
+       <usearg name="fd2p" type="Pointer[I32]"/>
+       <usearg name="af" type="U16"/>
+     </useargs>
+  </use>
+  <use id="_444" name="ruserok"
+     ponyname="ruserok"
+     fid="f44"
+     lineno="503"
+     rv="I32">
+     <useargs>
+       <usearg name="rhost" type="String"/>
+       <usearg name="suser" type="I32"/>
+       <usearg name="remuser" type="String"/>
+       <usearg name="locuser" type="String"/>
+     </useargs>
+  </use>
+  <use id="_445" name="ruserok_af"
+     ponyname="ruserok_af"
+     fid="f44"
+     lineno="513"
+     rv="I32">
+     <useargs>
+       <usearg name="rhost" type="String"/>
+       <usearg name="suser" type="I32"/>
+       <usearg name="remuser" type="String"/>
+       <usearg name="locuser" type="String"/>
+       <usearg name="af" type="U16"/>
+     </useargs>
+  </use>
+  <use id="_446" name="iruserok"
+     ponyname="iruserok"
+     fid="f44"
+     lineno="526"
+     rv="I32">
+     <useargs>
+       <usearg name="raddr" type="U32"/>
+       <usearg name="suser" type="I32"/>
+       <usearg name="remuser" type="String"/>
+       <usearg name="locuser" type="String"/>
+     </useargs>
+  </use>
+  <use id="_447" name="iruserok_af"
+     ponyname="iruserok_af"
+     fid="f44"
+     lineno="537"
+     rv="I32">
+     <useargs>
+       <usearg name="raddr" type="Pointer[None]"/>
+       <usearg name="suser" type="I32"/>
+       <usearg name="remuser" type="String"/>
+       <usearg name="locuser" type="String"/>
+       <usearg name="af" type="U16"/>
+     </useargs>
+  </use>
+  <use id="_448" name="rresvport"
+     ponyname="rresvport"
+     fid="f44"
+     lineno="549"
+     rv="I32">
+     <useargs>
+       <usearg name="alport" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_449" name="rresvport_af"
+     ponyname="rresvport_af"
+     fid="f44"
+     lineno="558"
+     rv="I32">
+     <useargs>
+       <usearg name="alport" type="Pointer[I32]"/>
+       <usearg name="af" type="U16"/>
+     </useargs>
+  </use>
+  <use id="_451" name="getaddrinfo"
+     ponyname="getaddrinfo"
+     fid="f44"
+     lineno="660"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="service" type="String"/>
+       <usearg name="req" type="NullablePointer[Saddrinfo]"/>
+       <usearg name="pai" type="Pointer[NullablePointer[Saddrinfo]]"/>
+     </useargs>
+  </use>
+  <use id="_452" name="freeaddrinfo"
+     ponyname="freeaddrinfo"
+     fid="f44"
+     lineno="666"
+     rv="None">
+     <useargs>
+       <usearg name="ai" type="NullablePointer[Saddrinfo]"/>
+     </useargs>
+  </use>
+  <use id="_453" name="gai_strerror"
+     ponyname="gai_strerror"
+     fid="f44"
+     lineno="669"
+     rv="String">
+     <useargs>
+       <usearg name="ecode" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_454" name="getnameinfo"
+     ponyname="getnameinfo"
+     fid="f44"
+     lineno="675"
+     rv="I32">
+     <useargs>
+       <usearg name="sa" type="NullablePointer[Ssockaddr]"/>
+       <usearg name="salen" type="U32"/>
+       <usearg name="host" type="String"/>
+       <usearg name="hostlen" type="U32"/>
+       <usearg name="serv" type="String"/>
+       <usearg name="servlen" type="U32"/>
+       <usearg name="flags" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_457" name="access"
+     ponyname="access"
+     fid="f45"
+     lineno="287"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="type" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_458" name="faccessat"
+     ponyname="faccessat"
+     fid="f45"
+     lineno="304"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="file" type="String"/>
+       <usearg name="type" type="I32"/>
+       <usearg name="flag" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_459" name="lseek"
+     ponyname="lseek"
+     fid="f45"
+     lineno="334"
+     rv="I64">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="offset" type="I64"/>
+       <usearg name="whence" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_460" name="close"
+     ponyname="close"
+     fid="f45"
+     lineno="353"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_461" name="read"
+     ponyname="read"
+     fid="f45"
+     lineno="360"
+     rv="I64">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="buf" type="Pointer[None]"/>
+       <usearg name="nbytes" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_462" name="write"
+     ponyname="write"
+     fid="f45"
+     lineno="367"
+     rv="I64">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="buf" type="Pointer[None]"/>
+       <usearg name="n" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_463" name="pread"
+     ponyname="pread"
+     fid="f45"
+     lineno="378"
+     rv="I64">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="buf" type="Pointer[None]"/>
+       <usearg name="nbytes" type="U64"/>
+       <usearg name="offset" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_464" name="pwrite"
+     ponyname="pwrite"
+     fid="f45"
+     lineno="387"
+     rv="I64">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="buf" type="Pointer[None]"/>
+       <usearg name="n" type="U64"/>
+       <usearg name="offset" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_465" name="pipe"
+     ponyname="pipe"
+     fid="f45"
+     lineno="426"
+     rv="I32">
+     <useargs>
+       <usearg name="pipedes" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_466" name="alarm"
+     ponyname="alarm"
+     fid="f45"
+     lineno="441"
+     rv="U32">
+     <useargs>
+       <usearg name="seconds" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_467" name="sleep"
+     ponyname="sleep"
+     fid="f45"
+     lineno="453"
+     rv="U32">
+     <useargs>
+       <usearg name="seconds" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_468" name="ualarm"
+     ponyname="ualarm"
+     fid="f45"
+     lineno="461"
+     rv="U32">
+     <useargs>
+       <usearg name="value" type="U32"/>
+       <usearg name="interval" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_469" name="usleep"
+     ponyname="usleep"
+     fid="f45"
+     lineno="469"
+     rv="I32">
+     <useargs>
+       <usearg name="useconds" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_470" name="pause"
+     ponyname="pause"
+     fid="f45"
+     lineno="478"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_471" name="chown"
+     ponyname="chown"
+     fid="f45"
+     lineno="482"
+     rv="I32">
+     <useargs>
+       <usearg name="file" type="String"/>
+       <usearg name="owner" type="U32"/>
+       <usearg name="group" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_472" name="fchown"
+     ponyname="fchown"
+     fid="f45"
+     lineno="487"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="owner" type="U32"/>
+       <usearg name="group" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_473" name="lchown"
+     ponyname="lchown"
+     fid="f45"
+     lineno="492"
+     rv="I32">
+     <useargs>
+       <usearg name="file" type="String"/>
+       <usearg name="owner" type="U32"/>
+       <usearg name="group" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_474" name="fchownat"
+     ponyname="fchownat"
+     fid="f45"
+     lineno="500"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="file" type="String"/>
+       <usearg name="owner" type="U32"/>
+       <usearg name="group" type="U32"/>
+       <usearg name="flag" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_475" name="chdir"
+     ponyname="chdir"
+     fid="f45"
+     lineno="506"
+     rv="I32">
+     <useargs>
+       <usearg name="path" type="String"/>
+     </useargs>
+  </use>
+  <use id="_476" name="fchdir"
+     ponyname="fchdir"
+     fid="f45"
+     lineno="510"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_477" name="getcwd"
+     ponyname="getcwd"
+     fid="f45"
+     lineno="520"
+     rv="String">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="size" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_478" name="getwd"
+     ponyname="getwd"
+     fid="f45"
+     lineno="535"
+     rv="String">
+     <useargs>
+       <usearg name="buf" type="String"/>
+     </useargs>
+  </use>
+  <use id="_479" name="dup"
+     ponyname="dup"
+     fid="f45"
+     lineno="542"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_480" name="dup2"
+     ponyname="dup2"
+     fid="f45"
+     lineno="545"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="fd2" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_482" name="execve"
+     ponyname="execve"
+     fid="f45"
+     lineno="562"
+     rv="I32">
+     <useargs>
+       <usearg name="path" type="String"/>
+       <usearg name="argv" type="Array[String]"/>
+       <usearg name="envp" type="Array[String]"/>
+     </useargs>
+  </use>
+  <use id="_483" name="fexecve"
+     ponyname="fexecve"
+     fid="f45"
+     lineno="568"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="argv" type="Array[String]"/>
+       <usearg name="envp" type="Array[String]"/>
+     </useargs>
+  </use>
+  <use id="_484" name="execv"
+     ponyname="execv"
+     fid="f45"
+     lineno="574"
+     rv="I32">
+     <useargs>
+       <usearg name="path" type="String"/>
+       <usearg name="argv" type="Array[String]"/>
+     </useargs>
+  </use>
+  <use id="_485" name="execle"
+     ponyname="execle"
+     fid="f45"
+     lineno="579"
+     rv="I32">
+     <useargs>
+       <usearg name="path" type="String"/>
+       <usearg name="arg" type="String"/>
+       <usearg name="parg2" type="..."/>
+     </useargs>
+  </use>
+  <use id="_486" name="execl"
+     ponyname="execl"
+     fid="f45"
+     lineno="584"
+     rv="I32">
+     <useargs>
+       <usearg name="path" type="String"/>
+       <usearg name="arg" type="String"/>
+       <usearg name="parg2" type="..."/>
+     </useargs>
+  </use>
+  <use id="_487" name="execvp"
+     ponyname="execvp"
+     fid="f45"
+     lineno="589"
+     rv="I32">
+     <useargs>
+       <usearg name="file" type="String"/>
+       <usearg name="argv" type="Array[String]"/>
+     </useargs>
+  </use>
+  <use id="_488" name="execlp"
+     ponyname="execlp"
+     fid="f45"
+     lineno="595"
+     rv="I32">
+     <useargs>
+       <usearg name="file" type="String"/>
+       <usearg name="arg" type="String"/>
+       <usearg name="parg2" type="..."/>
+     </useargs>
+  </use>
+  <use id="_489" name="nice"
+     ponyname="nice"
+     fid="f45"
+     lineno="609"
+     rv="I32">
+     <useargs>
+       <usearg name="inc" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_490" name="_exit"
+     ponyname="_exit"
+     fid="f45"
+     lineno="614"
+     rv="None">
+     <useargs>
+       <usearg name="parg0" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_494" name="pathconf"
+     ponyname="pathconf"
+     fid="f45"
+     lineno="623"
+     rv="I64">
+     <useargs>
+       <usearg name="path" type="String"/>
+       <usearg name="name" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_495" name="fpathconf"
+     ponyname="fpathconf"
+     fid="f45"
+     lineno="627"
+     rv="I64">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="name" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_496" name="sysconf"
+     ponyname="sysconf"
+     fid="f45"
+     lineno="630"
+     rv="I64">
+     <useargs>
+       <usearg name="name" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_497" name="confstr"
+     ponyname="confstr"
+     fid="f45"
+     lineno="634"
+     rv="U64">
+     <useargs>
+       <usearg name="name" type="I32"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="len" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_498" name="getpid"
+     ponyname="getpid"
+     fid="f45"
+     lineno="640"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_499" name="getppid"
+     ponyname="getppid"
+     fid="f45"
+     lineno="643"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_500" name="getpgrp"
+     ponyname="getpgrp"
+     fid="f45"
+     lineno="646"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_501" name="__getpgid"
+     ponyname="__getpgid"
+     fid="f45"
+     lineno="649"
+     rv="I32">
+     <useargs>
+       <usearg name="pid" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_502" name="getpgid"
+     ponyname="getpgid"
+     fid="f45"
+     lineno="651"
+     rv="I32">
+     <useargs>
+       <usearg name="pid" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_503" name="setpgid"
+     ponyname="setpgid"
+     fid="f45"
+     lineno="658"
+     rv="I32">
+     <useargs>
+       <usearg name="pid" type="I32"/>
+       <usearg name="pgid" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_504" name="setpgrp"
+     ponyname="setpgrp"
+     fid="f45"
+     lineno="672"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_505" name="setsid"
+     ponyname="setsid"
+     fid="f45"
+     lineno="679"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_506" name="getsid"
+     ponyname="getsid"
+     fid="f45"
+     lineno="683"
+     rv="I32">
+     <useargs>
+       <usearg name="pid" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_507" name="getuid"
+     ponyname="getuid"
+     fid="f45"
+     lineno="687"
+     rv="U32">
+     <useargs/>
+  </use>
+  <use id="_508" name="geteuid"
+     ponyname="geteuid"
+     fid="f45"
+     lineno="690"
+     rv="U32">
+     <useargs/>
+  </use>
+  <use id="_509" name="getgid"
+     ponyname="getgid"
+     fid="f45"
+     lineno="693"
+     rv="U32">
+     <useargs/>
+  </use>
+  <use id="_510" name="getegid"
+     ponyname="getegid"
+     fid="f45"
+     lineno="696"
+     rv="U32">
+     <useargs/>
+  </use>
+  <use id="_511" name="getgroups"
+     ponyname="getgroups"
+     fid="f45"
+     lineno="701"
+     rv="I32">
+     <useargs>
+       <usearg name="size" type="I32"/>
+       <usearg name="list" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_512" name="setuid"
+     ponyname="setuid"
+     fid="f45"
+     lineno="712"
+     rv="I32">
+     <useargs>
+       <usearg name="uid" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_513" name="setreuid"
+     ponyname="setreuid"
+     fid="f45"
+     lineno="717"
+     rv="I32">
+     <useargs>
+       <usearg name="ruid" type="U32"/>
+       <usearg name="euid" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_514" name="seteuid"
+     ponyname="seteuid"
+     fid="f45"
+     lineno="722"
+     rv="I32">
+     <useargs>
+       <usearg name="uid" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_515" name="setgid"
+     ponyname="setgid"
+     fid="f45"
+     lineno="729"
+     rv="I32">
+     <useargs>
+       <usearg name="gid" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_516" name="setregid"
+     ponyname="setregid"
+     fid="f45"
+     lineno="734"
+     rv="I32">
+     <useargs>
+       <usearg name="rgid" type="U32"/>
+       <usearg name="egid" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_517" name="setegid"
+     ponyname="setegid"
+     fid="f45"
+     lineno="739"
+     rv="I32">
+     <useargs>
+       <usearg name="gid" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_518" name="fork"
+     ponyname="fork"
+     fid="f45"
+     lineno="768"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_519" name="vfork"
+     ponyname="vfork"
+     fid="f45"
+     lineno="776"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_520" name="ttyname"
+     ponyname="ttyname"
+     fid="f45"
+     lineno="782"
+     rv="String">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_521" name="ttyname_r"
+     ponyname="ttyname_r"
+     fid="f45"
+     lineno="786"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="buflen" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_522" name="isatty"
+     ponyname="isatty"
+     fid="f45"
+     lineno="791"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_523" name="ttyslot"
+     ponyname="ttyslot"
+     fid="f45"
+     lineno="796"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_524" name="link"
+     ponyname="link"
+     fid="f45"
+     lineno="801"
+     rv="I32">
+     <useargs>
+       <usearg name="from" type="String"/>
+       <usearg name="to" type="String"/>
+     </useargs>
+  </use>
+  <use id="_525" name="linkat"
+     ponyname="linkat"
+     fid="f45"
+     lineno="807"
+     rv="I32">
+     <useargs>
+       <usearg name="fromfd" type="I32"/>
+       <usearg name="from" type="String"/>
+       <usearg name="tofd" type="I32"/>
+       <usearg name="to" type="String"/>
+       <usearg name="flags" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_526" name="symlink"
+     ponyname="symlink"
+     fid="f45"
+     lineno="814"
+     rv="I32">
+     <useargs>
+       <usearg name="from" type="String"/>
+       <usearg name="to" type="String"/>
+     </useargs>
+  </use>
+  <use id="_527" name="readlink"
+     ponyname="readlink"
+     fid="f45"
+     lineno="820"
+     rv="I64">
+     <useargs>
+       <usearg name="path" type="String"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="len" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_528" name="symlinkat"
+     ponyname="symlinkat"
+     fid="f45"
+     lineno="828"
+     rv="I32">
+     <useargs>
+       <usearg name="from" type="String"/>
+       <usearg name="tofd" type="I32"/>
+       <usearg name="to" type="String"/>
+     </useargs>
+  </use>
+  <use id="_529" name="readlinkat"
+     ponyname="readlinkat"
+     fid="f45"
+     lineno="832"
+     rv="I64">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="path" type="String"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="len" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_530" name="unlink"
+     ponyname="unlink"
+     fid="f45"
+     lineno="838"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_531" name="unlinkat"
+     ponyname="unlinkat"
+     fid="f45"
+     lineno="842"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="name" type="String"/>
+       <usearg name="flag" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_532" name="rmdir"
+     ponyname="rmdir"
+     fid="f45"
+     lineno="847"
+     rv="I32">
+     <useargs>
+       <usearg name="path" type="String"/>
+     </useargs>
+  </use>
+  <use id="_533" name="tcgetpgrp"
+     ponyname="tcgetpgrp"
+     fid="f45"
+     lineno="851"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_534" name="tcsetpgrp"
+     ponyname="tcsetpgrp"
+     fid="f45"
+     lineno="854"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="pgrpid" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_535" name="getlogin"
+     ponyname="getlogin"
+     fid="f45"
+     lineno="861"
+     rv="String">
+     <useargs/>
+  </use>
+  <use id="_536" name="getlogin_r"
+     ponyname="getlogin_r"
+     fid="f45"
+     lineno="869"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="namelen" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_537" name="setlogin"
+     ponyname="setlogin"
+     fid="f45"
+     lineno="875"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_542" name="getopt"
+     ponyname="getopt"
+     fid="f47"
+     lineno="91"
+     rv="I32">
+     <useargs>
+       <usearg name="argc" type="I32"/>
+       <usearg name="argv" type="Array[String]"/>
+       <usearg name="shortopts" type="String"/>
+     </useargs>
+  </use>
+  <use id="_543" name="gethostname"
+     ponyname="gethostname"
+     fid="f45"
+     lineno="891"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="len" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_544" name="sethostname"
+     ponyname="sethostname"
+     fid="f45"
+     lineno="899"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="len" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_545" name="sethostid"
+     ponyname="sethostid"
+     fid="f45"
+     lineno="904"
+     rv="I32">
+     <useargs>
+       <usearg name="id" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_546" name="getdomainname"
+     ponyname="getdomainname"
+     fid="f45"
+     lineno="910"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="len" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_547" name="setdomainname"
+     ponyname="setdomainname"
+     fid="f45"
+     lineno="912"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="len" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_548" name="vhangup"
+     ponyname="vhangup"
+     fid="f45"
+     lineno="918"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_549" name="revoke"
+     ponyname="revoke"
+     fid="f45"
+     lineno="921"
+     rv="I32">
+     <useargs>
+       <usearg name="file" type="String"/>
+     </useargs>
+  </use>
+  <use id="_550" name="profil"
+     ponyname="profil"
+     fid="f45"
+     lineno="929"
+     rv="I32">
+     <useargs>
+       <usearg name="samplebuffer" type="Pointer[U16]"/>
+       <usearg name="size" type="U64"/>
+       <usearg name="offset" type="U64"/>
+       <usearg name="scale" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_551" name="acct"
+     ponyname="acct"
+     fid="f45"
+     lineno="937"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_552" name="getusershell"
+     ponyname="getusershell"
+     fid="f45"
+     lineno="941"
+     rv="String">
+     <useargs/>
+  </use>
+  <use id="_553" name="endusershell"
+     ponyname="endusershell"
+     fid="f45"
+     lineno="942"
+     rv="None">
+     <useargs/>
+  </use>
+  <use id="_554" name="setusershell"
+     ponyname="setusershell"
+     fid="f45"
+     lineno="943"
+     rv="None">
+     <useargs/>
+  </use>
+  <use id="_555" name="daemon"
+     ponyname="daemon"
+     fid="f45"
+     lineno="949"
+     rv="I32">
+     <useargs>
+       <usearg name="nochdir" type="I32"/>
+       <usearg name="noclose" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_556" name="chroot"
+     ponyname="chroot"
+     fid="f45"
+     lineno="956"
+     rv="I32">
+     <useargs>
+       <usearg name="path" type="String"/>
+     </useargs>
+  </use>
+  <use id="_557" name="getpass"
+     ponyname="getpass"
+     fid="f45"
+     lineno="960"
+     rv="String">
+     <useargs>
+       <usearg name="prompt" type="String"/>
+     </useargs>
+  </use>
+  <use id="_558" name="fsync"
+     ponyname="fsync"
+     fid="f45"
+     lineno="968"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_559" name="gethostid"
+     ponyname="gethostid"
+     fid="f45"
+     lineno="981"
+     rv="I64">
+     <useargs/>
+  </use>
+  <use id="_560" name="sync"
+     ponyname="sync"
+     fid="f45"
+     lineno="984"
+     rv="None">
+     <useargs/>
+  </use>
+  <use id="_561" name="getpagesize"
+     ponyname="getpagesize"
+     fid="f45"
+     lineno="990"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_562" name="getdtablesize"
+     ponyname="getdtablesize"
+     fid="f45"
+     lineno="995"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_563" name="truncate"
+     ponyname="truncate"
+     fid="f45"
+     lineno="1005"
+     rv="I32">
+     <useargs>
+       <usearg name="file" type="String"/>
+       <usearg name="length" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_564" name="ftruncate"
+     ponyname="ftruncate"
+     fid="f45"
+     lineno="1028"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="length" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_565" name="brk"
+     ponyname="brk"
+     fid="f45"
+     lineno="1049"
+     rv="I32">
+     <useargs>
+       <usearg name="addr" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_566" name="sbrk"
+     ponyname="sbrk"
+     fid="f45"
+     lineno="1055"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="delta" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_567" name="syscall"
+     ponyname="syscall"
+     fid="f45"
+     lineno="1070"
+     rv="I64">
+     <useargs>
+       <usearg name="sysno" type="I64"/>
+       <usearg name="parg1" type="..."/>
+     </useargs>
+  </use>
+  <use id="_568" name="lockf"
+     ponyname="lockf"
+     fid="f45"
+     lineno="1093"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="cmd" type="I32"/>
+       <usearg name="len" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_569" name="fdatasync"
+     ponyname="fdatasync"
+     fid="f45"
+     lineno="1129"
+     rv="I32">
+     <useargs>
+       <usearg name="fildes" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_570" name="crypt"
+     ponyname="crypt"
+     fid="f45"
+     lineno="1138"
+     rv="String">
+     <useargs>
+       <usearg name="key" type="String"/>
+       <usearg name="salt" type="String"/>
+     </useargs>
+  </use>
+  <use id="_571" name="getentropy"
+     ponyname="getentropy"
+     fid="f45"
+     lineno="1177"
+     rv="I32">
+     <useargs>
+       <usearg name="buffer" type="Pointer[None]"/>
+       <usearg name="length" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_572" name="memcpy"
+     ponyname="memcpy"
+     fid="f48"
+     lineno="43"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="parg0" type="Pointer[None]"/>
+       <usearg name="parg1" type="Pointer[None]"/>
+       <usearg name="parg2" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_573" name="memmove"
+     ponyname="memmove"
+     fid="f48"
+     lineno="47"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="parg0" type="Pointer[None]"/>
+       <usearg name="parg1" type="Pointer[None]"/>
+       <usearg name="parg2" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_574" name="memccpy"
+     ponyname="memccpy"
+     fid="f48"
+     lineno="54"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="dest" type="Pointer[None]"/>
+       <usearg name="src" type="Pointer[None]"/>
+       <usearg name="c" type="I32"/>
+       <usearg name="n" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_575" name="memset"
+     ponyname="memset"
+     fid="f48"
+     lineno="61"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="parg0" type="Pointer[None]"/>
+       <usearg name="parg1" type="I32"/>
+       <usearg name="parg2" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_576" name="memcmp"
+     ponyname="memcmp"
+     fid="f48"
+     lineno="64"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="Pointer[None]"/>
+       <usearg name="parg1" type="Pointer[None]"/>
+       <usearg name="parg2" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_577" name="memchr"
+     ponyname="memchr"
+     fid="f48"
+     lineno="91"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="parg0" type="Pointer[None]"/>
+       <usearg name="parg1" type="I32"/>
+       <usearg name="parg2" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_578" name="strcpy"
+     ponyname="strcpy"
+     fid="f48"
+     lineno="125"
+     rv="String">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+     </useargs>
+  </use>
+  <use id="_579" name="strncpy"
+     ponyname="strncpy"
+     fid="f48"
+     lineno="128"
+     rv="String">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+       <usearg name="parg2" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_580" name="strcat"
+     ponyname="strcat"
+     fid="f48"
+     lineno="133"
+     rv="String">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+     </useargs>
+  </use>
+  <use id="_581" name="strncat"
+     ponyname="strncat"
+     fid="f48"
+     lineno="136"
+     rv="String">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+       <usearg name="parg2" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_582" name="strcmp"
+     ponyname="strcmp"
+     fid="f48"
+     lineno="140"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+     </useargs>
+  </use>
+  <use id="_583" name="strncmp"
+     ponyname="strncmp"
+     fid="f48"
+     lineno="143"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+       <usearg name="parg2" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_584" name="strcoll"
+     ponyname="strcoll"
+     fid="f48"
+     lineno="147"
+     rv="I32">
+     <useargs>
+       <usearg name="s1" type="String"/>
+       <usearg name="s2" type="String"/>
+     </useargs>
+  </use>
+  <use id="_585" name="strxfrm"
+     ponyname="strxfrm"
+     fid="f48"
+     lineno="150"
+     rv="U64">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+       <usearg name="parg2" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_589" name="strcoll_l"
+     ponyname="strcoll_l"
+     fid="f48"
+     lineno="159"
+     rv="I32">
+     <useargs>
+       <usearg name="s1" type="String"/>
+       <usearg name="s2" type="String"/>
+       <usearg name="l" type="NullablePointer[Slocalestruct]"/>
+     </useargs>
+  </use>
+  <use id="_590" name="strxfrm_l"
+     ponyname="strxfrm_l"
+     fid="f48"
+     lineno="163"
+     rv="U64">
+     <useargs>
+       <usearg name="dest" type="String"/>
+       <usearg name="src" type="String"/>
+       <usearg name="n" type="U64"/>
+       <usearg name="l" type="NullablePointer[Slocalestruct]"/>
+     </useargs>
+  </use>
+  <use id="_591" name="strdup"
+     ponyname="strdup"
+     fid="f48"
+     lineno="171"
+     rv="String">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+     </useargs>
+  </use>
+  <use id="_592" name="strndup"
+     ponyname="strndup"
+     fid="f48"
+     lineno="179"
+     rv="String">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_593" name="strchr"
+     ponyname="strchr"
+     fid="f48"
+     lineno="230"
+     rv="String">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_594" name="strrchr"
+     ponyname="strrchr"
+     fid="f48"
+     lineno="257"
+     rv="String">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_595" name="strcspn"
+     ponyname="strcspn"
+     fid="f48"
+     lineno="277"
+     rv="U64">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+     </useargs>
+  </use>
+  <use id="_596" name="strspn"
+     ponyname="strspn"
+     fid="f48"
+     lineno="281"
+     rv="U64">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+     </useargs>
+  </use>
+  <use id="_597" name="strpbrk"
+     ponyname="strpbrk"
+     fid="f48"
+     lineno="307"
+     rv="String">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+     </useargs>
+  </use>
+  <use id="_598" name="strstr"
+     ponyname="strstr"
+     fid="f48"
+     lineno="334"
+     rv="String">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+     </useargs>
+  </use>
+  <use id="_599" name="strtok"
+     ponyname="strtok"
+     fid="f48"
+     lineno="340"
+     rv="String">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+     </useargs>
+  </use>
+  <use id="_600" name="__strtok_r"
+     ponyname="__strtok_r"
+     fid="f48"
+     lineno="345"
+     rv="String">
+     <useargs>
+       <usearg name="s" type="String"/>
+       <usearg name="delim" type="String"/>
+       <usearg name="saveptr" type="Array[String]"/>
+     </useargs>
+  </use>
+  <use id="_601" name="strtok_r"
+     ponyname="strtok_r"
+     fid="f48"
+     lineno="350"
+     rv="String">
+     <useargs>
+       <usearg name="s" type="String"/>
+       <usearg name="delim" type="String"/>
+       <usearg name="saveptr" type="Array[String]"/>
+     </useargs>
+  </use>
+  <use id="_602" name="strlen"
+     ponyname="strlen"
+     fid="f48"
+     lineno="391"
+     rv="U64">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+     </useargs>
+  </use>
+  <use id="_603" name="strnlen"
+     ponyname="strnlen"
+     fid="f48"
+     lineno="397"
+     rv="U64">
+     <useargs>
+       <usearg name="string" type="String"/>
+       <usearg name="maxlen" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_604" name="strerror"
+     ponyname="strerror"
+     fid="f48"
+     lineno="403"
+     rv="String">
+     <useargs>
+       <usearg name="parg0" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_605" name="strerror_r"
+     ponyname="strerror_r"
+     fid="f48"
+     lineno="416"
+     rv="I32">
+     <useargs>
+       <usearg name="errnum" type="I32"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="buflen" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_606" name="strerror_l"
+     ponyname="strerror_l"
+     fid="f48"
+     lineno="442"
+     rv="String">
+     <useargs>
+       <usearg name="errnum" type="I32"/>
+       <usearg name="l" type="NullablePointer[Slocalestruct]"/>
+     </useargs>
+  </use>
+  <use id="_607" name="bcmp"
+     ponyname="bcmp"
+     fid="f51"
+     lineno="34"
+     rv="I32">
+     <useargs>
+       <usearg name="s1" type="Pointer[None]"/>
+       <usearg name="s2" type="Pointer[None]"/>
+       <usearg name="n" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_608" name="bcopy"
+     ponyname="bcopy"
+     fid="f51"
+     lineno="38"
+     rv="None">
+     <useargs>
+       <usearg name="src" type="Pointer[None]"/>
+       <usearg name="dest" type="Pointer[None]"/>
+       <usearg name="n" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_609" name="bzero"
+     ponyname="bzero"
+     fid="f51"
+     lineno="42"
+     rv="None">
+     <useargs>
+       <usearg name="parg0" type="Pointer[None]"/>
+       <usearg name="parg1" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_610" name="index"
+     ponyname="index"
+     fid="f51"
+     lineno="68"
+     rv="String">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_611" name="rindex"
+     ponyname="rindex"
+     fid="f51"
+     lineno="96"
+     rv="String">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_612" name="ffs"
+     ponyname="ffs"
+     fid="f51"
+     lineno="104"
+     rv="I32">
+     <useargs>
+       <usearg name="i" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_613" name="ffsl"
+     ponyname="ffsl"
+     fid="f51"
+     lineno="110"
+     rv="I32">
+     <useargs>
+       <usearg name="l" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_614" name="ffsll"
+     ponyname="ffsll"
+     fid="f51"
+     lineno="111"
+     rv="I32">
+     <useargs>
+       <usearg name="ll" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_615" name="strcasecmp"
+     ponyname="strcasecmp"
+     fid="f51"
+     lineno="116"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+     </useargs>
+  </use>
+  <use id="_616" name="strncasecmp"
+     ponyname="strncasecmp"
+     fid="f51"
+     lineno="120"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+       <usearg name="parg2" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_617" name="strcasecmp_l"
+     ponyname="strcasecmp_l"
+     fid="f51"
+     lineno="128"
+     rv="I32">
+     <useargs>
+       <usearg name="s1" type="String"/>
+       <usearg name="s2" type="String"/>
+       <usearg name="loc" type="NullablePointer[Slocalestruct]"/>
+     </useargs>
+  </use>
+  <use id="_618" name="strncasecmp_l"
+     ponyname="strncasecmp_l"
+     fid="f51"
+     lineno="133"
+     rv="I32">
+     <useargs>
+       <usearg name="s1" type="String"/>
+       <usearg name="s2" type="String"/>
+       <usearg name="n" type="U64"/>
+       <usearg name="loc" type="NullablePointer[Slocalestruct]"/>
+     </useargs>
+  </use>
+  <use id="_619" name="explicit_bzero"
+     ponyname="explicit_bzero"
+     fid="f48"
+     lineno="450"
+     rv="None">
+     <useargs>
+       <usearg name="s" type="Pointer[None]"/>
+       <usearg name="n" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_620" name="strsep"
+     ponyname="strsep"
+     fid="f48"
+     lineno="455"
+     rv="String">
+     <useargs>
+       <usearg name="stringp" type="Array[String]"/>
+       <usearg name="delim" type="String"/>
+     </useargs>
+  </use>
+  <use id="_621" name="strsignal"
+     ponyname="strsignal"
+     fid="f48"
+     lineno="462"
+     rv="String">
+     <useargs>
+       <usearg name="sig" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_622" name="__stpcpy"
+     ponyname="__stpcpy"
+     fid="f48"
+     lineno="473"
+     rv="String">
+     <useargs>
+       <usearg name="dest" type="String"/>
+       <usearg name="src" type="String"/>
+     </useargs>
+  </use>
+  <use id="_623" name="stpcpy"
+     ponyname="stpcpy"
+     fid="f48"
+     lineno="475"
+     rv="String">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+     </useargs>
+  </use>
+  <use id="_624" name="__stpncpy"
+     ponyname="__stpncpy"
+     fid="f48"
+     lineno="480"
+     rv="String">
+     <useargs>
+       <usearg name="dest" type="String"/>
+       <usearg name="src" type="String"/>
+       <usearg name="n" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_625" name="stpncpy"
+     ponyname="stpncpy"
+     fid="f48"
+     lineno="483"
+     rv="String">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="String"/>
+       <usearg name="parg2" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_633" name="__ctype_get_mb_cur_max"
+     ponyname="__ctype_get_mb_cur_max"
+     fid="f52"
+     lineno="97"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_634" name="atof"
+     ponyname="atof"
+     fid="f52"
+     lineno="101"
+     rv="F64">
+     <useargs>
+       <usearg name="nptr" type="String"/>
+     </useargs>
+  </use>
+  <use id="_635" name="atoi"
+     ponyname="atoi"
+     fid="f52"
+     lineno="104"
+     rv="I32">
+     <useargs>
+       <usearg name="nptr" type="String"/>
+     </useargs>
+  </use>
+  <use id="_636" name="atol"
+     ponyname="atol"
+     fid="f52"
+     lineno="107"
+     rv="I64">
+     <useargs>
+       <usearg name="nptr" type="String"/>
+     </useargs>
+  </use>
+  <use id="_637" name="atoll"
+     ponyname="atoll"
+     fid="f52"
+     lineno="112"
+     rv="I64">
+     <useargs>
+       <usearg name="nptr" type="String"/>
+     </useargs>
+  </use>
+  <use id="_638" name="strtod"
+     ponyname="strtod"
+     fid="f52"
+     lineno="117"
+     rv="F64">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="Array[String]"/>
+     </useargs>
+  </use>
+  <use id="_639" name="strtof"
+     ponyname="strtof"
+     fid="f52"
+     lineno="123"
+     rv="F32">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="Array[String]"/>
+     </useargs>
+  </use>
+  <use id="_640" name="strtold"
+     ponyname="strtold"
+     fid="f52"
+     lineno="126"
+     rv="F128">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="Array[String]"/>
+     </useargs>
+  </use>
+  <use id="_641" name="strtol"
+     ponyname="strtol"
+     fid="f52"
+     lineno="176"
+     rv="I64">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="Array[String]"/>
+       <usearg name="parg2" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_642" name="strtoul"
+     ponyname="strtoul"
+     fid="f52"
+     lineno="180"
+     rv="U64">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="Array[String]"/>
+       <usearg name="parg2" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_643" name="strtoq"
+     ponyname="strtoq"
+     fid="f52"
+     lineno="187"
+     rv="I64">
+     <useargs>
+       <usearg name="nptr" type="String"/>
+       <usearg name="endptr" type="Array[String]"/>
+       <usearg name="base" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_644" name="strtouq"
+     ponyname="strtouq"
+     fid="f52"
+     lineno="192"
+     rv="U64">
+     <useargs>
+       <usearg name="nptr" type="String"/>
+       <usearg name="endptr" type="Array[String]"/>
+       <usearg name="base" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_645" name="strtoll"
+     ponyname="strtoll"
+     fid="f52"
+     lineno="200"
+     rv="I64">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="Array[String]"/>
+       <usearg name="parg2" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_646" name="strtoull"
+     ponyname="strtoull"
+     fid="f52"
+     lineno="205"
+     rv="U64">
+     <useargs>
+       <usearg name="parg0" type="String"/>
+       <usearg name="parg1" type="Array[String]"/>
+       <usearg name="parg2" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_647" name="l64a"
+     ponyname="l64a"
+     fid="f52"
+     lineno="385"
+     rv="String">
+     <useargs>
+       <usearg name="n" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_648" name="a64l"
+     ponyname="a64l"
+     fid="f52"
+     lineno="388"
+     rv="I64">
+     <useargs>
+       <usearg name="s" type="String"/>
+     </useargs>
+  </use>
+  <use id="_649" name="random"
+     ponyname="random"
+     fid="f52"
+     lineno="401"
+     rv="I64">
+     <useargs/>
+  </use>
+  <use id="_650" name="srandom"
+     ponyname="srandom"
+     fid="f52"
+     lineno="404"
+     rv="None">
+     <useargs>
+       <usearg name="seed" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_651" name="initstate"
+     ponyname="initstate"
+     fid="f52"
+     lineno="410"
+     rv="String">
+     <useargs>
+       <usearg name="seed" type="U32"/>
+       <usearg name="statebuf" type="String"/>
+       <usearg name="statelen" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_652" name="setstate"
+     ponyname="setstate"
+     fid="f52"
+     lineno="415"
+     rv="String">
+     <useargs>
+       <usearg name="statebuf" type="String"/>
+     </useargs>
+  </use>
+  <use id="_654" name="random_r"
+     ponyname="random_r"
+     fid="f52"
+     lineno="434"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="NullablePointer[Srandomdata]"/>
+       <usearg name="result" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_655" name="srandom_r"
+     ponyname="srandom_r"
+     fid="f52"
+     lineno="437"
+     rv="I32">
+     <useargs>
+       <usearg name="seed" type="U32"/>
+       <usearg name="buf" type="NullablePointer[Srandomdata]"/>
+     </useargs>
+  </use>
+  <use id="_656" name="initstate_r"
+     ponyname="initstate_r"
+     fid="f52"
+     lineno="440"
+     rv="I32">
+     <useargs>
+       <usearg name="seed" type="U32"/>
+       <usearg name="statebuf" type="String"/>
+       <usearg name="statelen" type="U64"/>
+       <usearg name="buf" type="NullablePointer[Srandomdata]"/>
+     </useargs>
+  </use>
+  <use id="_657" name="setstate_r"
+     ponyname="setstate_r"
+     fid="f52"
+     lineno="445"
+     rv="I32">
+     <useargs>
+       <usearg name="statebuf" type="String"/>
+       <usearg name="buf" type="NullablePointer[Srandomdata]"/>
+     </useargs>
+  </use>
+  <use id="_658" name="rand"
+     ponyname="rand"
+     fid="f52"
+     lineno="453"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_659" name="srand"
+     ponyname="srand"
+     fid="f52"
+     lineno="455"
+     rv="None">
+     <useargs>
+       <usearg name="seed" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_660" name="rand_r"
+     ponyname="rand_r"
+     fid="f52"
+     lineno="459"
+     rv="I32">
+     <useargs>
+       <usearg name="seed" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_661" name="drand48"
+     ponyname="drand48"
+     fid="f52"
+     lineno="467"
+     rv="F64">
+     <useargs/>
+  </use>
+  <use id="_662" name="erand48"
+     ponyname="erand48"
+     fid="f52"
+     lineno="468"
+     rv="F64">
+     <useargs>
+       <usearg name="xsubi" type="Pointer[U16]"/>
+     </useargs>
+  </use>
+  <use id="_663" name="lrand48"
+     ponyname="lrand48"
+     fid="f52"
+     lineno="471"
+     rv="I64">
+     <useargs/>
+  </use>
+  <use id="_664" name="nrand48"
+     ponyname="nrand48"
+     fid="f52"
+     lineno="472"
+     rv="I64">
+     <useargs>
+       <usearg name="xsubi" type="Pointer[U16]"/>
+     </useargs>
+  </use>
+  <use id="_665" name="mrand48"
+     ponyname="mrand48"
+     fid="f52"
+     lineno="476"
+     rv="I64">
+     <useargs/>
+  </use>
+  <use id="_666" name="jrand48"
+     ponyname="jrand48"
+     fid="f52"
+     lineno="477"
+     rv="I64">
+     <useargs>
+       <usearg name="xsubi" type="Pointer[U16]"/>
+     </useargs>
+  </use>
+  <use id="_667" name="srand48"
+     ponyname="srand48"
+     fid="f52"
+     lineno="481"
+     rv="None">
+     <useargs>
+       <usearg name="seedval" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_668" name="seed48"
+     ponyname="seed48"
+     fid="f52"
+     lineno="482"
+     rv="Pointer[U16]">
+     <useargs>
+       <usearg name="seed16v" type="Pointer[U16]"/>
+     </useargs>
+  </use>
+  <use id="_669" name="lcong48"
+     ponyname="lcong48"
+     fid="f52"
+     lineno="484"
+     rv="None">
+     <useargs>
+       <usearg name="param" type="Pointer[U16]"/>
+     </useargs>
+  </use>
+  <use id="_671" name="drand48_r"
+     ponyname="drand48_r"
+     fid="f52"
+     lineno="501"
+     rv="I32">
+     <useargs>
+       <usearg name="buffer" type="NullablePointer[Sdrand48data]"/>
+       <usearg name="result" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_672" name="erand48_r"
+     ponyname="erand48_r"
+     fid="f52"
+     lineno="503"
+     rv="I32">
+     <useargs>
+       <usearg name="xsubi" type="Pointer[U16]"/>
+       <usearg name="buffer" type="NullablePointer[Sdrand48data]"/>
+       <usearg name="result" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_673" name="lrand48_r"
+     ponyname="lrand48_r"
+     fid="f52"
+     lineno="508"
+     rv="I32">
+     <useargs>
+       <usearg name="buffer" type="NullablePointer[Sdrand48data]"/>
+       <usearg name="result" type="Pointer[I64]"/>
+     </useargs>
+  </use>
+  <use id="_674" name="nrand48_r"
+     ponyname="nrand48_r"
+     fid="f52"
+     lineno="511"
+     rv="I32">
+     <useargs>
+       <usearg name="xsubi" type="Pointer[U16]"/>
+       <usearg name="buffer" type="NullablePointer[Sdrand48data]"/>
+       <usearg name="result" type="Pointer[I64]"/>
+     </useargs>
+  </use>
+  <use id="_675" name="mrand48_r"
+     ponyname="mrand48_r"
+     fid="f52"
+     lineno="517"
+     rv="I32">
+     <useargs>
+       <usearg name="buffer" type="NullablePointer[Sdrand48data]"/>
+       <usearg name="result" type="Pointer[I64]"/>
+     </useargs>
+  </use>
+  <use id="_676" name="jrand48_r"
+     ponyname="jrand48_r"
+     fid="f52"
+     lineno="520"
+     rv="I32">
+     <useargs>
+       <usearg name="xsubi" type="Pointer[U16]"/>
+       <usearg name="buffer" type="NullablePointer[Sdrand48data]"/>
+       <usearg name="result" type="Pointer[I64]"/>
+     </useargs>
+  </use>
+  <use id="_677" name="srand48_r"
+     ponyname="srand48_r"
+     fid="f52"
+     lineno="526"
+     rv="I32">
+     <useargs>
+       <usearg name="seedval" type="I64"/>
+       <usearg name="buffer" type="NullablePointer[Sdrand48data]"/>
+     </useargs>
+  </use>
+  <use id="_678" name="seed48_r"
+     ponyname="seed48_r"
+     fid="f52"
+     lineno="529"
+     rv="I32">
+     <useargs>
+       <usearg name="seed16v" type="Pointer[U16]"/>
+       <usearg name="buffer" type="NullablePointer[Sdrand48data]"/>
+     </useargs>
+  </use>
+  <use id="_679" name="lcong48_r"
+     ponyname="lcong48_r"
+     fid="f52"
+     lineno="532"
+     rv="I32">
+     <useargs>
+       <usearg name="param" type="Pointer[U16]"/>
+       <usearg name="buffer" type="NullablePointer[Sdrand48data]"/>
+     </useargs>
+  </use>
+  <use id="_680" name="malloc"
+     ponyname="malloc"
+     fid="f52"
+     lineno="539"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="parg0" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_681" name="calloc"
+     ponyname="calloc"
+     fid="f52"
+     lineno="542"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="parg0" type="U64"/>
+       <usearg name="parg1" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_682" name="realloc"
+     ponyname="realloc"
+     fid="f52"
+     lineno="550"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="parg0" type="Pointer[None]"/>
+       <usearg name="parg1" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_683" name="reallocarray"
+     ponyname="reallocarray"
+     fid="f52"
+     lineno="559"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="ptr" type="Pointer[None]"/>
+       <usearg name="nmemb" type="U64"/>
+       <usearg name="size" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_684" name="free"
+     ponyname="free"
+     fid="f52"
+     lineno="565"
+     rv="None">
+     <useargs>
+       <usearg name="ptr" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_685" name="alloca"
+     ponyname="alloca"
+     fid="f53"
+     lineno="32"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="parg0" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_686" name="valloc"
+     ponyname="valloc"
+     fid="f52"
+     lineno="574"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="size" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_687" name="posix_memalign"
+     ponyname="posix_memalign"
+     fid="f52"
+     lineno="580"
+     rv="I32">
+     <useargs>
+       <usearg name="memptr" type="NullablePointer[Pointer[None]]"/>
+       <usearg name="alignment" type="U64"/>
+       <usearg name="size" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_688" name="aligned_alloc"
+     ponyname="aligned_alloc"
+     fid="f52"
+     lineno="586"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="alignment" type="U64"/>
+       <usearg name="size" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_689" name="abort"
+     ponyname="abort"
+     fid="f52"
+     lineno="591"
+     rv="None">
+     <useargs/>
+  </use>
+  <use id="_690" name="atexit"
+     ponyname="atexit"
+     fid="f52"
+     lineno="595"
+     rv="I32">
+     <useargs>
+       <usearg name="func" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_691" name="at_quick_exit"
+     ponyname="at_quick_exit"
+     fid="f52"
+     lineno="603"
+     rv="I32">
+     <useargs>
+       <usearg name="func" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_692" name="on_exit"
+     ponyname="on_exit"
+     fid="f52"
+     lineno="610"
+     rv="I32">
+     <useargs>
+       <usearg name="func" type="Pointer[None]"/>
+       <usearg name="arg" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_693" name="exit"
+     ponyname="exit"
+     fid="f52"
+     lineno="617"
+     rv="None">
+     <useargs>
+       <usearg name="parg0" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_694" name="quick_exit"
+     ponyname="quick_exit"
+     fid="f52"
+     lineno="623"
+     rv="None">
+     <useargs>
+       <usearg name="status" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_695" name="_Exit"
+     ponyname="_Exit"
+     fid="f52"
+     lineno="629"
+     rv="None">
+     <useargs>
+       <usearg name="parg0" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_696" name="getenv"
+     ponyname="getenv"
+     fid="f52"
+     lineno="634"
+     rv="String">
+     <useargs>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_697" name="putenv"
+     ponyname="putenv"
+     fid="f52"
+     lineno="647"
+     rv="I32">
+     <useargs>
+       <usearg name="string" type="String"/>
+     </useargs>
+  </use>
+  <use id="_698" name="setenv"
+     ponyname="setenv"
+     fid="f52"
+     lineno="653"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="value" type="String"/>
+       <usearg name="replace" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_699" name="unsetenv"
+     ponyname="unsetenv"
+     fid="f52"
+     lineno="657"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_700" name="clearenv"
+     ponyname="clearenv"
+     fid="f52"
+     lineno="664"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_701" name="mktemp"
+     ponyname="mktemp"
+     fid="f52"
+     lineno="675"
+     rv="String">
+     <useargs>
+       <usearg name="template" type="String"/>
+     </useargs>
+  </use>
+  <use id="_702" name="mkstemp"
+     ponyname="mkstemp"
+     fid="f52"
+     lineno="688"
+     rv="I32">
+     <useargs>
+       <usearg name="template" type="String"/>
+     </useargs>
+  </use>
+  <use id="_703" name="mkstemps"
+     ponyname="mkstemps"
+     fid="f52"
+     lineno="710"
+     rv="I32">
+     <useargs>
+       <usearg name="template" type="String"/>
+       <usearg name="suffixlen" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_704" name="mkdtemp"
+     ponyname="mkdtemp"
+     fid="f52"
+     lineno="731"
+     rv="String">
+     <useargs>
+       <usearg name="template" type="String"/>
+     </useargs>
+  </use>
+  <use id="_705" name="system"
+     ponyname="system"
+     fid="f52"
+     lineno="784"
+     rv="I32">
+     <useargs>
+       <usearg name="command" type="String"/>
+     </useargs>
+  </use>
+  <use id="_706" name="realpath"
+     ponyname="realpath"
+     fid="f52"
+     lineno="800"
+     rv="String">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="resolved" type="String"/>
+     </useargs>
+  </use>
+  <use id="_708" name="bsearch"
+     ponyname="bsearch"
+     fid="f52"
+     lineno="820"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="key" type="Pointer[None]"/>
+       <usearg name="base" type="Pointer[None]"/>
+       <usearg name="nmemb" type="U64"/>
+       <usearg name="size" type="U64"/>
+       <usearg name="compar" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_709" name="qsort"
+     ponyname="qsort"
+     fid="f52"
+     lineno="830"
+     rv="None">
+     <useargs>
+       <usearg name="base" type="Pointer[None]"/>
+       <usearg name="nmemb" type="U64"/>
+       <usearg name="size" type="U64"/>
+       <usearg name="compar" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_710" name="abs"
+     ponyname="abs"
+     fid="f52"
+     lineno="840"
+     rv="I32">
+     <useargs>
+       <usearg name="parg0" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_711" name="labs"
+     ponyname="labs"
+     fid="f52"
+     lineno="841"
+     rv="I64">
+     <useargs>
+       <usearg name="parg0" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_712" name="llabs"
+     ponyname="llabs"
+     fid="f52"
+     lineno="844"
+     rv="I64">
+     <useargs>
+       <usearg name="parg0" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_713" name="div"
+     ponyname="div"
+     fid="f52"
+     lineno="852"
+     rv="S">
+     <useargs>
+       <usearg name="numer" type="I32"/>
+       <usearg name="denom" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_714" name="ldiv"
+     ponyname="ldiv"
+     fid="f52"
+     lineno="854"
+     rv="S">
+     <useargs>
+       <usearg name="numer" type="I64"/>
+       <usearg name="denom" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_715" name="lldiv"
+     ponyname="lldiv"
+     fid="f52"
+     lineno="858"
+     rv="S">
+     <useargs>
+       <usearg name="numer" type="I64"/>
+       <usearg name="denom" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_716" name="ecvt"
+     ponyname="ecvt"
+     fid="f52"
+     lineno="872"
+     rv="String">
+     <useargs>
+       <usearg name="value" type="F64"/>
+       <usearg name="ndigit" type="I32"/>
+       <usearg name="decpt" type="Pointer[I32]"/>
+       <usearg name="sign" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_717" name="fcvt"
+     ponyname="fcvt"
+     fid="f52"
+     lineno="878"
+     rv="String">
+     <useargs>
+       <usearg name="value" type="F64"/>
+       <usearg name="ndigit" type="I32"/>
+       <usearg name="decpt" type="Pointer[I32]"/>
+       <usearg name="sign" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_718" name="gcvt"
+     ponyname="gcvt"
+     fid="f52"
+     lineno="884"
+     rv="String">
+     <useargs>
+       <usearg name="value" type="F64"/>
+       <usearg name="ndigit" type="I32"/>
+       <usearg name="buf" type="String"/>
+     </useargs>
+  </use>
+  <use id="_719" name="qecvt"
+     ponyname="qecvt"
+     fid="f52"
+     lineno="890"
+     rv="String">
+     <useargs>
+       <usearg name="value" type="F128"/>
+       <usearg name="ndigit" type="I32"/>
+       <usearg name="decpt" type="Pointer[I32]"/>
+       <usearg name="sign" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_720" name="qfcvt"
+     ponyname="qfcvt"
+     fid="f52"
+     lineno="893"
+     rv="String">
+     <useargs>
+       <usearg name="value" type="F128"/>
+       <usearg name="ndigit" type="I32"/>
+       <usearg name="decpt" type="Pointer[I32]"/>
+       <usearg name="sign" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_721" name="qgcvt"
+     ponyname="qgcvt"
+     fid="f52"
+     lineno="896"
+     rv="String">
+     <useargs>
+       <usearg name="value" type="F128"/>
+       <usearg name="ndigit" type="I32"/>
+       <usearg name="buf" type="String"/>
+     </useargs>
+  </use>
+  <use id="_722" name="ecvt_r"
+     ponyname="ecvt_r"
+     fid="f52"
+     lineno="902"
+     rv="I32">
+     <useargs>
+       <usearg name="value" type="F64"/>
+       <usearg name="ndigit" type="I32"/>
+       <usearg name="decpt" type="Pointer[I32]"/>
+       <usearg name="sign" type="Pointer[I32]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="len" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_723" name="fcvt_r"
+     ponyname="fcvt_r"
+     fid="f52"
+     lineno="905"
+     rv="I32">
+     <useargs>
+       <usearg name="value" type="F64"/>
+       <usearg name="ndigit" type="I32"/>
+       <usearg name="decpt" type="Pointer[I32]"/>
+       <usearg name="sign" type="Pointer[I32]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="len" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_724" name="qecvt_r"
+     ponyname="qecvt_r"
+     fid="f52"
+     lineno="909"
+     rv="I32">
+     <useargs>
+       <usearg name="value" type="F128"/>
+       <usearg name="ndigit" type="I32"/>
+       <usearg name="decpt" type="Pointer[I32]"/>
+       <usearg name="sign" type="Pointer[I32]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="len" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_725" name="qfcvt_r"
+     ponyname="qfcvt_r"
+     fid="f52"
+     lineno="913"
+     rv="I32">
+     <useargs>
+       <usearg name="value" type="F128"/>
+       <usearg name="ndigit" type="I32"/>
+       <usearg name="decpt" type="Pointer[I32]"/>
+       <usearg name="sign" type="Pointer[I32]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="len" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_726" name="mblen"
+     ponyname="mblen"
+     fid="f52"
+     lineno="922"
+     rv="I32">
+     <useargs>
+       <usearg name="s" type="String"/>
+       <usearg name="n" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_727" name="mbtowc"
+     ponyname="mbtowc"
+     fid="f52"
+     lineno="925"
+     rv="I32">
+     <useargs>
+       <usearg name="pwc" type="Pointer[I32]"/>
+       <usearg name="s" type="String"/>
+       <usearg name="n" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_728" name="wctomb"
+     ponyname="wctomb"
+     fid="f52"
+     lineno="929"
+     rv="I32">
+     <useargs>
+       <usearg name="s" type="String"/>
+       <usearg name="wchar" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_729" name="mbstowcs"
+     ponyname="mbstowcs"
+     fid="f52"
+     lineno="933"
+     rv="U64">
+     <useargs>
+       <usearg name="pwcs" type="Pointer[I32]"/>
+       <usearg name="s" type="String"/>
+       <usearg name="n" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_730" name="wcstombs"
+     ponyname="wcstombs"
+     fid="f52"
+     lineno="937"
+     rv="U64">
+     <useargs>
+       <usearg name="s" type="String"/>
+       <usearg name="pwcs" type="Pointer[I32]"/>
+       <usearg name="n" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_731" name="rpmatch"
+     ponyname="rpmatch"
+     fid="f52"
+     lineno="947"
+     rv="I32">
+     <useargs>
+       <usearg name="response" type="String"/>
+     </useargs>
+  </use>
+  <use id="_732" name="getsubopt"
+     ponyname="getsubopt"
+     fid="f52"
+     lineno="958"
+     rv="I32">
+     <useargs>
+       <usearg name="optionp" type="Array[String]"/>
+       <usearg name="tokens" type="Array[String]"/>
+       <usearg name="valuep" type="Array[String]"/>
+     </useargs>
+  </use>
+  <use id="_733" name="getloadavg"
+     ponyname="getloadavg"
+     fid="f52"
+     lineno="1004"
+     rv="I32">
+     <useargs>
+       <usearg name="loadavg" type="Pointer[F64]"/>
+       <usearg name="nelem" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_763" name="clock"
+     ponyname="clock"
+     fid="f60"
+     lineno="72"
+     rv="I64">
+     <useargs/>
+  </use>
+  <use id="_764" name="time"
+     ponyname="time"
+     fid="f60"
+     lineno="75"
+     rv="I64">
+     <useargs>
+       <usearg name="timer" type="Pointer[I64]"/>
+     </useargs>
+  </use>
+  <use id="_765" name="difftime"
+     ponyname="difftime"
+     fid="f60"
+     lineno="78"
+     rv="F64">
+     <useargs>
+       <usearg name="time1" type="I64"/>
+       <usearg name="time0" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_766" name="mktime"
+     ponyname="mktime"
+     fid="f60"
+     lineno="82"
+     rv="I64">
+     <useargs>
+       <usearg name="tp" type="NullablePointer[Stm]"/>
+     </useargs>
+  </use>
+  <use id="_767" name="strftime"
+     ponyname="strftime"
+     fid="f60"
+     lineno="88"
+     rv="U64">
+     <useargs>
+       <usearg name="s" type="String"/>
+       <usearg name="maxsize" type="U64"/>
+       <usearg name="format" type="String"/>
+       <usearg name="tp" type="NullablePointer[Stm]"/>
+     </useargs>
+  </use>
+  <use id="_768" name="strftime_l"
+     ponyname="strftime_l"
+     fid="f60"
+     lineno="104"
+     rv="U64">
+     <useargs>
+       <usearg name="s" type="String"/>
+       <usearg name="maxsize" type="U64"/>
+       <usearg name="format" type="String"/>
+       <usearg name="tp" type="NullablePointer[Stm]"/>
+       <usearg name="loc" type="NullablePointer[Slocalestruct]"/>
+     </useargs>
+  </use>
+  <use id="_769" name="gmtime"
+     ponyname="gmtime"
+     fid="f60"
+     lineno="119"
+     rv="NullablePointer[Stm]">
+     <useargs>
+       <usearg name="timer" type="Pointer[I64]"/>
+     </useargs>
+  </use>
+  <use id="_770" name="localtime"
+     ponyname="localtime"
+     fid="f60"
+     lineno="123"
+     rv="NullablePointer[Stm]">
+     <useargs>
+       <usearg name="timer" type="Pointer[I64]"/>
+     </useargs>
+  </use>
+  <use id="_771" name="gmtime_r"
+     ponyname="gmtime_r"
+     fid="f60"
+     lineno="128"
+     rv="NullablePointer[Stm]">
+     <useargs>
+       <usearg name="timer" type="Pointer[I64]"/>
+       <usearg name="tp" type="NullablePointer[Stm]"/>
+     </useargs>
+  </use>
+  <use id="_772" name="localtime_r"
+     ponyname="localtime_r"
+     fid="f60"
+     lineno="133"
+     rv="NullablePointer[Stm]">
+     <useargs>
+       <usearg name="timer" type="Pointer[I64]"/>
+       <usearg name="tp" type="NullablePointer[Stm]"/>
+     </useargs>
+  </use>
+  <use id="_773" name="asctime"
+     ponyname="asctime"
+     fid="f60"
+     lineno="139"
+     rv="String">
+     <useargs>
+       <usearg name="tp" type="NullablePointer[Stm]"/>
+     </useargs>
+  </use>
+  <use id="_774" name="ctime"
+     ponyname="ctime"
+     fid="f60"
+     lineno="142"
+     rv="String">
+     <useargs>
+       <usearg name="timer" type="Pointer[I64]"/>
+     </useargs>
+  </use>
+  <use id="_775" name="asctime_r"
+     ponyname="asctime_r"
+     fid="f60"
+     lineno="149"
+     rv="String">
+     <useargs>
+       <usearg name="tp" type="NullablePointer[Stm]"/>
+       <usearg name="buf" type="String"/>
+     </useargs>
+  </use>
+  <use id="_776" name="ctime_r"
+     ponyname="ctime_r"
+     fid="f60"
+     lineno="153"
+     rv="String">
+     <useargs>
+       <usearg name="timer" type="Pointer[I64]"/>
+       <usearg name="buf" type="String"/>
+     </useargs>
+  </use>
+  <use id="_781" name="tzset"
+     ponyname="tzset"
+     fid="f60"
+     lineno="170"
+     rv="None">
+     <useargs/>
+  </use>
+  <use id="_784" name="timegm"
+     ponyname="timegm"
+     fid="f60"
+     lineno="190"
+     rv="I64">
+     <useargs>
+       <usearg name="tp" type="NullablePointer[Stm]"/>
+     </useargs>
+  </use>
+  <use id="_785" name="timelocal"
+     ponyname="timelocal"
+     fid="f60"
+     lineno="193"
+     rv="I64">
+     <useargs>
+       <usearg name="tp" type="NullablePointer[Stm]"/>
+     </useargs>
+  </use>
+  <use id="_786" name="dysize"
+     ponyname="dysize"
+     fid="f60"
+     lineno="196"
+     rv="I32">
+     <useargs>
+       <usearg name="year" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_787" name="nanosleep"
+     ponyname="nanosleep"
+     fid="f60"
+     lineno="205"
+     rv="I32">
+     <useargs>
+       <usearg name="requestedtime" type="NullablePointer[Stimespec]"/>
+       <usearg name="remaining" type="NullablePointer[Stimespec]"/>
+     </useargs>
+  </use>
+  <use id="_788" name="clock_getres"
+     ponyname="clock_getres"
+     fid="f60"
+     lineno="210"
+     rv="I32">
+     <useargs>
+       <usearg name="clockid" type="I32"/>
+       <usearg name="res" type="NullablePointer[Stimespec]"/>
+     </useargs>
+  </use>
+  <use id="_789" name="clock_gettime"
+     ponyname="clock_gettime"
+     fid="f60"
+     lineno="213"
+     rv="I32">
+     <useargs>
+       <usearg name="clockid" type="I32"/>
+       <usearg name="tp" type="NullablePointer[Stimespec]"/>
+     </useargs>
+  </use>
+  <use id="_790" name="clock_settime"
+     ponyname="clock_settime"
+     fid="f60"
+     lineno="216"
+     rv="I32">
+     <useargs>
+       <usearg name="clockid" type="I32"/>
+       <usearg name="tp" type="NullablePointer[Stimespec]"/>
+     </useargs>
+  </use>
+  <use id="_791" name="clock_nanosleep"
+     ponyname="clock_nanosleep"
+     fid="f60"
+     lineno="224"
+     rv="I32">
+     <useargs>
+       <usearg name="clockid" type="I32"/>
+       <usearg name="flags" type="I32"/>
+       <usearg name="req" type="NullablePointer[Stimespec]"/>
+       <usearg name="rem" type="NullablePointer[Stimespec]"/>
+     </useargs>
+  </use>
+  <use id="_792" name="clock_getcpuclockid"
+     ponyname="clock_getcpuclockid"
+     fid="f60"
+     lineno="229"
+     rv="I32">
+     <useargs>
+       <usearg name="pid" type="I32"/>
+       <usearg name="clockid" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_793" name="timer_create"
+     ponyname="timer_create"
+     fid="f60"
+     lineno="234"
+     rv="I32">
+     <useargs>
+       <usearg name="clockid" type="I32"/>
+       <usearg name="evp" type="NullablePointer[Ssigevent]"/>
+       <usearg name="timerid" type="NullablePointer[Pointer[None]]"/>
+     </useargs>
+  </use>
+  <use id="_794" name="timer_delete"
+     ponyname="timer_delete"
+     fid="f60"
+     lineno="239"
+     rv="I32">
+     <useargs>
+       <usearg name="timerid" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_795" name="timer_settime"
+     ponyname="timer_settime"
+     fid="f60"
+     lineno="242"
+     rv="I32">
+     <useargs>
+       <usearg name="timerid" type="Pointer[None]"/>
+       <usearg name="flags" type="I32"/>
+       <usearg name="value" type="NullablePointer[Sitimerspec]"/>
+       <usearg name="ovalue" type="NullablePointer[Sitimerspec]"/>
+     </useargs>
+  </use>
+  <use id="_796" name="timer_gettime"
+     ponyname="timer_gettime"
+     fid="f60"
+     lineno="247"
+     rv="I32">
+     <useargs>
+       <usearg name="timerid" type="Pointer[None]"/>
+       <usearg name="value" type="NullablePointer[Sitimerspec]"/>
+     </useargs>
+  </use>
+  <use id="_797" name="timer_getoverrun"
+     ponyname="timer_getoverrun"
+     fid="f60"
+     lineno="251"
+     rv="I32">
+     <useargs>
+       <usearg name="timerid" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_798" name="timespec_get"
+     ponyname="timespec_get"
+     fid="f60"
+     lineno="257"
+     rv="I32">
+     <useargs>
+       <usearg name="ts" type="NullablePointer[Stimespec]"/>
+       <usearg name="base" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_801" name="fcntl"
+     ponyname="fcntl"
+     fid="f63"
+     lineno="176"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="cmd" type="I32"/>
+       <usearg name="parg2" type="..."/>
+     </useargs>
+  </use>
+  <use id="_802" name="open"
+     ponyname="open"
+     fid="f63"
+     lineno="196"
+     rv="I32">
+     <useargs>
+       <usearg name="file" type="String"/>
+       <usearg name="oflag" type="I32"/>
+       <usearg name="parg2" type="..."/>
+     </useargs>
+  </use>
+  <use id="_803" name="openat"
+     ponyname="openat"
+     fid="f63"
+     lineno="220"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="file" type="String"/>
+       <usearg name="oflag" type="I32"/>
+       <usearg name="parg3" type="..."/>
+     </useargs>
+  </use>
+  <use id="_804" name="creat"
+     ponyname="creat"
+     fid="f63"
+     lineno="242"
+     rv="I32">
+     <useargs>
+       <usearg name="file" type="String"/>
+       <usearg name="mode" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_805" name="posix_fadvise"
+     ponyname="posix_fadvise"
+     fid="f63"
+     lineno="288"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="offset" type="I64"/>
+       <usearg name="len" type="I64"/>
+       <usearg name="advise" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_806" name="posix_fallocate"
+     ponyname="posix_fallocate"
+     fid="f63"
+     lineno="310"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="offset" type="I64"/>
+       <usearg name="len" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_823" name="__sysv_signal"
+     ponyname="__sysv_signal"
+     fid="f70"
+     lineno="77"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="sig" type="I32"/>
+       <usearg name="handler" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_824" name="signal"
+     ponyname="signal"
+     fid="f70"
+     lineno="88"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="sig" type="I32"/>
+       <usearg name="handler" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_825" name="kill"
+     ponyname="kill"
+     fid="f70"
+     lineno="112"
+     rv="I32">
+     <useargs>
+       <usearg name="pid" type="I32"/>
+       <usearg name="sig" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_826" name="killpg"
+     ponyname="killpg"
+     fid="f70"
+     lineno="119"
+     rv="I32">
+     <useargs>
+       <usearg name="pgrp" type="I32"/>
+       <usearg name="sig" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_827" name="raise"
+     ponyname="raise"
+     fid="f70"
+     lineno="123"
+     rv="I32">
+     <useargs>
+       <usearg name="sig" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_828" name="ssignal"
+     ponyname="ssignal"
+     fid="f70"
+     lineno="127"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="sig" type="I32"/>
+       <usearg name="handler" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_829" name="gsignal"
+     ponyname="gsignal"
+     fid="f70"
+     lineno="129"
+     rv="I32">
+     <useargs>
+       <usearg name="sig" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_830" name="psignal"
+     ponyname="psignal"
+     fid="f70"
+     lineno="134"
+     rv="None">
+     <useargs>
+       <usearg name="sig" type="I32"/>
+       <usearg name="s" type="String"/>
+     </useargs>
+  </use>
+  <use id="_831" name="psiginfo"
+     ponyname="psiginfo"
+     fid="f70"
+     lineno="137"
+     rv="None">
+     <useargs>
+       <usearg name="pinfo" type="NullablePointer[S]"/>
+       <usearg name="s" type="String"/>
+     </useargs>
+  </use>
+  <use id="_832" name="sigblock"
+     ponyname="sigblock"
+     fid="f70"
+     lineno="173"
+     rv="I32">
+     <useargs>
+       <usearg name="mask" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_833" name="sigsetmask"
+     ponyname="sigsetmask"
+     fid="f70"
+     lineno="176"
+     rv="I32">
+     <useargs>
+       <usearg name="mask" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_834" name="siggetmask"
+     ponyname="siggetmask"
+     fid="f70"
+     lineno="179"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_836" name="sigemptyset"
+     ponyname="sigemptyset"
+     fid="f70"
+     lineno="199"
+     rv="I32">
+     <useargs>
+       <usearg name="set" type="NullablePointer[S]"/>
+     </useargs>
+  </use>
+  <use id="_837" name="sigfillset"
+     ponyname="sigfillset"
+     fid="f70"
+     lineno="202"
+     rv="I32">
+     <useargs>
+       <usearg name="set" type="NullablePointer[S]"/>
+     </useargs>
+  </use>
+  <use id="_838" name="sigaddset"
+     ponyname="sigaddset"
+     fid="f70"
+     lineno="205"
+     rv="I32">
+     <useargs>
+       <usearg name="set" type="NullablePointer[S]"/>
+       <usearg name="signo" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_839" name="sigdelset"
+     ponyname="sigdelset"
+     fid="f70"
+     lineno="208"
+     rv="I32">
+     <useargs>
+       <usearg name="set" type="NullablePointer[S]"/>
+       <usearg name="signo" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_840" name="sigismember"
+     ponyname="sigismember"
+     fid="f70"
+     lineno="211"
+     rv="I32">
+     <useargs>
+       <usearg name="set" type="NullablePointer[S]"/>
+       <usearg name="signo" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_842" name="sigprocmask"
+     ponyname="sigprocmask"
+     fid="f70"
+     lineno="232"
+     rv="I32">
+     <useargs>
+       <usearg name="how" type="I32"/>
+       <usearg name="set" type="NullablePointer[S]"/>
+       <usearg name="oset" type="NullablePointer[S]"/>
+     </useargs>
+  </use>
+  <use id="_843" name="sigsuspend"
+     ponyname="sigsuspend"
+     fid="f70"
+     lineno="240"
+     rv="I32">
+     <useargs>
+       <usearg name="set" type="NullablePointer[S]"/>
+     </useargs>
+  </use>
+  <use id="_844" name="sigaction"
+     ponyname="sigaction"
+     fid="f70"
+     lineno="243"
+     rv="I32">
+     <useargs>
+       <usearg name="sig" type="I32"/>
+       <usearg name="act" type="NullablePointer[Ssigaction]"/>
+       <usearg name="oact" type="NullablePointer[Ssigaction]"/>
+     </useargs>
+  </use>
+  <use id="_845" name="sigpending"
+     ponyname="sigpending"
+     fid="f70"
+     lineno="247"
+     rv="I32">
+     <useargs>
+       <usearg name="set" type="NullablePointer[S]"/>
+     </useargs>
+  </use>
+  <use id="_846" name="sigwait"
+     ponyname="sigwait"
+     fid="f70"
+     lineno="255"
+     rv="I32">
+     <useargs>
+       <usearg name="set" type="NullablePointer[S]"/>
+       <usearg name="sig" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_847" name="sigwaitinfo"
+     ponyname="sigwaitinfo"
+     fid="f70"
+     lineno="264"
+     rv="I32">
+     <useargs>
+       <usearg name="set" type="NullablePointer[S]"/>
+       <usearg name="info" type="NullablePointer[S]"/>
+     </useargs>
+  </use>
+  <use id="_848" name="sigtimedwait"
+     ponyname="sigtimedwait"
+     fid="f70"
+     lineno="272"
+     rv="I32">
+     <useargs>
+       <usearg name="set" type="NullablePointer[S]"/>
+       <usearg name="info" type="NullablePointer[S]"/>
+       <usearg name="timeout" type="NullablePointer[Stimespec]"/>
+     </useargs>
+  </use>
+  <use id="_849" name="sigqueue"
+     ponyname="sigqueue"
+     fid="f70"
+     lineno="279"
+     rv="I32">
+     <useargs>
+       <usearg name="pid" type="I32"/>
+       <usearg name="sig" type="I32"/>
+       <usearg name="val" type="None"/>
+     </useargs>
+  </use>
+  <use id="_859" name="sigreturn"
+     ponyname="sigreturn"
+     fid="f70"
+     lineno="291"
+     rv="I32">
+     <useargs>
+       <usearg name="scp" type="NullablePointer[Ssigcontext]"/>
+     </useargs>
+  </use>
+  <use id="_872" name="siginterrupt"
+     ponyname="siginterrupt"
+     fid="f70"
+     lineno="311"
+     rv="I32">
+     <useargs>
+       <usearg name="sig" type="I32"/>
+       <usearg name="interrupt" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_874" name="sigaltstack"
+     ponyname="sigaltstack"
+     fid="f70"
+     lineno="319"
+     rv="I32">
+     <useargs>
+       <usearg name="ss" type="NullablePointer[S]"/>
+       <usearg name="oss" type="NullablePointer[S]"/>
+     </useargs>
+  </use>
+  <use id="_876" name="sigstack"
+     ponyname="sigstack"
+     fid="f70"
+     lineno="333"
+     rv="I32">
+     <useargs>
+       <usearg name="ss" type="NullablePointer[Ssigstack]"/>
+       <usearg name="oss" type="NullablePointer[Ssigstack]"/>
+     </useargs>
+  </use>
+  <use id="_877" name="pthread_sigmask"
+     ponyname="pthread_sigmask"
+     fid="f77"
+     lineno="31"
+     rv="I32">
+     <useargs>
+       <usearg name="how" type="I32"/>
+       <usearg name="newmask" type="NullablePointer[S]"/>
+       <usearg name="oldmask" type="NullablePointer[S]"/>
+     </useargs>
+  </use>
+  <use id="_878" name="pthread_kill"
+     ponyname="pthread_kill"
+     fid="f77"
+     lineno="36"
+     rv="I32">
+     <useargs>
+       <usearg name="threadid" type="U64"/>
+       <usearg name="signo" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_879" name="__libc_current_sigrtmin"
+     ponyname="__libc_current_sigrtmin"
+     fid="f70"
+     lineno="369"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_880" name="__libc_current_sigrtmax"
+     ponyname="__libc_current_sigrtmax"
+     fid="f70"
+     lineno="371"
+     rv="I32">
+     <useargs/>
+  </use></uses>
+</castxml2pony>
+

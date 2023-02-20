@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<castxml2pony xmlns:xi="http://www.w3.org/2001/XInclude">
+<xi:include href="./types.xml"/>
+<xi:include href="./renderstructs.xml"/>
+<xi:include href="./glibc-net.xml"/>
+                    <structs>
+                      <struct name="S" id="_43" size="64" align="32" fid="f3" lineno="155">
+    <field name="__val'" id="_894" type="Pointer[I32]" fieldid="_1062" offset="0" fid="f3" line="155"/>
+  </struct>
+
+  <struct name="S" id="_73" size="64" align="32" fid="f4" lineno="13">
+    <field name="__count'" id="_897" type="I32" fieldid="_892" offset="0" fid="f4" line="15"/>
+    <field name="__value'" id="_899" type="None" fieldid="_1430" offset="32" fid="f4" line="20"/>
+  </struct>
+
+  <struct name="SGfpost" id="_75" size="128" align="64" fid="f5" lineno="10">
+    <field name="__pos'" id="_901" type="I64" fieldid="_40" offset="0" fid="f5" line="12"/>
+    <field name="__state'" id="_902" type="S" fieldid="_74" offset="64" fid="f5" line="13"/>
+  </struct>
+
+  <struct name="SGfpos64t" id="_77" size="128" align="64" fid="f6" lineno="10">
+    <field name="__pos'" id="_904" type="I64" fieldid="_41" offset="0" fid="f6" line="12"/>
+    <field name="__state'" id="_905" type="S" fieldid="_74" offset="64" fid="f6" line="13"/>
+  </struct>
+
+  <struct name="SIOFILE" id="_79" size="1728" align="64" fid="f7" lineno="49">
+    <field name="_flags'" id="_907" type="I32" fieldid="_892" offset="0" fid="f7" line="51"/>
+    <field name="_IO_read_ptr'" id="_908" type="String" fieldid="_884" offset="64" fid="f7" line="54"/>
+    <field name="_IO_read_end'" id="_909" type="String" fieldid="_884" offset="128" fid="f7" line="55"/>
+    <field name="_IO_read_base'" id="_910" type="String" fieldid="_884" offset="192" fid="f7" line="56"/>
+    <field name="_IO_write_base'" id="_911" type="String" fieldid="_884" offset="256" fid="f7" line="57"/>
+    <field name="_IO_write_ptr'" id="_912" type="String" fieldid="_884" offset="320" fid="f7" line="58"/>
+    <field name="_IO_write_end'" id="_913" type="String" fieldid="_884" offset="384" fid="f7" line="59"/>
+    <field name="_IO_buf_base'" id="_914" type="String" fieldid="_884" offset="448" fid="f7" line="60"/>
+    <field name="_IO_buf_end'" id="_915" type="String" fieldid="_884" offset="512" fid="f7" line="61"/>
+    <field name="_IO_save_base'" id="_916" type="String" fieldid="_884" offset="576" fid="f7" line="64"/>
+    <field name="_IO_backup_base'" id="_917" type="String" fieldid="_884" offset="640" fid="f7" line="65"/>
+    <field name="_IO_save_end'" id="_918" type="String" fieldid="_884" offset="704" fid="f7" line="66"/>
+    <field name="_markers'" id="_919" type="NullablePointer[SIOmarker]" fieldid="_1431" offset="768" fid="f7" line="68"/>
+    <field name="_chain'" id="_920" type="NullablePointer[SIOFILE]" fieldid="_1432" offset="832" fid="f7" line="70"/>
+    <field name="_fileno'" id="_921" type="I32" fieldid="_892" offset="896" fid="f7" line="72"/>
+    <field name="_flags2'" id="_922" type="I32" fieldid="_892" offset="928" fid="f7" line="73"/>
+    <field name="_old_offset'" id="_923" type="I64" fieldid="_40" offset="960" fid="f7" line="74"/>
+    <field name="_cur_column'" id="_924" type="U16" fieldid="_888" offset="1024" fid="f7" line="77"/>
+    <field name="_vtable_offset'" id="_925" type="I8" fieldid="_890" offset="1040" fid="f7" line="78"/>
+    <field name="_shortbuf'" id="_926" type="Pointer[U8]" fieldid="_1433" offset="1048" fid="f7" line="79"/>
+    <field name="_lock'" id="_927" type="Pointer[None]" fieldid="_1434" offset="1088" fid="f7" line="81"/>
+    <field name="_offset'" id="_928" type="I64" fieldid="_41" offset="1152" fid="f7" line="89"/>
+    <field name="_codecvt'" id="_929" type="NullablePointer[SIOcodecvt]" fieldid="_1435" offset="1216" fid="f7" line="91"/>
+    <field name="_wide_data'" id="_930" type="NullablePointer[SIOwidedata]" fieldid="_1436" offset="1280" fid="f7" line="92"/>
+    <field name="_freeres_list'" id="_931" type="NullablePointer[SIOFILE]" fieldid="_1432" offset="1344" fid="f7" line="93"/>
+    <field name="_freeres_buf'" id="_932" type="Pointer[None]" fieldid="_896" offset="1408" fid="f7" line="94"/>
+    <field name="__pad5'" id="_933" type="U64" fieldid="_7" offset="1472" fid="f7" line="95"/>
+    <field name="_mode'" id="_934" type="I32" fieldid="_892" offset="1536" fid="f7" line="96"/>
+    <field name="_unused2'" id="_935" type="Pointer[U8]" fieldid="_1437" offset="1568" fid="f7" line="98"/>
+  </struct>
+
+  <struct name="SIOmarker" id="_82" size="" align="" fid="f7" lineno="36">
+
+  </struct>
+
+  <struct name="SIOcodecvt" id="_83" size="" align="" fid="f7" lineno="37">
+
+  </struct>
+
+  <struct name="SIOwidedata" id="_84" size="" align="" fid="f7" lineno="38">
+
+  </struct>
+
+  <struct name="S" id="_222" size="1024" align="64" fid="f20" lineno="5">
+    <field name="__val'" id="_949" type="Pointer[U64]" fieldid="_1438" offset="0" fid="f20" line="7"/>
+  </struct>
+
+  <struct name="Stimeval" id="_225" size="128" align="64" fid="f22" lineno="8">
+    <field name="tv_sec'" id="_951" type="I64" fieldid="_49" offset="0" fid="f22" line="10"/>
+    <field name="tv_usec'" id="_952" type="I64" fieldid="_51" offset="64" fid="f22" line="11"/>
+  </struct>
+
+  <struct name="Stimespec" id="_226" size="128" align="64" fid="f23" lineno="10">
+    <field name="tv_sec'" id="_953" type="I64" fieldid="_49" offset="0" fid="f23" line="12"/>
+    <field name="tv_nsec'" id="_954" type="I64" fieldid="_66" offset="64" fid="f23" line="16"/>
+  </struct>
+
+  <struct name="S" id="_229" size="1024" align="64" fid="f24" lineno="59">
+    <field name="__fds_bits'" id="_955" type="Pointer[I64]" fieldid="_1439" offset="0" fid="f24" line="67"/>
+  </struct>
+
+  <struct name="Spthreadinternallist" id="_238" size="128" align="64" fid="f25" lineno="49">
+    <field name="__prev'" id="_961" type="NullablePointer[Spthreadinternallist]" fieldid="_1442" offset="0" fid="f25" line="51"/>
+    <field name="__next'" id="_962" type="NullablePointer[Spthreadinternallist]" fieldid="_1442" offset="64" fid="f25" line="52"/>
+  </struct>
+
+  <struct name="Spthreadinternalslist" id="_240" size="64" align="64" fid="f25" lineno="55">
+    <field name="__next'" id="_964" type="NullablePointer[Spthreadinternalslist]" fieldid="_1443" offset="0" fid="f25" line="57"/>
+  </struct>
+
+  <struct name="Spthreadmutexs" id="_242" size="320" align="64" fid="f26" lineno="22">
+    <field name="__lock'" id="_966" type="I32" fieldid="_892" offset="0" fid="f26" line="24"/>
+    <field name="__count'" id="_967" type="U32" fieldid="_889" offset="32" fid="f26" line="25"/>
+    <field name="__owner'" id="_968" type="I32" fieldid="_892" offset="64" fid="f26" line="26"/>
+    <field name="__nusers'" id="_969" type="U32" fieldid="_889" offset="96" fid="f26" line="28"/>
+    <field name="__kind'" id="_970" type="I32" fieldid="_892" offset="128" fid="f26" line="32"/>
+    <field name="__spins'" id="_971" type="I16" fieldid="_891" offset="160" fid="f26" line="34"/>
+    <field name="__elision'" id="_972" type="I16" fieldid="_891" offset="176" fid="f26" line="35"/>
+    <field name="__list'" id="_973" type="Spthreadinternallist" fieldid="_239" offset="192" fid="f26" line="36"/>
+  </struct>
+
+  <struct name="Spthreadrwlockarcht" id="_243" size="448" align="64" fid="f27" lineno="23">
+    <field name="__readers'" id="_974" type="U32" fieldid="_889" offset="0" fid="f27" line="25"/>
+    <field name="__writers'" id="_975" type="U32" fieldid="_889" offset="32" fid="f27" line="26"/>
+    <field name="__wrphase_futex'" id="_976" type="U32" fieldid="_889" offset="64" fid="f27" line="27"/>
+    <field name="__writers_futex'" id="_977" type="U32" fieldid="_889" offset="96" fid="f27" line="28"/>
+    <field name="__pad3'" id="_978" type="U32" fieldid="_889" offset="128" fid="f27" line="29"/>
+    <field name="__pad4'" id="_979" type="U32" fieldid="_889" offset="160" fid="f27" line="30"/>
+    <field name="__cur_writer'" id="_980" type="I32" fieldid="_892" offset="192" fid="f27" line="32"/>
+    <field name="__shared'" id="_981" type="I32" fieldid="_892" offset="224" fid="f27" line="33"/>
+    <field name="__rwelision'" id="_982" type="I8" fieldid="_890" offset="256" fid="f27" line="34"/>
+    <field name="__pad1'" id="_983" type="Pointer[U8]" fieldid="_1444" offset="264" fid="f27" line="39"/>
+    <field name="__pad2'" id="_984" type="U64" fieldid="_886" offset="320" fid="f27" line="42"/>
+    <field name="__flags'" id="_985" type="U32" fieldid="_889" offset="384" fid="f27" line="45"/>
+  </struct>
+
+  <struct name="Spthreadconds" id="_244" size="384" align="64" fid="f25" lineno="92">
+    <field name="'" id="_987" type="None" fieldid="_986" offset="0" fid="f25" line="94"/>
+    <field name="'" id="_991" type="None" fieldid="_990" offset="64" fid="f25" line="103"/>
+    <field name="__g_refs'" id="_994" type="Pointer[U32]" fieldid="_1451" offset="128" fid="f25" line="112"/>
+    <field name="__g_size'" id="_995" type="Pointer[U32]" fieldid="_1451" offset="192" fid="f25" line="113"/>
+    <field name="__g1_orig_size'" id="_996" type="U32" fieldid="_889" offset="256" fid="f25" line="114"/>
+    <field name="__wrefs'" id="_997" type="U32" fieldid="_889" offset="288" fid="f25" line="115"/>
+    <field name="__g_signals'" id="_998" type="Pointer[U32]" fieldid="_1451" offset="320" fid="f25" line="116"/>
+  </struct>
+
+  <struct name="S" id="_247" size="32" align="32" fid="f25" lineno="122">
+    <field name="__data'" id="_999" type="I32" fieldid="_892" offset="0" fid="f25" line="124"/>
+  </struct>
+
+  <struct name="Siovec" id="_271" size="128" align="64" fid="f29" lineno="26">
+    <field name="iov_base'" id="_1031" type="Pointer[None]" fieldid="_896" offset="0" fid="f29" line="28"/>
+    <field name="iov_len'" id="_1032" type="U64" fieldid="_7" offset="64" fid="f29" line="29"/>
+  </struct>
+
+  <struct name="Ssockaddr" id="_275" size="128" align="16" fid="f30" lineno="178">
+    <field name="sa_family'" id="_1033" type="U16" fieldid="_274" offset="0" fid="f30" line="180"/>
+    <field name="sa_data'" id="_1034" type="Pointer[U8]" fieldid="_1461" offset="16" fid="f30" line="181"/>
+  </struct>
+
+  <struct name="Ssockaddrstorage" id="_276" size="1024" align="64" fid="f30" lineno="191">
+    <field name="ss_family'" id="_1035" type="U16" fieldid="_274" offset="0" fid="f30" line="193"/>
+    <field name="__ss_padding'" id="_1036" type="Pointer[U8]" fieldid="_1462" offset="16" fid="f30" line="194"/>
+    <field name="__ss_align'" id="_1037" type="U64" fieldid="_886" offset="960" fid="f30" line="195"/>
+  </struct>
+
+  <struct name="Smsghdr" id="_278" size="448" align="64" fid="f30" lineno="257">
+    <field name="msg_name'" id="_1038" type="Pointer[None]" fieldid="_896" offset="0" fid="f30" line="259"/>
+    <field name="msg_namelen'" id="_1039" type="U32" fieldid="_272" offset="64" fid="f30" line="260"/>
+    <field name="msg_iov'" id="_1040" type="NullablePointer[Siovec]" fieldid="_1463" offset="128" fid="f30" line="262"/>
+    <field name="msg_iovlen'" id="_1041" type="U64" fieldid="_7" offset="192" fid="f30" line="263"/>
+    <field name="msg_control'" id="_1042" type="Pointer[None]" fieldid="_896" offset="256" fid="f30" line="265"/>
+    <field name="msg_controllen'" id="_1043" type="U64" fieldid="_7" offset="320" fid="f30" line="266"/>
+    <field name="msg_flags'" id="_1044" type="I32" fieldid="_892" offset="384" fid="f30" line="271"/>
+  </struct>
+
+  <struct name="Scmsghdr" id="_279" size="128" align="64" fid="f30" lineno="275">
+    <field name="cmsg_len'" id="_1045" type="U64" fieldid="_7" offset="0" fid="f30" line="277"/>
+    <field name="cmsg_level'" id="_1046" type="I32" fieldid="_892" offset="64" fid="f30" line="282"/>
+    <field name="cmsg_type'" id="_1047" type="I32" fieldid="_892" offset="96" fid="f30" line="283"/>
+    <field name="__cmsg_data'" id="_1048" type="Pointer[U8]" fieldid="_1464" offset="128" fid="f30" line="285"/>
+  </struct>
+
+  <struct name="S" id="_282" size="1024" align="64" fid="f33" lineno="25">
+    <field name="fds_bits'" id="_1051" type="Pointer[U64]" fieldid="_1438" offset="0" fid="f33" line="26"/>
+  </struct>
+
+  <struct name="S" id="_305" size="64" align="32" fid="f35" lineno="79">
+    <field name="val'" id="_1054" type="Pointer[I32]" fieldid="_1062" offset="0" fid="f35" line="80"/>
+  </struct>
+
+  <struct name="Slinger" id="_318" size="64" align="32" fid="f30" lineno="361">
+    <field name="l_onoff'" id="_1057" type="I32" fieldid="_892" offset="0" fid="f30" line="363"/>
+    <field name="l_linger'" id="_1058" type="I32" fieldid="_892" offset="32" fid="f30" line="364"/>
+  </struct>
+
+  <struct name="Sosockaddr" id="_319" size="128" align="16" fid="f36" lineno="6">
+    <field name="sa_family'" id="_1059" type="U16" fieldid="_888" offset="0" fid="f36" line="8"/>
+    <field name="sa_data'" id="_1060" type="Pointer[U8]" fieldid="_1468" offset="16" fid="f36" line="9"/>
+  </struct>
+
+  <struct name="Sinaddr" id="_345" size="32" align="32" fid="f39" lineno="31">
+    <field name="s_addr'" id="_1067" type="U32" fieldid="_344" offset="0" fid="f39" line="33"/>
+  </struct>
+
+  <struct name="Sipopts" id="_346" size="352" align="32" fid="f40" lineno="142">
+    <field name="ip_dst'" id="_1068" type="Sinaddr" fieldid="_1112" offset="0" fid="f40" line="144"/>
+    <field name="ip_opts'" id="_1069" type="Pointer[U8]" fieldid="_1455" offset="32" fid="f40" line="145"/>
+  </struct>
+
+  <struct name="Sipmreqn" id="_347" size="96" align="32" fid="f40" lineno="149">
+    <field name="imr_multiaddr'" id="_1070" type="Sinaddr" fieldid="_1112" offset="0" fid="f40" line="151"/>
+    <field name="imr_address'" id="_1071" type="Sinaddr" fieldid="_1112" offset="32" fid="f40" line="152"/>
+    <field name="imr_ifindex'" id="_1072" type="I32" fieldid="_892" offset="64" fid="f40" line="153"/>
+  </struct>
+
+  <struct name="Sinpktinfo" id="_348" size="96" align="32" fid="f40" lineno="157">
+    <field name="ipi_ifindex'" id="_1073" type="I32" fieldid="_892" offset="0" fid="f40" line="159"/>
+    <field name="ipi_spec_dst'" id="_1074" type="Sinaddr" fieldid="_1112" offset="32" fid="f40" line="160"/>
+    <field name="ipi_addr'" id="_1075" type="Sinaddr" fieldid="_1112" offset="64" fid="f40" line="161"/>
+  </struct>
+
+  <struct name="Sin6addr" id="_353" size="128" align="32" fid="f39" lineno="216">
+    <field name="__in6_u'" id="_1077" type="None" fieldid="_1473" offset="0" fid="f39" line="223"/>
+  </struct>
+
+  <struct name="Ssockaddrin" id="_356" size="128" align="32" fid="f39" lineno="242">
+    <field name="sin_family'" id="_1079" type="U16" fieldid="_274" offset="0" fid="f39" line="244"/>
+    <field name="sin_port'" id="_1080" type="U16" fieldid="_351" offset="16" fid="f39" line="245"/>
+    <field name="sin_addr'" id="_1081" type="Sinaddr" fieldid="_1112" offset="32" fid="f39" line="246"/>
+    <field name="sin_zero'" id="_1082" type="Pointer[U8]" fieldid="_1474" offset="64" fid="f39" line="249"/>
+  </struct>
+
+  <struct name="Ssockaddrin6" id="_357" size="224" align="32" fid="f39" lineno="257">
+    <field name="sin6_family'" id="_1083" type="U16" fieldid="_274" offset="0" fid="f39" line="259"/>
+    <field name="sin6_port'" id="_1084" type="U16" fieldid="_351" offset="16" fid="f39" line="260"/>
+    <field name="sin6_flowinfo'" id="_1085" type="U32" fieldid="_342" offset="32" fid="f39" line="261"/>
+    <field name="sin6_addr'" id="_1086" type="Sin6addr" fieldid="_1078" offset="64" fid="f39" line="262"/>
+    <field name="sin6_scope_id'" id="_1087" type="U32" fieldid="_342" offset="192" fid="f39" line="263"/>
+  </struct>
+
+  <struct name="Sipmreq" id="_358" size="64" align="32" fid="f39" lineno="269">
+    <field name="imr_multiaddr'" id="_1088" type="Sinaddr" fieldid="_1112" offset="0" fid="f39" line="272"/>
+    <field name="imr_interface'" id="_1089" type="Sinaddr" fieldid="_1112" offset="32" fid="f39" line="275"/>
+  </struct>
+
+  <struct name="Sipmreqsource" id="_359" size="96" align="32" fid="f39" lineno="278">
+    <field name="imr_multiaddr'" id="_1090" type="Sinaddr" fieldid="_1112" offset="0" fid="f39" line="281"/>
+    <field name="imr_interface'" id="_1091" type="Sinaddr" fieldid="_1112" offset="32" fid="f39" line="284"/>
+    <field name="imr_sourceaddr'" id="_1092" type="Sinaddr" fieldid="_1112" offset="64" fid="f39" line="287"/>
+  </struct>
+
+  <struct name="Sipv6mreq" id="_360" size="160" align="32" fid="f39" lineno="293">
+    <field name="ipv6mr_multiaddr'" id="_1093" type="Sin6addr" fieldid="_1078" offset="0" fid="f39" line="296"/>
+    <field name="ipv6mr_interface'" id="_1094" type="U32" fieldid="_889" offset="128" fid="f39" line="299"/>
+  </struct>
+
+  <struct name="Sgroupreq" id="_361" size="1088" align="64" fid="f39" lineno="305">
+    <field name="gr_interface'" id="_1095" type="U32" fieldid="_342" offset="0" fid="f39" line="308"/>
+    <field name="gr_group'" id="_1096" type="Ssockaddrstorage" fieldid="_1475" offset="64" fid="f39" line="311"/>
+  </struct>
+
+  <struct name="Sgroupsourcereq" id="_362" size="2112" align="64" fid="f39" lineno="314">
+    <field name="gsr_interface'" id="_1097" type="U32" fieldid="_342" offset="0" fid="f39" line="317"/>
+    <field name="gsr_group'" id="_1098" type="Ssockaddrstorage" fieldid="_1475" offset="64" fid="f39" line="320"/>
+    <field name="gsr_source'" id="_1099" type="Ssockaddrstorage" fieldid="_1475" offset="1088" fid="f39" line="323"/>
+  </struct>
+
+  <struct name="Sipmsfilter" id="_363" size="160" align="32" fid="f39" lineno="328">
+    <field name="imsf_multiaddr'" id="_1100" type="Sinaddr" fieldid="_1112" offset="0" fid="f39" line="331"/>
+    <field name="imsf_interface'" id="_1101" type="Sinaddr" fieldid="_1112" offset="32" fid="f39" line="334"/>
+    <field name="imsf_fmode'" id="_1102" type="U32" fieldid="_342" offset="64" fid="f39" line="337"/>
+    <field name="imsf_numsrc'" id="_1103" type="U32" fieldid="_342" offset="96" fid="f39" line="340"/>
+    <field name="imsf_slist'" id="_1104" type="Pointer[Sinaddr]" fieldid="_1476" offset="128" fid="f39" line="342"/>
+  </struct>
+
+  <struct name="Sgroupfilter" id="_364" size="2176" align="64" fid="f39" lineno="349">
+    <field name="gf_interface'" id="_1105" type="U32" fieldid="_342" offset="0" fid="f39" line="352"/>
+    <field name="gf_group'" id="_1106" type="Ssockaddrstorage" fieldid="_1475" offset="64" fid="f39" line="355"/>
+    <field name="gf_fmode'" id="_1107" type="U32" fieldid="_342" offset="1088" fid="f39" line="358"/>
+    <field name="gf_numsrc'" id="_1108" type="U32" fieldid="_342" offset="1120" fid="f39" line="361"/>
+    <field name="gf_slist'" id="_1109" type="Pointer[Ssockaddrstorage]" fieldid="_1477" offset="1152" fid="f39" line="363"/>
+  </struct>
+
+  <struct name="Srpcent" id="_385" size="192" align="64" fid="f42" lineno="46">
+    <field name="r_name'" id="_1116" type="String" fieldid="_884" offset="0" fid="f42" line="48"/>
+    <field name="r_aliases'" id="_1117" type="Array[String]" fieldid="_940" offset="64" fid="f42" line="49"/>
+    <field name="r_number'" id="_1118" type="I32" fieldid="_892" offset="128" fid="f42" line="50"/>
+  </struct>
+
+  <struct name="Snetent" id="_394" size="192" align="64" fid="f43" lineno="26">
+    <field name="n_name'" id="_1121" type="String" fieldid="_884" offset="0" fid="f43" line="28"/>
+    <field name="n_aliases'" id="_1122" type="Array[String]" fieldid="_940" offset="64" fid="f43" line="29"/>
+    <field name="n_addrtype'" id="_1123" type="I32" fieldid="_892" offset="128" fid="f43" line="30"/>
+    <field name="n_net'" id="_1124" type="U32" fieldid="_342" offset="160" fid="f43" line="31"/>
+  </struct>
+
+  <struct name="Shostent" id="_398" size="256" align="64" fid="f44" lineno="98">
+    <field name="h_name'" id="_1125" type="String" fieldid="_884" offset="0" fid="f44" line="100"/>
+    <field name="h_aliases'" id="_1126" type="Array[String]" fieldid="_940" offset="64" fid="f44" line="101"/>
+    <field name="h_addrtype'" id="_1127" type="I32" fieldid="_892" offset="128" fid="f44" line="102"/>
+    <field name="h_length'" id="_1128" type="I32" fieldid="_892" offset="160" fid="f44" line="103"/>
+    <field name="h_addr_list'" id="_1129" type="Array[String]" fieldid="_940" offset="192" fid="f44" line="104"/>
+  </struct>
+
+  <struct name="Sservent" id="_417" size="256" align="64" fid="f44" lineno="255">
+    <field name="s_name'" id="_1134" type="String" fieldid="_884" offset="0" fid="f44" line="257"/>
+    <field name="s_aliases'" id="_1135" type="Array[String]" fieldid="_940" offset="64" fid="f44" line="258"/>
+    <field name="s_port'" id="_1136" type="I32" fieldid="_892" offset="128" fid="f44" line="259"/>
+    <field name="s_proto'" id="_1137" type="String" fieldid="_884" offset="192" fid="f44" line="260"/>
+  </struct>
+
+  <struct name="Sprotoent" id="_426" size="192" align="64" fid="f44" lineno="324">
+    <field name="p_name'" id="_1140" type="String" fieldid="_884" offset="0" fid="f44" line="326"/>
+    <field name="p_aliases'" id="_1141" type="Array[String]" fieldid="_940" offset="64" fid="f44" line="327"/>
+    <field name="p_proto'" id="_1142" type="I32" fieldid="_892" offset="128" fid="f44" line="328"/>
+  </struct>
+
+  <struct name="Saddrinfo" id="_450" size="384" align="64" fid="f44" lineno="565">
+    <field name="ai_flags'" id="_1145" type="I32" fieldid="_892" offset="0" fid="f44" line="567"/>
+    <field name="ai_family'" id="_1146" type="I32" fieldid="_892" offset="32" fid="f44" line="568"/>
+    <field name="ai_socktype'" id="_1147" type="I32" fieldid="_892" offset="64" fid="f44" line="569"/>
+    <field name="ai_protocol'" id="_1148" type="I32" fieldid="_892" offset="96" fid="f44" line="570"/>
+    <field name="ai_addrlen'" id="_1149" type="U32" fieldid="_272" offset="128" fid="f44" line="571"/>
+    <field name="ai_addr'" id="_1150" type="NullablePointer[Ssockaddr]" fieldid="_1064" offset="192" fid="f44" line="572"/>
+    <field name="ai_canonname'" id="_1151" type="String" fieldid="_884" offset="256" fid="f44" line="573"/>
+    <field name="ai_next'" id="_1152" type="NullablePointer[Saddrinfo]" fieldid="_1155" offset="320" fid="f44" line="574"/>
+  </struct>
+
+  <struct name="Slocalestruct" id="_586" size="1856" align="64" fid="f49" lineno="28">
+    <field name="__locales'" id="_1161" type="Pointer[NullablePointer[Slocaledata]]" fieldid="_1486" offset="0" fid="f49" line="31"/>
+    <field name="__ctype_b'" id="_1162" type="Pointer[U16]" fieldid="_1487" offset="832" fid="f49" line="34"/>
+    <field name="__ctype_tolower'" id="_1163" type="Pointer[I32]" fieldid="_1488" offset="896" fid="f49" line="35"/>
+    <field name="__ctype_toupper'" id="_1164" type="Pointer[I32]" fieldid="_1488" offset="960" fid="f49" line="36"/>
+    <field name="__names'" id="_1165" type="Pointer[String]" fieldid="_1489" offset="1024" fid="f49" line="39"/>
+  </struct>
+
+  <struct name="S" id="_627" size="64" align="32" fid="f52" lineno="58">
+    <field name="quot'" id="_1167" type="I32" fieldid="_892" offset="0" fid="f52" line="60"/>
+    <field name="rem'" id="_1168" type="I32" fieldid="_892" offset="32" fid="f52" line="61"/>
+  </struct>
+
+  <struct name="S" id="_629" size="128" align="64" fid="f52" lineno="66">
+    <field name="quot'" id="_1170" type="I64" fieldid="_893" offset="0" fid="f52" line="68"/>
+    <field name="rem'" id="_1171" type="I64" fieldid="_893" offset="64" fid="f52" line="69"/>
+  </struct>
+
+  <struct name="S" id="_631" size="128" align="64" fid="f52" lineno="76">
+    <field name="quot'" id="_1173" type="I64" fieldid="_1056" offset="0" fid="f52" line="78"/>
+    <field name="rem'" id="_1174" type="I64" fieldid="_1056" offset="64" fid="f52" line="79"/>
+  </struct>
+
+  <struct name="Srandomdata" id="_653" size="384" align="64" fid="f52" lineno="423">
+    <field name="fptr'" id="_1177" type="Pointer[I32]" fieldid="_1185" offset="0" fid="f52" line="425"/>
+    <field name="rptr'" id="_1178" type="Pointer[I32]" fieldid="_1185" offset="64" fid="f52" line="426"/>
+    <field name="state'" id="_1179" type="Pointer[I32]" fieldid="_1185" offset="128" fid="f52" line="427"/>
+    <field name="rand_type'" id="_1180" type="I32" fieldid="_892" offset="192" fid="f52" line="428"/>
+    <field name="rand_deg'" id="_1181" type="I32" fieldid="_892" offset="224" fid="f52" line="429"/>
+    <field name="rand_sep'" id="_1182" type="I32" fieldid="_892" offset="256" fid="f52" line="430"/>
+    <field name="end_ptr'" id="_1183" type="Pointer[I32]" fieldid="_1185" offset="320" fid="f52" line="431"/>
+  </struct>
+
+  <struct name="Sdrand48data" id="_670" size="192" align="64" fid="f52" lineno="490">
+    <field name="__x'" id="_1189" type="Pointer[U16]" fieldid="_1187" offset="0" fid="f52" line="492"/>
+    <field name="__old_x'" id="_1190" type="Pointer[U16]" fieldid="_1187" offset="48" fid="f52" line="493"/>
+    <field name="__c'" id="_1191" type="U16" fieldid="_888" offset="96" fid="f52" line="494"/>
+    <field name="__init'" id="_1192" type="U16" fieldid="_888" offset="112" fid="f52" line="495"/>
+    <field name="__a'" id="_1193" type="U64" fieldid="_1176" offset="128" fid="f52" line="496"/>
+  </struct>
+
+  <struct name="Sicmphdr" id="_753" size="64" align="32" fid="f55" lineno="26">
+    <field name="type'" id="_1204" type="U8" fieldid="_340" offset="0" fid="f55" line="28"/>
+    <field name="code'" id="_1205" type="U8" fieldid="_340" offset="8" fid="f55" line="29"/>
+    <field name="checksum'" id="_1206" type="U16" fieldid="_341" offset="16" fid="f55" line="30"/>
+    <field name="un'" id="_1208" type="None" fieldid="_1501" offset="32" fid="f55" line="44"/>
+  </struct>
+
+  <struct name="Stimestamp" id="_754" size="320" align="32" fid="f56" lineno="28">
+    <field name="len'" id="_1209" type="U8" fieldid="_340" offset="0" fid="f56" line="30"/>
+    <field name="ptr'" id="_1210" type="U8" fieldid="_340" offset="8" fid="f56" line="31"/>
+    <field name="flags'" id="_1211" type="U32" fieldid="_889" offset="16" fid="f56" line="33"/>
+    <field name="overflow'" id="_1212" type="U32" fieldid="_889" offset="20" fid="f56" line="34"/>
+    <field name="data'" id="_1213" type="Pointer[U32]" fieldid="_1502" offset="32" fid="f56" line="41"/>
+  </struct>
+
+  <struct name="Siphdr" id="_755" size="160" align="32" fid="f56" lineno="44">
+    <field name="ihl'" id="_1214" type="U32" fieldid="_889" offset="0" fid="f56" line="47"/>
+    <field name="version'" id="_1215" type="U32" fieldid="_889" offset="4" fid="f56" line="48"/>
+    <field name="tos'" id="_1216" type="U8" fieldid="_340" offset="8" fid="f56" line="55"/>
+    <field name="tot_len'" id="_1217" type="U16" fieldid="_341" offset="16" fid="f56" line="56"/>
+    <field name="id'" id="_1218" type="U16" fieldid="_341" offset="32" fid="f56" line="57"/>
+    <field name="frag_off'" id="_1219" type="U16" fieldid="_341" offset="48" fid="f56" line="58"/>
+    <field name="ttl'" id="_1220" type="U8" fieldid="_340" offset="64" fid="f56" line="59"/>
+    <field name="protocol'" id="_1221" type="U8" fieldid="_340" offset="72" fid="f56" line="60"/>
+    <field name="check'" id="_1222" type="U16" fieldid="_341" offset="80" fid="f56" line="61"/>
+    <field name="saddr'" id="_1223" type="U32" fieldid="_342" offset="96" fid="f56" line="62"/>
+    <field name="daddr'" id="_1224" type="U32" fieldid="_342" offset="128" fid="f56" line="63"/>
+  </struct>
+
+  <struct name="Sip" id="_756" size="160" align="32" fid="f56" lineno="107">
+    <field name="ip_hl'" id="_1225" type="U32" fieldid="_889" offset="0" fid="f56" line="110"/>
+    <field name="ip_v'" id="_1226" type="U32" fieldid="_889" offset="4" fid="f56" line="111"/>
+    <field name="ip_tos'" id="_1227" type="U8" fieldid="_340" offset="8" fid="f56" line="117"/>
+    <field name="ip_len'" id="_1228" type="U16" fieldid="_888" offset="16" fid="f56" line="118"/>
+    <field name="ip_id'" id="_1229" type="U16" fieldid="_888" offset="32" fid="f56" line="119"/>
+    <field name="ip_off'" id="_1230" type="U16" fieldid="_888" offset="48" fid="f56" line="120"/>
+    <field name="ip_ttl'" id="_1231" type="U8" fieldid="_340" offset="64" fid="f56" line="125"/>
+    <field name="ip_p'" id="_1232" type="U8" fieldid="_340" offset="72" fid="f56" line="126"/>
+    <field name="ip_sum'" id="_1233" type="U16" fieldid="_888" offset="80" fid="f56" line="127"/>
+    <field name="ip_src'" id="_1234" type="Sinaddr" fieldid="_1112" offset="96" fid="f56" line="128"/>
+    <field name="ip_dst'" id="_1235" type="Sinaddr" fieldid="_1112" offset="128" fid="f56" line="128"/>
+  </struct>
+
+  <struct name="Siptimestamp" id="_757" size="320" align="32" fid="f56" lineno="134">
+    <field name="ipt_code'" id="_1236" type="U8" fieldid="_340" offset="0" fid="f56" line="136"/>
+    <field name="ipt_len'" id="_1237" type="U8" fieldid="_340" offset="8" fid="f56" line="137"/>
+    <field name="ipt_ptr'" id="_1238" type="U8" fieldid="_340" offset="16" fid="f56" line="138"/>
+    <field name="ipt_flg'" id="_1239" type="U32" fieldid="_889" offset="24" fid="f56" line="140"/>
+    <field name="ipt_oflw'" id="_1240" type="U32" fieldid="_889" offset="28" fid="f56" line="141"/>
+    <field name="data'" id="_1241" type="Pointer[U32]" fieldid="_1502" offset="32" fid="f56" line="147"/>
+  </struct>
+
+  <struct name="Sicmpraaddr" id="_758" size="64" align="32" fid="f55" lineno="131">
+    <field name="ira_addr'" id="_1242" type="U32" fieldid="_342" offset="0" fid="f55" line="133"/>
+    <field name="ira_preference'" id="_1243" type="U32" fieldid="_342" offset="32" fid="f55" line="134"/>
+  </struct>
+
+  <struct name="Sicmp" id="_759" size="224" align="32" fid="f55" lineno="137">
+    <field name="icmp_type'" id="_1244" type="U8" fieldid="_340" offset="0" fid="f55" line="139"/>
+    <field name="icmp_code'" id="_1245" type="U8" fieldid="_340" offset="8" fid="f55" line="140"/>
+    <field name="icmp_cksum'" id="_1246" type="U16" fieldid="_341" offset="16" fid="f55" line="141"/>
+    <field name="icmp_hun'" id="_1248" type="None" fieldid="_1509" offset="32" fid="f55" line="166"/>
+    <field name="icmp_dun'" id="_1250" type="None" fieldid="_1517" offset="64" fid="f55" line="193"/>
+  </struct>
+
+  <struct name="Stm" id="_760" size="448" align="64" fid="f57" lineno="7">
+    <field name="tm_sec'" id="_1251" type="I32" fieldid="_892" offset="0" fid="f57" line="9"/>
+    <field name="tm_min'" id="_1252" type="I32" fieldid="_892" offset="32" fid="f57" line="10"/>
+    <field name="tm_hour'" id="_1253" type="I32" fieldid="_892" offset="64" fid="f57" line="11"/>
+    <field name="tm_mday'" id="_1254" type="I32" fieldid="_892" offset="96" fid="f57" line="12"/>
+    <field name="tm_mon'" id="_1255" type="I32" fieldid="_892" offset="128" fid="f57" line="13"/>
+    <field name="tm_year'" id="_1256" type="I32" fieldid="_892" offset="160" fid="f57" line="14"/>
+    <field name="tm_wday'" id="_1257" type="I32" fieldid="_892" offset="192" fid="f57" line="15"/>
+    <field name="tm_yday'" id="_1258" type="I32" fieldid="_892" offset="224" fid="f57" line="16"/>
+    <field name="tm_isdst'" id="_1259" type="I32" fieldid="_892" offset="256" fid="f57" line="17"/>
+    <field name="tm_gmtoff'" id="_1260" type="I64" fieldid="_893" offset="320" fid="f57" line="20"/>
+    <field name="tm_zone'" id="_1261" type="String" fieldid="_939" offset="384" fid="f57" line="21"/>
+  </struct>
+
+  <struct name="Sitimerspec" id="_761" size="256" align="64" fid="f58" lineno="8">
+    <field name="it_interval'" id="_1262" type="Stimespec" fieldid="_1441" offset="0" fid="f58" line="10"/>
+    <field name="it_value'" id="_1263" type="Stimespec" fieldid="_1441" offset="128" fid="f58" line="11"/>
+  </struct>
+
+  <struct name="Ssigevent" id="_762" size="512" align="64" fid="f59" lineno="22">
+    <field name="sigev_value'" id="_1264" type="None" fieldid="_809" offset="0" fid="f59" line="24"/>
+    <field name="sigev_signo'" id="_1265" type="I32" fieldid="_892" offset="64" fid="f59" line="25"/>
+    <field name="sigev_notify'" id="_1266" type="I32" fieldid="_892" offset="96" fid="f59" line="26"/>
+    <field name="_sigev_un'" id="_1268" type="None" fieldid="_1522" offset="128" fid="f59" line="41"/>
+  </struct>
+
+  <struct name="Sflock" id="_799" size="256" align="64" fid="f61" lineno="35">
+    <field name="l_type'" id="_1280" type="I16" fieldid="_891" offset="0" fid="f61" line="37"/>
+    <field name="l_whence'" id="_1281" type="I16" fieldid="_891" offset="16" fid="f61" line="38"/>
+    <field name="l_start'" id="_1282" type="I64" fieldid="_40" offset="64" fid="f61" line="40"/>
+    <field name="l_len'" id="_1283" type="I64" fieldid="_40" offset="128" fid="f61" line="41"/>
+    <field name="l_pid'" id="_1284" type="I32" fieldid="_42" offset="192" fid="f61" line="46"/>
+  </struct>
+
+  <struct name="Sstat" id="_800" size="1152" align="64" fid="f62" lineno="46">
+    <field name="st_dev'" id="_1285" type="U64" fieldid="_33" offset="0" fid="f62" line="48"/>
+    <field name="st_ino'" id="_1286" type="U64" fieldid="_36" offset="64" fid="f62" line="53"/>
+    <field name="st_nlink'" id="_1287" type="U64" fieldid="_39" offset="128" fid="f62" line="61"/>
+    <field name="st_mode'" id="_1288" type="U32" fieldid="_38" offset="192" fid="f62" line="62"/>
+    <field name="st_uid'" id="_1289" type="U32" fieldid="_34" offset="224" fid="f62" line="64"/>
+    <field name="st_gid'" id="_1290" type="U32" fieldid="_35" offset="256" fid="f62" line="65"/>
+    <field name="__pad0'" id="_1291" type="I32" fieldid="_892" offset="288" fid="f62" line="67"/>
+    <field name="st_rdev'" id="_1292" type="U64" fieldid="_33" offset="320" fid="f62" line="69"/>
+    <field name="st_size'" id="_1293" type="I64" fieldid="_40" offset="384" fid="f62" line="74"/>
+    <field name="st_blksize'" id="_1294" type="I64" fieldid="_57" offset="448" fid="f62" line="78"/>
+    <field name="st_blocks'" id="_1295" type="I64" fieldid="_58" offset="512" fid="f62" line="80"/>
+    <field name="st_atim'" id="_1296" type="Stimespec" fieldid="_1441" offset="576" fid="f62" line="91"/>
+    <field name="st_mtim'" id="_1297" type="Stimespec" fieldid="_1441" offset="704" fid="f62" line="92"/>
+    <field name="st_ctim'" id="_1298" type="Stimespec" fieldid="_1441" offset="832" fid="f62" line="93"/>
+    <field name="__glibc_reserved'" id="_1299" type="Pointer[I64]" fieldid="_1526" offset="960" fid="f62" line="106"/>
+  </struct>
+
+  <struct name="S" id="_810" size="1024" align="64" fid="f66" lineno="36">
+    <field name="si_signo'" id="_1303" type="I32" fieldid="_892" offset="0" fid="f66" line="38"/>
+    <field name="si_errno'" id="_1304" type="I32" fieldid="_892" offset="32" fid="f66" line="40"/>
+    <field name="si_code'" id="_1305" type="I32" fieldid="_892" offset="64" fid="f66" line="42"/>
+    <field name="__pad0'" id="_1306" type="I32" fieldid="_892" offset="96" fid="f66" line="48"/>
+    <field name="_sifields'" id="_1308" type="None" fieldid="_1542" offset="128" fid="f66" line="123"/>
+  </struct>
+
+  <struct name="Ssigaction" id="_841" size="1216" align="64" fid="f71" lineno="27">
+    <field name="__sigaction_handler'" id="_1315" type="None" fieldid="_1545" offset="0" fid="f71" line="38"/>
+    <field name="sa_mask'" id="_1316" type="S" fieldid="_223" offset="64" fid="f71" line="46"/>
+    <field name="sa_flags'" id="_1317" type="I32" fieldid="_892" offset="1088" fid="f71" line="49"/>
+    <field name="sa_restorer'" id="_1318" type="Pointer[None]" fieldid="_1198" offset="1152" fid="f71" line="52"/>
+  </struct>
+
+  <struct name="Sfpxswbytes" id="_850" size="384" align="64" fid="f72" lineno="31">
+    <field name="magic1'" id="_1322" type="U32" fieldid="_18" offset="0" fid="f72" line="33"/>
+    <field name="extended_size'" id="_1323" type="U32" fieldid="_18" offset="32" fid="f72" line="34"/>
+    <field name="xstate_bv'" id="_1324" type="U64" fieldid="_20" offset="64" fid="f72" line="35"/>
+    <field name="xstate_size'" id="_1325" type="U32" fieldid="_18" offset="128" fid="f72" line="36"/>
+    <field name="__glibc_reserved1'" id="_1326" type="Pointer[U32]" fieldid="_1547" offset="160" fid="f72" line="37"/>
+  </struct>
+
+  <struct name="Sfpreg" id="_851" size="80" align="16" fid="f72" lineno="40">
+    <field name="significand'" id="_1327" type="Pointer[U16]" fieldid="_1548" offset="0" fid="f72" line="42"/>
+    <field name="exponent'" id="_1328" type="U16" fieldid="_888" offset="64" fid="f72" line="43"/>
+  </struct>
+
+  <struct name="Sfpxreg" id="_852" size="128" align="16" fid="f72" lineno="46">
+    <field name="significand'" id="_1329" type="Pointer[U16]" fieldid="_1548" offset="0" fid="f72" line="48"/>
+    <field name="exponent'" id="_1330" type="U16" fieldid="_888" offset="64" fid="f72" line="49"/>
+    <field name="__glibc_reserved1'" id="_1331" type="Pointer[U16]" fieldid="_1187" offset="80" fid="f72" line="50"/>
+  </struct>
+
+  <struct name="Sxmmreg" id="_853" size="128" align="32" fid="f72" lineno="53">
+    <field name="element'" id="_1332" type="Pointer[U32]" fieldid="_1549" offset="0" fid="f72" line="55"/>
+  </struct>
+
+  <struct name="Sfpstate" id="_854" size="4096" align="64" fid="f72" lineno="123">
+    <field name="cwd'" id="_1333" type="U16" fieldid="_16" offset="0" fid="f72" line="126"/>
+    <field name="swd'" id="_1334" type="U16" fieldid="_16" offset="16" fid="f72" line="127"/>
+    <field name="ftw'" id="_1335" type="U16" fieldid="_16" offset="32" fid="f72" line="128"/>
+    <field name="fop'" id="_1336" type="U16" fieldid="_16" offset="48" fid="f72" line="129"/>
+    <field name="rip'" id="_1337" type="U64" fieldid="_20" offset="64" fid="f72" line="130"/>
+    <field name="rdp'" id="_1338" type="U64" fieldid="_20" offset="128" fid="f72" line="131"/>
+    <field name="mxcsr'" id="_1339" type="U32" fieldid="_18" offset="192" fid="f72" line="132"/>
+    <field name="mxcr_mask'" id="_1340" type="U32" fieldid="_18" offset="224" fid="f72" line="133"/>
+    <field name="_st'" id="_1341" type="Pointer[Sfpxreg]" fieldid="_1550" offset="256" fid="f72" line="134"/>
+    <field name="_xmm'" id="_1342" type="Pointer[Sxmmreg]" fieldid="_1551" offset="1280" fid="f72" line="135"/>
+    <field name="__glibc_reserved1'" id="_1343" type="Pointer[U32]" fieldid="_1552" offset="3328" fid="f72" line="136"/>
+  </struct>
+
+  <struct name="Ssigcontext" id="_855" size="2048" align="64" fid="f72" lineno="139">
+    <field name="r8'" id="_1344" type="U64" fieldid="_20" offset="0" fid="f72" line="141"/>
+    <field name="r9'" id="_1345" type="U64" fieldid="_20" offset="64" fid="f72" line="142"/>
+    <field name="r10'" id="_1346" type="U64" fieldid="_20" offset="128" fid="f72" line="143"/>
+    <field name="r11'" id="_1347" type="U64" fieldid="_20" offset="192" fid="f72" line="144"/>
+    <field name="r12'" id="_1348" type="U64" fieldid="_20" offset="256" fid="f72" line="145"/>
+    <field name="r13'" id="_1349" type="U64" fieldid="_20" offset="320" fid="f72" line="146"/>
+    <field name="r14'" id="_1350" type="U64" fieldid="_20" offset="384" fid="f72" line="147"/>
+    <field name="r15'" id="_1351" type="U64" fieldid="_20" offset="448" fid="f72" line="148"/>
+    <field name="rdi'" id="_1352" type="U64" fieldid="_20" offset="512" fid="f72" line="149"/>
+    <field name="rsi'" id="_1353" type="U64" fieldid="_20" offset="576" fid="f72" line="150"/>
+    <field name="rbp'" id="_1354" type="U64" fieldid="_20" offset="640" fid="f72" line="151"/>
+    <field name="rbx'" id="_1355" type="U64" fieldid="_20" offset="704" fid="f72" line="152"/>
+    <field name="rdx'" id="_1356" type="U64" fieldid="_20" offset="768" fid="f72" line="153"/>
+    <field name="rax'" id="_1357" type="U64" fieldid="_20" offset="832" fid="f72" line="154"/>
+    <field name="rcx'" id="_1358" type="U64" fieldid="_20" offset="896" fid="f72" line="155"/>
+    <field name="rsp'" id="_1359" type="U64" fieldid="_20" offset="960" fid="f72" line="156"/>
+    <field name="rip'" id="_1360" type="U64" fieldid="_20" offset="1024" fid="f72" line="157"/>
+    <field name="eflags'" id="_1361" type="U64" fieldid="_20" offset="1088" fid="f72" line="158"/>
+    <field name="cs'" id="_1362" type="U16" fieldid="_888" offset="1152" fid="f72" line="159"/>
+    <field name="gs'" id="_1363" type="U16" fieldid="_888" offset="1168" fid="f72" line="160"/>
+    <field name="fs'" id="_1364" type="U16" fieldid="_888" offset="1184" fid="f72" line="161"/>
+    <field name="__pad0'" id="_1365" type="U16" fieldid="_888" offset="1200" fid="f72" line="162"/>
+    <field name="err'" id="_1366" type="U64" fieldid="_20" offset="1216" fid="f72" line="163"/>
+    <field name="trapno'" id="_1367" type="U64" fieldid="_20" offset="1280" fid="f72" line="164"/>
+    <field name="oldmask'" id="_1368" type="U64" fieldid="_20" offset="1344" fid="f72" line="165"/>
+    <field name="cr2'" id="_1369" type="U64" fieldid="_20" offset="1408" fid="f72" line="166"/>
+    <field name="'" id="_1371" type="None" fieldid="_1370" offset="1472" fid="f72" line="167"/>
+    <field name="__reserved1'" id="_1374" type="Pointer[U64]" fieldid="_1555" offset="1536" fid="f72" line="172"/>
+  </struct>
+
+  <struct name="Sxsavehdr" id="_856" size="512" align="64" fid="f72" lineno="177">
+    <field name="xstate_bv'" id="_1375" type="U64" fieldid="_20" offset="0" fid="f72" line="179"/>
+    <field name="__glibc_reserved1'" id="_1376" type="Pointer[U64]" fieldid="_1556" offset="64" fid="f72" line="180"/>
+    <field name="__glibc_reserved2'" id="_1377" type="Pointer[U64]" fieldid="_1557" offset="192" fid="f72" line="181"/>
+  </struct>
+
+  <struct name="Symmhstate" id="_857" size="2048" align="32" fid="f72" lineno="184">
+    <field name="ymmh_space'" id="_1378" type="Pointer[U32]" fieldid="_1558" offset="0" fid="f72" line="186"/>
+  </struct>
+
+  <struct name="Sxstate" id="_858" size="6656" align="64" fid="f72" lineno="189">
+    <field name="fpstate'" id="_1379" type="Sfpstate" fieldid="_1559" offset="0" fid="f72" line="191"/>
+    <field name="xstate_hdr'" id="_1380" type="Sxsavehdr" fieldid="_1560" offset="4096" fid="f72" line="192"/>
+    <field name="ymmh'" id="_1381" type="Symmhstate" fieldid="_1561" offset="4608" fid="f72" line="193"/>
+  </struct>
+
+  <struct name="S" id="_860" size="192" align="64" fid="f73" lineno="26">
+    <field name="ss_sp'" id="_1383" type="Pointer[None]" fieldid="_896" offset="0" fid="f73" line="28"/>
+    <field name="ss_flags'" id="_1384" type="I32" fieldid="_892" offset="64" fid="f73" line="29"/>
+    <field name="ss_size'" id="_1385" type="U64" fieldid="_7" offset="128" fid="f73" line="30"/>
+  </struct>
+
+  <struct name="Slibcfpxreg" id="_864" size="128" align="16" fid="f74" lineno="101">
+    <field name="significand'" id="_1388" type="Pointer[U16]" fieldid="_1548" offset="0" fid="f74" line="103"/>
+    <field name="exponent'" id="_1389" type="U16" fieldid="_888" offset="64" fid="f74" line="104"/>
+    <field name="__glibc_reserved1'" id="_1390" type="Pointer[U16]" fieldid="_1187" offset="80" fid="f74" line="105"/>
+  </struct>
+
+  <struct name="Slibcxmmreg" id="_865" size="128" align="32" fid="f74" lineno="108">
+    <field name="element'" id="_1391" type="Pointer[U32]" fieldid="_1549" offset="0" fid="f74" line="110"/>
+  </struct>
+
+  <struct name="Slibcfpstate" id="_866" size="4096" align="64" fid="f74" lineno="113">
+    <field name="cwd'" id="_1392" type="U16" fieldid="_16" offset="0" fid="f74" line="116"/>
+    <field name="swd'" id="_1393" type="U16" fieldid="_16" offset="16" fid="f74" line="117"/>
+    <field name="ftw'" id="_1394" type="U16" fieldid="_16" offset="32" fid="f74" line="118"/>
+    <field name="fop'" id="_1395" type="U16" fieldid="_16" offset="48" fid="f74" line="119"/>
+    <field name="rip'" id="_1396" type="U64" fieldid="_20" offset="64" fid="f74" line="120"/>
+    <field name="rdp'" id="_1397" type="U64" fieldid="_20" offset="128" fid="f74" line="121"/>
+    <field name="mxcsr'" id="_1398" type="U32" fieldid="_18" offset="192" fid="f74" line="122"/>
+    <field name="mxcr_mask'" id="_1399" type="U32" fieldid="_18" offset="224" fid="f74" line="123"/>
+    <field name="_st'" id="_1400" type="Pointer[Slibcfpxreg]" fieldid="_1563" offset="256" fid="f74" line="124"/>
+    <field name="_xmm'" id="_1401" type="Pointer[Slibcxmmreg]" fieldid="_1564" offset="1280" fid="f74" line="125"/>
+    <field name="__glibc_reserved1'" id="_1402" type="Pointer[U32]" fieldid="_1552" offset="3328" fid="f74" line="126"/>
+  </struct>
+
+  <struct name="S" id="_868" size="2048" align="64" fid="f74" lineno="133">
+    <field name="gregs'" id="_1404" type="Pointer[I64]" fieldid="_863" offset="0" fid="f74" line="135"/>
+    <field name="fpregs'" id="_1405" type="NullablePointer[Slibcfpstate]" fieldid="_867" offset="1472" fid="f74" line="137"/>
+    <field name="__reserved1'" id="_1406" type="Pointer[U64]" fieldid="_1566" offset="1536" fid="f74" line="138"/>
+  </struct>
+
+  <struct name="Sucontextt" id="_870" size="7744" align="64" fid="f74" lineno="142">
+    <field name="uc_flags'" id="_1408" type="U64" fieldid="_886" offset="0" fid="f74" line="144"/>
+    <field name="uc_link'" id="_1409" type="NullablePointer[Sucontextt]" fieldid="_1567" offset="64" fid="f74" line="145"/>
+    <field name="uc_stack'" id="_1410" type="S" fieldid="_861" offset="128" fid="f74" line="146"/>
+    <field name="uc_mcontext'" id="_1411" type="S" fieldid="_869" offset="320" fid="f74" line="147"/>
+    <field name="uc_sigmask'" id="_1412" type="S" fieldid="_224" offset="2368" fid="f74" line="148"/>
+    <field name="__fpregs_mem'" id="_1413" type="Slibcfpstate" fieldid="_1565" offset="3392" fid="f74" line="149"/>
+    <field name="__ssp'" id="_1414" type="Pointer[U64]" fieldid="_1568" offset="7488" fid="f74" line="150"/>
+  </struct>
+
+  <struct name="Ssigstack" id="_875" size="128" align="64" fid="f76" lineno="23">
+    <field name="ss_sp'" id="_1418" type="Pointer[None]" fieldid="_896" offset="0" fid="f76" line="25"/>
+    <field name="ss_onstack'" id="_1419" type="I32" fieldid="_892" offset="64" fid="f76" line="26"/>
+  </struct>
+
+  <struct name="SNSConstantStringtag" id="_883" size="256" align="64" fid="f0" lineno="0">
+    <field name="isa'" id="_1422" type="Pointer[I32]" fieldid="_1488" offset="0" fid="" line=""/>
+    <field name="flags'" id="_1423" type="I32" fieldid="_892" offset="64" fid="" line=""/>
+    <field name="str'" id="_1424" type="String" fieldid="_939" offset="128" fid="" line=""/>
+    <field name="length'" id="_1425" type="I64" fieldid="_893" offset="192" fid="" line=""/>
+  </struct>
+
+  <struct name="Svalisttag" id="_1427" size="192" align="64" fid="f0" lineno="0">
+    <field name="gp_offset'" id="_1570" type="U32" fieldid="_889" offset="0" fid="" line=""/>
+    <field name="fp_offset'" id="_1571" type="U32" fieldid="_889" offset="32" fid="" line=""/>
+    <field name="overflow_arg_area'" id="_1572" type="Pointer[None]" fieldid="_896" offset="64" fid="" line=""/>
+    <field name="reg_save_area'" id="_1573" type="Pointer[None]" fieldid="_896" offset="128" fid="" line=""/>
+  </struct>
+
+  <struct name="S" id="_1446" size="64" align="32" fid="f25" lineno="97">
+    <field name="__low'" id="_1579" type="U32" fieldid="_889" offset="0" fid="f25" line="99"/>
+    <field name="__high'" id="_1580" type="U32" fieldid="_889" offset="32" fid="f25" line="100"/>
+  </struct>
+
+  <struct name="S" id="_1449" size="64" align="32" fid="f25" lineno="106">
+    <field name="__low'" id="_1582" type="U32" fieldid="_889" offset="0" fid="f25" line="108"/>
+    <field name="__high'" id="_1583" type="U32" fieldid="_889" offset="32" fid="f25" line="109"/>
+  </struct>
+
+  <struct name="S" id="_1496" size="32" align="16" fid="f55" lineno="33">
+    <field name="id'" id="_1590" type="U16" fieldid="_341" offset="0" fid="f55" line="35"/>
+    <field name="sequence'" id="_1591" type="U16" fieldid="_341" offset="16" fid="f55" line="36"/>
+  </struct>
+
+  <struct name="S" id="_1499" size="32" align="16" fid="f55" lineno="39">
+    <field name="__glibc_reserved'" id="_1593" type="U16" fieldid="_341" offset="0" fid="f55" line="41"/>
+    <field name="mtu'" id="_1594" type="U16" fieldid="_341" offset="16" fid="f55" line="42"/>
+  </struct>
+
+  <struct name="S" id="_1510" size="96" align="32" fid="f55" lineno="179">
+    <field name="its_otime'" id="_1599" type="U32" fieldid="_342" offset="0" fid="f55" line="181"/>
+    <field name="its_rtime'" id="_1600" type="U32" fieldid="_342" offset="32" fid="f55" line="182"/>
+    <field name="its_ttime'" id="_1601" type="U32" fieldid="_342" offset="64" fid="f55" line="183"/>
+  </struct>
+
+  <struct name="S" id="_1512" size="160" align="32" fid="f55" lineno="185">
+    <field name="idi_ip'" id="_1603" type="Sip" fieldid="_1652" offset="0" fid="f55" line="187"/>
+  </struct>
+
+  <struct name="S" id="_1520" size="128" align="64" fid="f59" lineno="36">
+    <field name="_function'" id="_1608" type="Pointer[None]" fieldid="_1653" offset="0" fid="f59" line="38"/>
+    <field name="_attribute'" id="_1609" type="Pointer[None]" fieldid="_1654" offset="64" fid="f59" line="39"/>
+  </struct>
+
+  <struct name="S" id="_1528" size="64" align="32" fid="f66" lineno="56">
+    <field name="si_pid'" id="_1612" type="I32" fieldid="_42" offset="0" fid="f66" line="58"/>
+    <field name="si_uid'" id="_1613" type="U32" fieldid="_34" offset="32" fid="f66" line="59"/>
+  </struct>
+
+  <struct name="S" id="_1530" size="128" align="64" fid="f66" lineno="63">
+    <field name="si_tid'" id="_1615" type="I32" fieldid="_892" offset="0" fid="f66" line="65"/>
+    <field name="si_overrun'" id="_1616" type="I32" fieldid="_892" offset="32" fid="f66" line="66"/>
+    <field name="si_sigval'" id="_1617" type="None" fieldid="_809" offset="64" fid="f66" line="67"/>
+  </struct>
+
+  <struct name="S" id="_1532" size="128" align="64" fid="f66" lineno="71">
+    <field name="si_pid'" id="_1619" type="I32" fieldid="_42" offset="0" fid="f66" line="73"/>
+    <field name="si_uid'" id="_1620" type="U32" fieldid="_34" offset="32" fid="f66" line="74"/>
+    <field name="si_sigval'" id="_1621" type="None" fieldid="_809" offset="64" fid="f66" line="75"/>
+  </struct>
+
+  <struct name="S" id="_1534" size="256" align="64" fid="f66" lineno="79">
+    <field name="si_pid'" id="_1623" type="I32" fieldid="_42" offset="0" fid="f66" line="81"/>
+    <field name="si_uid'" id="_1624" type="U32" fieldid="_34" offset="32" fid="f66" line="82"/>
+    <field name="si_status'" id="_1625" type="I32" fieldid="_892" offset="64" fid="f66" line="83"/>
+    <field name="si_utime'" id="_1626" type="I64" fieldid="_45" offset="128" fid="f66" line="84"/>
+    <field name="si_stime'" id="_1627" type="I64" fieldid="_45" offset="192" fid="f66" line="85"/>
+  </struct>
+
+  <struct name="S" id="_1536" size="256" align="64" fid="f66" lineno="89">
+    <field name="si_addr'" id="_1629" type="Pointer[None]" fieldid="_896" offset="0" fid="f66" line="91"/>
+    <field name="si_addr_lsb'" id="_1630" type="I16" fieldid="_891" offset="64" fid="f66" line="93"/>
+    <field name="_bounds'" id="_1632" type="None" fieldid="_1658" offset="128" fid="f66" line="104"/>
+  </struct>
+
+  <struct name="S" id="_1538" size="128" align="64" fid="f66" lineno="108">
+    <field name="si_band'" id="_1634" type="I64" fieldid="_893" offset="0" fid="f66" line="110"/>
+    <field name="si_fd'" id="_1635" type="I32" fieldid="_892" offset="64" fid="f66" line="111"/>
+  </struct>
+
+  <struct name="S" id="_1540" size="128" align="64" fid="f66" lineno="116">
+    <field name="_call_addr'" id="_1637" type="Pointer[None]" fieldid="_896" offset="0" fid="f66" line="118"/>
+    <field name="_syscall'" id="_1638" type="I32" fieldid="_892" offset="64" fid="f66" line="119"/>
+    <field name="_arch'" id="_1639" type="U32" fieldid="_889" offset="96" fid="f66" line="120"/>
+  </struct>
+
+  <struct name="S" id="_1655" size="128" align="64" fid="f66" lineno="97">
+    <field name="_lower'" id="_1661" type="Pointer[None]" fieldid="_896" offset="0" fid="f66" line="99"/>
+    <field name="_upper'" id="_1662" type="Pointer[None]" fieldid="_896" offset="64" fid="f66" line="100"/>
+  </struct>
+
+  <struct name="Sihidseq" id="_1649" size="32" align="16" fid="f55" lineno="146">
+
+  </struct>
+
+  <struct name="Sihpmtu" id="_1650" size="32" align="16" fid="f55" lineno="154">
+
+  </struct>
+
+  <struct name="Sihrtradv" id="_1651" size="32" align="16" fid="f55" lineno="160">
+
+  </struct>
+
+  <struct name="Slocaledata" id="_1664" size="" align="" fid="f49" lineno="31">
+
+  </struct>
+</structs>
+</castxml2pony>
+

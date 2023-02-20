@@ -1,0 +1,78 @@
+<typedefs>
+  <typedef name="String"
+    ponytypein="String"
+    ponytypeinconv=".cstring()"
+    ponytypeout="String"
+    structtype="Pointer[U8]"
+    structdef="Pointer[U8]"
+    argtype="Pointer[U8] tag"
+    decl="  var "
+    rvtype="Pointer[U8]">
+    <ponytypeconvout>
+      <prefixs>
+        <prefix>var pcstring: Pointer[U8] = </prefix>
+      </prefixs>
+      <suffixes>
+        <suffix>let p: String iso = String.from_cstring(pcstring).clone()</suffix>
+        <suffix>consume p</suffix>
+      </suffixes>
+    </ponytypeconvout>
+  </typedef>
+
+  <typedef name="Array[String]"
+    ponytypein="Array[String]"
+    ponytypeinconv=""
+    ponytypeout="Pointer[Pointer[U8]]"
+    structtype="Pointer[Pointer[U8]]"
+    structdef="Pointer[Pointer[U8]]"
+    argtype="Pointer[Pointer[U8]] tag"
+    decl="  var "
+    rvtype="Pointer[Pointer[U8]]"/>
+
+<typedef name="Sip" ponytypein="Sip tag" ponytypeinconv="" ponytypeout="Sip" structtype="Sip" structdef="Sip" argtype="Sip tag" rvtype="Sip" decl="  embed "/>
+<typedef name="I8" ponytypein="I8" ponytypeinconv="" ponytypeout="I8" structtype="I8" structdef="I8(0)" argtype="I8" rvtype="I8" decl="  var "/>
+<typedef name="Pointer[None]" ponytypein="Pointer[None] tag" ponytypeinconv="" ponytypeout="Pointer[None]" structtype="Pointer[None]" structdef="Pointer[None]" argtype="Pointer[None] tag" rvtype="Pointer[None]" decl="  var "/>
+<typedef name="I32" ponytypein="I32" ponytypeinconv="" ponytypeout="I32" structtype="I32" structdef="I32(0)" argtype="I32" rvtype="I32" decl="  var "/>
+<typedef name="Pointer[Ssockaddrstorage]" ponytypein="Pointer[Ssockaddrstorage] tag" ponytypeinconv="" ponytypeout="Pointer[Ssockaddrstorage]" structtype="Pointer[Ssockaddrstorage]" structdef="Pointer[Ssockaddrstorage]" argtype="Pointer[Ssockaddrstorage] tag" rvtype="Pointer[Ssockaddrstorage]" decl="  var "/>
+<typedef name="U32" ponytypein="U32" ponytypeinconv="" ponytypeout="U32" structtype="U32" structdef="U32(0)" argtype="U32" rvtype="U32" decl="  var "/>
+<typedef name="Pointer[U32]" ponytypein="Pointer[U32] tag" ponytypeinconv="" ponytypeout="Pointer[U32]" structtype="Pointer[U32]" structdef="Pointer[U32]" argtype="Pointer[U32] tag" rvtype="Pointer[U32]" decl="  var "/>
+<typedef name="Pointer[Sxmmreg]" ponytypein="Pointer[Sxmmreg] tag" ponytypeinconv="" ponytypeout="Pointer[Sxmmreg]" structtype="Pointer[Sxmmreg]" structdef="Pointer[Sxmmreg]" argtype="Pointer[Sxmmreg] tag" rvtype="Pointer[Sxmmreg]" decl="  var "/>
+<typedef name="Sfpstate" ponytypein="Sfpstate tag" ponytypeinconv="" ponytypeout="Sfpstate" structtype="Sfpstate" structdef="Sfpstate" argtype="Sfpstate tag" rvtype="Sfpstate" decl="  embed "/>
+<typedef name="Pointer[I64]" ponytypein="Pointer[I64] tag" ponytypeinconv="" ponytypeout="Pointer[I64]" structtype="Pointer[I64]" structdef="Pointer[I64]" argtype="Pointer[I64] tag" rvtype="Pointer[I64]" decl="  var "/>
+<typedef name="NullablePointer[Spthreadinternallist]" ponytypein="NullablePointer[Spthreadinternallist] tag" ponytypeinconv="" ponytypeout="NullablePointer[Spthreadinternallist]" structtype="NullablePointer[Spthreadinternallist]" structdef="NullablePointer[Spthreadinternallist].none()" argtype="NullablePointer[Spthreadinternallist] tag" rvtype="NullablePointer[Spthreadinternallist]" decl="  var "/>
+<typedef name="Sin6addr" ponytypein="Sin6addr tag" ponytypeinconv="" ponytypeout="Sin6addr" structtype="Sin6addr" structdef="Sin6addr" argtype="Sin6addr tag" rvtype="Sin6addr" decl="  embed "/>
+<typedef name="I64" ponytypein="I64" ponytypeinconv="" ponytypeout="I64" structtype="I64" structdef="I64(0)" argtype="I64" rvtype="I64" decl="  var "/>
+<typedef name="U64" ponytypein="U64" ponytypeinconv="" ponytypeout="U64" structtype="U64" structdef="U64(0)" argtype="U64" rvtype="U64" decl="  var "/>
+<typedef name="Pointer[Sfpxreg]" ponytypein="Pointer[Sfpxreg] tag" ponytypeinconv="" ponytypeout="Pointer[Sfpxreg]" structtype="Pointer[Sfpxreg]" structdef="Pointer[Sfpxreg]" argtype="Pointer[Sfpxreg] tag" rvtype="Pointer[Sfpxreg]" decl="  var "/>
+<typedef name="Pointer[Slibcxmmreg]" ponytypein="Pointer[Slibcxmmreg] tag" ponytypeinconv="" ponytypeout="Pointer[Slibcxmmreg]" structtype="Pointer[Slibcxmmreg]" structdef="Pointer[Slibcxmmreg]" argtype="Pointer[Slibcxmmreg] tag" rvtype="Pointer[Slibcxmmreg]" decl="  var "/>
+<typedef name="I16" ponytypein="I16" ponytypeinconv="" ponytypeout="I16" structtype="I16" structdef="I16(0)" argtype="I16" rvtype="I16" decl="  var "/>
+<typedef name="Pointer[NullablePointer[Slocaledata]]" ponytypein="Pointer[NullablePointer[Slocaledata]] tag" ponytypeinconv="" ponytypeout="Pointer[NullablePointer[Slocaledata]]" structtype="Pointer[NullablePointer[Slocaledata]]" structdef="Pointer[NullablePointer[Slocaledata]]" argtype="Pointer[NullablePointer[Slocaledata]] tag" rvtype="Pointer[NullablePointer[Slocaledata]]" decl="  var "/>
+<typedef name="Pointer[I32]" ponytypein="Pointer[I32] tag" ponytypeinconv="" ponytypeout="Pointer[I32]" structtype="Pointer[I32]" structdef="Pointer[I32]" argtype="Pointer[I32] tag" rvtype="Pointer[I32]" decl="  var "/>
+<typedef name="NullablePointer[SIOFILE]" ponytypein="NullablePointer[SIOFILE] tag" ponytypeinconv="" ponytypeout="NullablePointer[SIOFILE]" structtype="NullablePointer[SIOFILE]" structdef="NullablePointer[SIOFILE].none()" argtype="NullablePointer[SIOFILE] tag" rvtype="NullablePointer[SIOFILE]" decl="  var "/>
+<typedef name="Stimespec" ponytypein="Stimespec tag" ponytypeinconv="" ponytypeout="Stimespec" structtype="Stimespec" structdef="Stimespec" argtype="Stimespec tag" rvtype="Stimespec" decl="  embed "/>
+<typedef name="U16" ponytypein="U16" ponytypeinconv="" ponytypeout="U16" structtype="U16" structdef="U16(0)" argtype="U16" rvtype="U16" decl="  var "/>
+<typedef name="None" ponytypein="None tag" ponytypeinconv="" ponytypeout="None" structtype="None" structdef="None" argtype="None tag" rvtype="None" decl="  embed "/>
+<typedef name="NullablePointer[Ssockaddr]" ponytypein="NullablePointer[Ssockaddr] tag" ponytypeinconv="" ponytypeout="NullablePointer[Ssockaddr]" structtype="NullablePointer[Ssockaddr]" structdef="NullablePointer[Ssockaddr].none()" argtype="NullablePointer[Ssockaddr] tag" rvtype="NullablePointer[Ssockaddr]" decl="  var "/>
+<typedef name="NullablePointer[SIOmarker]" ponytypein="NullablePointer[SIOmarker] tag" ponytypeinconv="" ponytypeout="NullablePointer[SIOmarker]" structtype="NullablePointer[SIOmarker]" structdef="NullablePointer[SIOmarker].none()" argtype="NullablePointer[SIOmarker] tag" rvtype="NullablePointer[SIOmarker]" decl="  var "/>
+<typedef name="Pointer[U64]" ponytypein="Pointer[U64] tag" ponytypeinconv="" ponytypeout="Pointer[U64]" structtype="Pointer[U64]" structdef="Pointer[U64]" argtype="Pointer[U64] tag" rvtype="Pointer[U64]" decl="  var "/>
+<typedef name="NullablePointer[Siovec]" ponytypein="NullablePointer[Siovec] tag" ponytypeinconv="" ponytypeout="NullablePointer[Siovec]" structtype="NullablePointer[Siovec]" structdef="NullablePointer[Siovec].none()" argtype="NullablePointer[Siovec] tag" rvtype="NullablePointer[Siovec]" decl="  var "/>
+<typedef name="NullablePointer[SIOcodecvt]" ponytypein="NullablePointer[SIOcodecvt] tag" ponytypeinconv="" ponytypeout="NullablePointer[SIOcodecvt]" structtype="NullablePointer[SIOcodecvt]" structdef="NullablePointer[SIOcodecvt].none()" argtype="NullablePointer[SIOcodecvt] tag" rvtype="NullablePointer[SIOcodecvt]" decl="  var "/>
+<typedef name="Sinaddr" ponytypein="Sinaddr tag" ponytypeinconv="" ponytypeout="Sinaddr" structtype="Sinaddr" structdef="Sinaddr" argtype="Sinaddr tag" rvtype="Sinaddr" decl="  embed "/>
+<typedef name="Ssockaddrstorage" ponytypein="Ssockaddrstorage tag" ponytypeinconv="" ponytypeout="Ssockaddrstorage" structtype="Ssockaddrstorage" structdef="Ssockaddrstorage" argtype="Ssockaddrstorage tag" rvtype="Ssockaddrstorage" decl="  embed "/>
+<typedef name="S" ponytypein="S tag" ponytypeinconv="" ponytypeout="S" structtype="S" structdef="S" argtype="S tag" rvtype="S" decl="  embed "/>
+<typedef name="Pointer[Sinaddr]" ponytypein="Pointer[Sinaddr] tag" ponytypeinconv="" ponytypeout="Pointer[Sinaddr]" structtype="Pointer[Sinaddr]" structdef="Pointer[Sinaddr]" argtype="Pointer[Sinaddr] tag" rvtype="Pointer[Sinaddr]" decl="  var "/>
+<typedef name="NullablePointer[Saddrinfo]" ponytypein="NullablePointer[Saddrinfo] tag" ponytypeinconv="" ponytypeout="NullablePointer[Saddrinfo]" structtype="NullablePointer[Saddrinfo]" structdef="NullablePointer[Saddrinfo].none()" argtype="NullablePointer[Saddrinfo] tag" rvtype="NullablePointer[Saddrinfo]" decl="  var "/>
+<typedef name="Pointer[U16]" ponytypein="Pointer[U16] tag" ponytypeinconv="" ponytypeout="Pointer[U16]" structtype="Pointer[U16]" structdef="Pointer[U16]" argtype="Pointer[U16] tag" rvtype="Pointer[U16]" decl="  var "/>
+<typedef name="NullablePointer[Spthreadinternalslist]" ponytypein="NullablePointer[Spthreadinternalslist] tag" ponytypeinconv="" ponytypeout="NullablePointer[Spthreadinternalslist]" structtype="NullablePointer[Spthreadinternalslist]" structdef="NullablePointer[Spthreadinternalslist].none()" argtype="NullablePointer[Spthreadinternalslist] tag" rvtype="NullablePointer[Spthreadinternalslist]" decl="  var "/>
+<typedef name="Pointer[String]" ponytypein="Pointer[String] tag" ponytypeinconv="" ponytypeout="Pointer[String]" structtype="Pointer[String]" structdef="Pointer[String]" argtype="Pointer[String] tag" rvtype="Pointer[String]" decl="  var "/>
+<typedef name="Sxsavehdr" ponytypein="Sxsavehdr tag" ponytypeinconv="" ponytypeout="Sxsavehdr" structtype="Sxsavehdr" structdef="Sxsavehdr" argtype="Sxsavehdr tag" rvtype="Sxsavehdr" decl="  embed "/>
+<typedef name="Slibcfpstate" ponytypein="Slibcfpstate tag" ponytypeinconv="" ponytypeout="Slibcfpstate" structtype="Slibcfpstate" structdef="Slibcfpstate" argtype="Slibcfpstate tag" rvtype="Slibcfpstate" decl="  embed "/>
+<typedef name="Symmhstate" ponytypein="Symmhstate tag" ponytypeinconv="" ponytypeout="Symmhstate" structtype="Symmhstate" structdef="Symmhstate" argtype="Symmhstate tag" rvtype="Symmhstate" decl="  embed "/>
+<typedef name="Pointer[Slibcfpxreg]" ponytypein="Pointer[Slibcfpxreg] tag" ponytypeinconv="" ponytypeout="Pointer[Slibcfpxreg]" structtype="Pointer[Slibcfpxreg]" structdef="Pointer[Slibcfpxreg]" argtype="Pointer[Slibcfpxreg] tag" rvtype="Pointer[Slibcfpxreg]" decl="  var "/>
+<typedef name="NullablePointer[Sucontextt]" ponytypein="NullablePointer[Sucontextt] tag" ponytypeinconv="" ponytypeout="NullablePointer[Sucontextt]" structtype="NullablePointer[Sucontextt]" structdef="NullablePointer[Sucontextt].none()" argtype="NullablePointer[Sucontextt] tag" rvtype="NullablePointer[Sucontextt]" decl="  var "/>
+<typedef name="Spthreadinternallist" ponytypein="Spthreadinternallist tag" ponytypeinconv="" ponytypeout="Spthreadinternallist" structtype="Spthreadinternallist" structdef="Spthreadinternallist" argtype="Spthreadinternallist tag" rvtype="Spthreadinternallist" decl="  embed "/>
+<typedef name="U8" ponytypein="U8" ponytypeinconv="" ponytypeout="U8" structtype="U8" structdef="U8(0)" argtype="U8" rvtype="U8" decl="  var "/>
+<typedef name="NullablePointer[SIOwidedata]" ponytypein="NullablePointer[SIOwidedata] tag" ponytypeinconv="" ponytypeout="NullablePointer[SIOwidedata]" structtype="NullablePointer[SIOwidedata]" structdef="NullablePointer[SIOwidedata].none()" argtype="NullablePointer[SIOwidedata] tag" rvtype="NullablePointer[SIOwidedata]" decl="  var "/>
+<typedef name="NullablePointer[Slibcfpstate]" ponytypein="NullablePointer[Slibcfpstate] tag" ponytypeinconv="" ponytypeout="NullablePointer[Slibcfpstate]" structtype="NullablePointer[Slibcfpstate]" structdef="NullablePointer[Slibcfpstate].none()" argtype="NullablePointer[Slibcfpstate] tag" rvtype="NullablePointer[Slibcfpstate]" decl="  var "/>
+<typedef name="Pointer[U8]" ponytypein="Pointer[U8] tag" ponytypeinconv="" ponytypeout="Pointer[U8]" structtype="Pointer[U8]" structdef="Pointer[U8]" argtype="Pointer[U8] tag" rvtype="Pointer[U8]" decl="  var "/></typedefs>
+
