@@ -100,7 +100,7 @@ actor RawSocket is AsioEventNotify
     end
 
   be _event_notify(event: AsioEventID, flags: U32, arg: U32) =>
-    let size: I64 = @recv(fid, buffer.cpointer(), 65535, 0)
+    let size: I64 = @recv(fid, buffer.cpointer(), 65535, 0x40) // MSG_DONTWAIT
     if (size > 0) then
       pull_buffer()
       _event_notify(event, flags, arg)
