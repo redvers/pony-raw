@@ -1,7 +1,7 @@
 use @printf[I32](fmt: Pointer[U8] tag, ...)
 
 class RawTCP4
-  let ip4packet: IPv4Packet
+  let ip4packet: IPv4Packet val
   let offset: USize
 
   let srcport: U16
@@ -11,7 +11,7 @@ class RawTCP4
   let dataoff: U8
   let flags: U8
 
-  new create(ip4packet': IPv4Packet, offset': USize)? =>
+  new create(ip4packet': IPv4Packet val, offset': USize)? =>
     ip4packet = ip4packet'
     offset = offset'
 

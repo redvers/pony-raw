@@ -49,21 +49,29 @@ actor RawSocket is AsioEventNotify
 
         let ipv4: IPv4Packet iso =  recover iso IPv4Packet(consume tpacket)? end
 
-        /* Our callbacks operate on a "single-callback" basis.  Once a
-         * callback has been triggered, it will skip all other processing. */
-        match filter.raw_ipv4
-        | let fcb: {(IPv4Packet iso): None} val => fcb(consume ipv4) ; return None
-        end
-
         var vihl: U8 = ipv4.ip4packet(0)?.op_and(0b00001111)
         match ipv4.ip4packet(9)?
+        // ICMP over IPv4
         | let p: U8 if (p == 1) =>
           match filter.raw_ipv4_icmp
           | let fcb: {(RawICMP4 iso): None} val => fcb(recover iso
               RawICMP4(consume ipv4, (20 + ((vihl - 5) * 4)).usize())?
-            end)
+            end); return None
+          end
+
+        // TCP over IPv4
+        | let p: U8 if (p == 6) =>
+          match filter.raw_ipv4_tcp
+          | let fcb: {(RawTCP4 iso): None} val => fcb(recover iso
+              RawTCP4(consume ipv4, (20 + ((vihl - 5) * 4)).usize())?
+            end); return None
           end
         end
+
+        match filter.raw_ipv4
+        | let fcb: {(IPv4Packet iso): None} val => fcb(consume ipv4) ; return None
+        end
+
 
 
 
