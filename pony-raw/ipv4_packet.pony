@@ -2,7 +2,7 @@ class IPv4Packet
   var srcip: IPv4Addr = 0
   var dstip: IPv4Addr = 0
   let ip4packet: Array[U8] val
-  let protocol: (RawICMP4 | None) = None
+  var protocol: (RawICMP4 | RawTCP4 | None) = None
 
   new create(incpkt: Array[U8] val)? =>
     ip4packet = incpkt
@@ -16,10 +16,11 @@ class IPv4Packet
       dstip = ip4packet.read_u32(16)?.bswap()   // operations.
     end
 
+    protocol =
     match ip4packet(9)?
     | let p: U8 if (p == 1) => RawICMP4(this, (20 + ((vihl - 5) * 4)).usize())?
     | let p: U8 if (p == 2) => None  // IGMP
-    | let p: U8 if (p == 6) => None  // TCP
+    | let p: U8 if (p == 6) => RawTCP4(this, (20 + ((vihl - 5) * 4)).usize())?  // TCP
     | let p: U8 if (p == 17) => None // UDP
     | let p: U8 if (p == 41) => None // ENCAP
     | let p: U8 if (p == 89) => None // OSPF
@@ -27,6 +28,7 @@ class IPv4Packet
     else
       error
     end
+
 
   fun ip2string(ipval: IPv4Addr): String =>
     ipval.op_and(0b11111111_00000000_00000000_00000000).shr(24).string() + "." +

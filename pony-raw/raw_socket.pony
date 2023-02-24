@@ -10,17 +10,17 @@ use @recv[I64](fd: I32, buf: Pointer[U8] tag, n: U64, flags: I32)
 actor RawSocket is AsioEventNotify
   let fid: I32
   var _event: AsioEventID = AsioEvent.none()
-  let _notify: RawSocketNotifier
+  let notify: RawSocketNotifier
   let buffer: Array[U8] val = recover Array[U8].init(0, 65535) end
 
-  new create(auth: NetAuth, notify: RawSocketNotifier iso) =>
-    _notify = consume notify
+  new create(auth: NetAuth, notify': RawSocketNotifier iso) =>
+    notify = consume notify'
     fid = @socket(AFPacket(), SockRaw(), @htons(EthPAll()).i32())
     if (fid == -1) then
-      _notify.not_listening(this)
+      notify.not_listening(this)
     else
       _event = @pony_asio_event_create(this, fid.u32(), AsioEvent.read(), 0, true)
-      _notify.listening(this)
+      notify.listening(this)
     end
 
   be _event_notify(event: AsioEventID, flags: U32, arg: U32) =>
@@ -46,7 +46,7 @@ actor RawSocket is AsioEventNotify
           end
           consume t
         end
-        _notify.got_ipv4(this, recover iso IPv4Packet(consume tpacket)? end)
+        notify.got_ipv4(this, recover iso IPv4Packet(consume tpacket)? end)
       else
         None // We've exhaused the system buffer
       end
