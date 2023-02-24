@@ -1,4 +1,5 @@
 use "net"
+use "debug"
 use "collections"
 
 use @socket[I32](domain: I32, stype: I32, protocol: I32)
@@ -10,17 +11,17 @@ use @recv[I64](fd: I32, buf: Pointer[U8] tag, n: U64, flags: I32)
 actor RawSocket is AsioEventNotify
   let fid: I32
   var _event: AsioEventID = AsioEvent.none()
-  let notify: RawSocketNotifier
+  let filter: RawFilter ref
   let buffer: Array[U8] val = recover Array[U8].init(0, 65535) end
 
-  new create(auth: NetAuth, notify': RawSocketNotifier iso) =>
-    notify = consume notify'
+  new create(auth: NetAuth, filter': RawFilter iso) =>
+    filter = consume filter'
     fid = @socket(AFPacket(), SockRaw(), @htons(EthPAll()).i32())
     if (fid == -1) then
-      notify.not_listening(this)
+      try (filter.not_listening as {(): None} val)() end
     else
       _event = @pony_asio_event_create(this, fid.u32(), AsioEvent.read(), 0, true)
-      notify.listening(this)
+      try (filter.listening as {(): None} val)() end
     end
 
   be _event_notify(event: AsioEventID, flags: U32, arg: U32) =>
@@ -29,9 +30,6 @@ actor RawSocket is AsioEventNotify
       pull_buffer()
       _event_notify(event, flags, arg)
     end
-
-
-
 
   fun ref pull_buffer() =>
     try
@@ -46,9 +44,40 @@ actor RawSocket is AsioEventNotify
           end
           consume t
         end
-        notify.got_ipv4(this, recover iso IPv4Packet(consume tpacket)? end)
-      else
-        None // We've exhaused the system buffer
+
+
+
+        let ipv4: IPv4Packet iso =  recover iso IPv4Packet(consume tpacket)? end
+
+        /* Our callbacks operate on a "single-callback" basis.  Once a
+         * callback has been triggered, it will skip all other processing. */
+        match filter.raw_ipv4
+        | let fcb: {(IPv4Packet iso): None} val => fcb(consume ipv4) ; return None
+        end
+
+        var vihl: U8 = ipv4.ip4packet(0)?.op_and(0b00001111)
+        match ipv4.ip4packet(9)?
+        | let p: U8 if (p == 1) =>
+          match filter.raw_ipv4_icmp
+          | let fcb: {(RawICMP4 iso): None} val => fcb(recover iso
+              RawICMP4(consume ipv4, (20 + ((vihl - 5) * 4)).usize())?
+            end)
+          end
+        end
+
+
+
+
+
+
+//        let packet: IPv4Packet iso = recover iso IPv4Packet(consume tpacket)? end
+//        match (consume packet).protocol
+//        | let x: RawICMP4 val => None
+//        end
+//        match
+//        filter.raw_ipv4(recover iso IPv4Packet(consume tpacket)? end)
+//      else
+//        None // We've exhaused the system buffer
       end
     end
 

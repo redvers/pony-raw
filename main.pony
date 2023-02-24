@@ -7,8 +7,30 @@ actor Main
   let env: Env
   new create(env': Env) =>
     env = env'
-    let socket: RawSocket = RawSocket(NetAuth(env.root), recover MyRawSocketNotify end)
+    let filter: RawFilter iso = recover iso
+      RawFilter
+      .>set_listening((recover tag this end)~listening())
+      .>set_not_listening((recover tag this end)~not_listening())
+//      .>set_raw_ipv4((recover tag this end)~print_ipv4())
+      .>set_raw_ipv4_icmp((recover tag this end)~print_icmp4())
+    end
+    let socket: RawSocket = RawSocket(NetAuth(env.root), consume filter) // , recover MyRawSocketNotify end)
 
+  be listening() => env.err.print("Listening…")
+  be not_listening() => env.err.print("Not listening…")
+
+  be print_ipv4(ipv4: IPv4Packet iso) => Debug.out("Raw IPv4: " +
+                                    ipv4.srcString() +
+                                    " → " +
+                                    ipv4.dstString())
+
+  be print_icmp4(icmp: RawICMP4 iso) => Debug.out("Raw ICMPv4: " +
+                                    icmp.ip4packet.srcString() +
+                                    " → " +
+                                    icmp.ip4packet.dstString())
+
+
+/*
 class MyRawSocketNotify is RawSocketNotifier
   fun listening(listen: RawSocket) =>
     Debug.out("I'm listening…")
@@ -30,3 +52,4 @@ class MyRawSocketNotify is RawSocketNotifier
                                   ":" + x.dstport.string())
     end
 //    Debug.out(ipv4.srcString() + " → " + ipv4.dstString())
+//    */
